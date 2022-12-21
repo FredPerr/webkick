@@ -1,5 +1,5 @@
 # Step 1. Rebuild the source code only when needed
-FROM node:18-alpine AS builder
+FROM node:19.3.0-bullseye-slim AS builder
 
 WORKDIR /app
 
