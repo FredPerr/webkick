@@ -42,7 +42,7 @@ RUN \
 
 # Step 2. Production image, copy all the files and run next
 FROM node:19.3.0-bullseye-slim AS runner
-
+ENV NODE_ENV production
 WORKDIR /app
 
 # Don't run production as root
