@@ -1,30 +1,8 @@
-# With Docker Compose
+# Archetype
 
-This example contains everything needed to get a Next.js development and production environment up and running with Docker Compose.
+## Installation & Running 
 
-## Benefits of Docker Compose
-
-- Develop locally without Node.js or TypeScript installed ✨
-- Easy to run, consistent development environment across macOS, Windows, and Linux teams
-- Run multiple Next.js apps, databases, and other microservices in a single deployment
-- Multistage builds combined with [Output Standalone](https://nextjs.org/docs/advanced-features/output-file-tracing#automatically-copying-traced-files) outputs up to 85% smaller apps (Approximately 110 MB compared to 1 GB with create-next-app)
-- Easy configuration with YAML files
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-docker-compose with-docker-compose-app
-```
-
-```bash
-yarn create next-app --example with-docker-compose with-docker-compose-app
-```
-
-```bash
-pnpm create next-app --example with-docker-compose with-docker-compose-app
-```
+### How to use
 
 Optionally, after the installation is complete:
 
@@ -32,18 +10,18 @@ Optionally, after the installation is complete:
 
 It is recommended to commit a lockfile to version control. Although the example will work without one, build errors are more likely to occur when using the latest version of all dependencies. This way, we're always using a known good configuration to develop and run in production.
 
-## Prerequisites
+### Prerequisites
 
 Install [Docker Desktop](https://docs.docker.com/get-docker) for Mac, Windows, or Linux. Docker Desktop includes Docker Compose as part of the installation.
 
-## Development
+### Development
 
 First, run the development server:
 
 ```bash
 # Create a network, which allows containers to communicate
 # with each other, by using their container name as a hostname
-docker network create my_network
+docker network create archetype_network
 
 # Build dev
 # Note: Keep v1 command until "Use Docker Compose v2" is enabled by default for Docker Desktop for Linux
@@ -58,7 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-## Production
+### Production
 
 Multistage builds are highly recommended in production. Combined with the Next [Output Standalone](https://nextjs.org/docs/advanced-features/output-file-tracing#automatically-copying-traced-files) feature, only `node_modules` files required for production are copied into the final Docker image.
 
@@ -67,7 +45,7 @@ First, run the production server (Final image approximately 110 MB).
 ```bash
 # Create a network, which allows containers to communicate
 # with each other, by using their container name as a hostname
-docker network create my_network
+docker network create archetype_network
 
 # Build prod
 docker-compose -f docker-compose.prod.yml build
@@ -76,28 +54,15 @@ docker-compose -f docker-compose.prod.yml build
 docker-compose -f docker-compose.prod.yml up -d
 ```
 
-Alternatively, run the production server without without multistage builds (Final image approximately 1 GB).
-
-```bash
-# Create a network, which allows containers to communicate
-# with each other, by using their container name as a hostname
-docker network create my_network
-
-# Build prod without multistage
-docker-compose -f docker-compose.prod-without-multistage.yml build
-
-# Up prod without multistage in detached mode
-docker-compose -f docker-compose.prod-without-multistage.yml up -d
-```
-
 Open [http://localhost:3000](http://localhost:3000).
 
-## Useful commands
+###
+ Useful commands
 
 ```bash
 # Stop all running containers
 docker kill $(docker ps -aq) && docker rm $(docker ps -aq)
 
-# Free space
+# Free space (free docker's files on the host filesystem entirely: containers, images, ...)
 docker system prune -af --volumes
 ```
