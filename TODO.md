@@ -1,3 +1,3 @@
-- [ ] Verify the Docker files (dev and prod Dockerfile) to good practices (e.g: [skyk 10 best practices to containerize nodejs web applications](https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/))
+- [x] Verify the Docker files (dev and prod Dockerfile) to good practices (e.g: [skyk 10 best practices to containerize nodejs web applications](https://snyk.io/blog/10-best-practices-to-containerize-nodejs-web-applications-with-docker/))
 - [ ] Determine the NextJS technology stack, update the app structure accordingly and integrate the new stack.
 - [ ] Define the project's objectives.
