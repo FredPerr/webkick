@@ -5,5 +5,11 @@ export default {
     keywords: 'next.js, boilerplate, typescript, react',
     description: 'Next.js Boilerplate with TypeScript, and React.',
     lang: 'en',
-    logo: AppLogo
+    logo: AppLogo,
+    hero: {
+        static_image: '/images/hero-demo.jpg',
+        title: 'Archetype',
+        subtitle: 'Next.js Boilerplate',
+        description: 'Next.js Boilerplate with TypeScript, and React.',
+    }
 }

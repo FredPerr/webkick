@@ -5,7 +5,7 @@ import { Navbar, Image, Button, Link } from "@nextui-org/react";
 
 export default function ClassicNavbar() {
     return (
-        <Navbar disableBlur variant="static" css={{ bgColor: 'white' }}>
+        <Navbar disableBlur variant="static" css={{ bgColor: '$gray100', h: '76px' }} containerCss={{bgColor: '$gray100'}}>
             <Navbar.Content>
                 <Navbar.Link href="/#">
                     <Navbar.Brand>
