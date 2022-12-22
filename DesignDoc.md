@@ -15,6 +15,9 @@
 ### Testimonials section
 - [ ] Testimonials section with cards for each company.
 
+### Portfolio section
+- [ ] Portfolio section with cards for each project.
+
 ### Contact section
 - [ ] Contact section with a form with Formspree.
 
