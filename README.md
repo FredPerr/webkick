@@ -1,5 +1,9 @@
 # Archetype
 
+## Customization
+Set the information in `next-app/src/constants/*.ts` files.
+Change the icons (favicons) of the website in `next-app/public/images/favicons/` using the [RealFaviconGenerator](https://realfavicongenerator.net/).
+
 ## Installation & Running 
 
 ### How to use
