@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import { NextUIProvider } from '@nextui-org/react'
-import { NextPageWithLayout } from '@/layouts/index'
+import { NextPageWithLayout } from '@/layouts/Layout'
 import theme from '@/styles/themes/index'
 import React from 'react'
 

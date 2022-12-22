@@ -1,11 +1,14 @@
-import Box from '@/components/box'
-import { Text } from '@nextui-org/react'
+import Layout from '@/layouts/Layout'
 
 
 export default function Home() {
   return (
-    <Box>
-      <Text>fdsasdfdsafs</Text>
-    </Box>
+    <>
+    </>
   )
+}
+
+
+Home.layout = (page: React.ReactElement)=> {
+  return <Layout>{page}</Layout>
 }
