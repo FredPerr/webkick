@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
+  swcMinify: true,
+  trailingSlash: true,
 
   webpack(config) {
     config.module.rules.push({
