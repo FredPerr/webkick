@@ -2,10 +2,11 @@ import React from "react"
 import { NextPage } from "next"
 import Head from "next/head"
 import website from "@/constants/website"
+
+
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
     layout?: (page: React.ReactElement) => React.ReactNode
 }
-
 
 export type LayoutProps = {
     children: React.ReactNode
