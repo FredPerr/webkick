@@ -1,14 +1,23 @@
-export default {
-    HOME: {
-        path: '/',
-        title: 'Home'
+export const navbar = [
+    {
+        path: '/#services',
+        title: 'Services'
     },
-    ABOUT: {
-        path: '/about',
+    {
+        path: '/#about',
         title: 'About'
     },
-    CONTACT: {
-        path: '/contact',
-        title: 'Contact'
+    {
+        path: '/#projects',
+        title: 'Projects'
+    },
+    {
+        path: '/#contact',
+        title: 'Contact',
+    },
+    {
+        path: '/#quote',
+        title: 'Get a Quote',
+        type: 'button'
     }
-}
+]
