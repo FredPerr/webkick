@@ -1,4 +1,3 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { NextUIProvider } from '@nextui-org/react'
 import { NextPageWithLayout } from '@/layouts/index'
