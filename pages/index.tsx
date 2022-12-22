@@ -1,16 +1,24 @@
 import Layout from '@/layouts/Layout'
-import Hero from '@/sections/hero'
+import Hero, { HeroContainer } from '@/sections/hero'
+import { Navbar } from '../components/navbar'
 
 
 export default function Home() {
   return (
     <>
-      <Hero/>
+      <HeroContainer>
+        <Navbar />
+        <Hero />
+      </HeroContainer>
     </>
   )
 }
 
 
-Home.layout = (page: React.ReactElement)=> {
-  return <Layout>{page}</Layout>
+Home.layout = (page: React.ReactElement) => {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
 }
