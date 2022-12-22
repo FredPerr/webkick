@@ -1,11 +1,11 @@
 version: '3'
 
 services:
-  next-app:
-    container_name: next-app
+  web:
+    container_name: web
     build:
-      context: ./next-app
-      dockerfile: prod.Dockerfile
+      context: .
+      dockerfile: Dockerfile
       args:
         ENV_VARIABLE: ${ENV_VARIABLE}
         NEXT_PUBLIC_ENV_VARIABLE: ${NEXT_PUBLIC_ENV_VARIABLE}

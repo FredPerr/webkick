@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Hero/>
-      <Text>dst</Text>
+      <Text>Test</Text>
     </>
   )
 }
