@@ -1,8 +1,10 @@
 # Archetype
 
 ## Customization
-Set the information in `next-app/src/constants/*.ts` files.
-Change the icons (favicons) of the website in `next-app/public/images/favicons/` using the [RealFaviconGenerator](https://realfavicongenerator.net/).
+Set the information in `constants/*.ts` files.
+Change the icons (favicons) of the website in `public/images/favicons/` using the [RealFaviconGenerator](https://realfavicongenerator.net/).
+
+Customize the service cards in `constants/services.ts`.
 
 ## Installation & Running 
 
@@ -10,7 +12,7 @@ Change the icons (favicons) of the website in `next-app/public/images/favicons/`
 
 Optionally, after the installation is complete:
 
-- Run `cd next-app`, then run `npm install` or `yarn install` or `pnpm install` to generate a lockfile.
+- Run `npm install`.
 
 It is recommended to commit a lockfile to version control. Although the example will work without one, build errors are more likely to occur when using the latest version of all dependencies. This way, we're always using a known good configuration to develop and run in production.
 
@@ -33,7 +35,7 @@ docker network create archetype_network
 docker-compose -f docker-compose.dev.yml build
 
 # Up dev
-docker-compose -f docker-compose.dev.yml up
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

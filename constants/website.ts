@@ -11,5 +11,9 @@ export default {
         title: 'Archetype',
         subtitle: 'Next.js Boilerplate',
         description: 'Next.js Boilerplate with TypeScript, and React.',
+    },
+    services: {
+        title: 'Our Services',
+        subtitle: 'Polyvalence & Excellence',
     }
 }
