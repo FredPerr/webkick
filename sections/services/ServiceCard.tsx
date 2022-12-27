@@ -13,7 +13,7 @@ export type ServiceCardType = typeof ServiceCard
 
 export default function ServiceCard(props: ServiceCardProps) {
     return (
-        <Card css={{ fd: 'column', mw: '400px', p: 20, br: 0, m: 10 }}>
+        <Card css={{ fd: 'column', mw: '350px', p: 20, br: 0, m: 10 }}>
             <Card.Header>
                 <img
                     src={props.img}
