@@ -4,13 +4,13 @@
 
 ## Home
 ### Hero section
-- [ ] Hero section with a background image, (slider optional).
+- [x] Hero section with a background image, (slider optional).
 
 ### Services section
-- [ ] Services section with cards and icons.
+- [x] Services section with cards and icons.
 
 ### About section
-- [ ] About section with image and text.
+- [x] About section with image and text.
 
 ### Testimonials section
 - [ ] Testimonials section with cards for each company.
