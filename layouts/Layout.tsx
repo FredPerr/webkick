@@ -2,6 +2,7 @@ import React from 'react'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import website from '@/constants/website'
+import Footer from '@/components/footer/Footer'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
     layout?: (page: React.ReactElement) => React.ReactNode
@@ -56,6 +57,7 @@ export default function Layout({ children }: LayoutProps) {
                 <meta name="google" content="notranslate" />
             </Head>
             {children}
+            <Footer />
         </>
     )
 }
