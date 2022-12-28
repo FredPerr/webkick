@@ -8,8 +8,6 @@ export default function AboutContainer() {
     return (
         <Section
             id="about"
-            title="About us"
-            subtitle="What we have done for 20+ years"
             css={{ position: 'relative' }}
         >
             <Image
