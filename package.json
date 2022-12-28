@@ -3,7 +3,8 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "start": "next start"
+        "start": "next start",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@formspree/react": "^2.4.1",
@@ -17,6 +18,7 @@
         "@types/node": "^18.11.9",
         "@types/react": "^18.0.25",
         "@types/react-dom": "^18.0.9",
+        "husky": "^8.0.2",
         "prettier": "2.8.1",
         "typescript": "^4.9.3"
     }
