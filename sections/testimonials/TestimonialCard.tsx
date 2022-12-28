@@ -24,8 +24,16 @@ export default function TestimonialCard(props: TestimonialCardProps) {
                         >
                             {props.subtitle}
                         </Text>
-                        <Text h3 color="black">
+                        <Text h3 color="black" css={{ mb: 0 }}>
                             {props.title}
+                        </Text>
+                        <Text
+                            size={12}
+                            weight="bold"
+                            transform="uppercase"
+                            color="#ffffffAA"
+                        >
+                            {props.note}
                         </Text>
                     </Col>
                 </Card.Header>
@@ -49,35 +57,28 @@ export default function TestimonialCard(props: TestimonialCardProps) {
                     }}
                 >
                     <Row>
-                        <Col>
-                            <Text color="#000" size={12}>
-                                {props.note}
-                            </Text>
+                        <Col css={{dflex: 'center', fd: 'column'}}>
                             <Text color="#000" size={12}>
                                 {props.comment}
                             </Text>
-                        </Col>
-                        <Col>
-                            <Row justify="flex-end">
-                                <Button
-                                    as={Link}
-                                    href={props.visit}
-                                    flat
-                                    auto
-                                    rounded
-                                    color="primary"
+                            <Button
+                                size="sm"
+                                as={Link}
+                                href={props.visit}
+                                flat
+                                auto
+                                rounded
+                                color="primary"
+                            >
+                                <Text
+                                    css={{ color: 'inherit' }}
+                                    size={12}
+                                    weight="bold"
+                                    transform="uppercase"
                                 >
-                                    <Text
-                                        css={{ color: 'inherit' }}
-                                        size={12}
-                                        weight="bold"
-                                        transform="uppercase"
-                                        as={Link}
-                                    >
-                                        Visit
-                                    </Text>
-                                </Button>
-                            </Row>
+                                    Visit
+                                </Text>
+                            </Button>
                         </Col>
                     </Row>
                 </Card.Footer>
