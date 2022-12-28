@@ -6,10 +6,7 @@ import { Title } from '@/components/section'
 
 export default function AboutContainer() {
     return (
-        <Section
-            id="about"
-            css={{ position: 'relative' }}
-        >
+        <Section id="about" css={{ position: 'relative' }}>
             <Image
                 src="/images/about-demo.jpg"
                 objectFit="cover"
