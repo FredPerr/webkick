@@ -20,7 +20,7 @@ export default function ClassicNavbar() {
             <Navbar.Content gap="$15">
                 {navbar.map((route, index) =>
                     route.type === 'button' ? (
-                        <Navbar.Item>
+                        <Navbar.Item key={index}>
                             <Button auto as={Link} href={route.path}>
                                 {route.title}
                             </Button>
