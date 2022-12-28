@@ -5,6 +5,7 @@ import { AboutSection } from '@/sections/about'
 import ServicesSection from '@/sections/services/ServicesSection'
 import { TestimonialsSection } from '@/sections/testimonials'
 import PortfolioSection from '@/sections/portfolio/PortfolioSection'
+import { ContactSection } from '@/sections/contact'
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
             <AboutSection />
             <TestimonialsSection />
             {/* <PortfolioSection /> */}
+            <ContactSection />
         </>
     )
 }
