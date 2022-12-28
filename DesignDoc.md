@@ -16,7 +16,7 @@
 
 ### Testimonials section
 
--   [ ] Testimonials section with cards for each company.
+-   [x] Testimonials section with cards for each company.
 
 ### Portfolio section
 
