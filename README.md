@@ -1,18 +1,19 @@
 # Archetype
 
 ## Customization
+
 Set the information in `constants/*.ts` files.
 Change the icons (favicons) of the website in `public/images/favicons/` using the [RealFaviconGenerator](https://realfavicongenerator.net/).
 
 Customize the service cards in `constants/services.ts`.
 
-## Installation & Running 
+## Installation & Running
 
 ### How to use
 
 Optionally, after the installation is complete:
 
-- Run `npm install`.
+-   Run `npm install`.
 
 It is recommended to commit a lockfile to version control. Although the example will work without one, build errors are more likely to occur when using the latest version of all dependencies. This way, we're always using a known good configuration to develop and run in production.
 
@@ -63,7 +64,8 @@ docker-compose -f docker-compose.prod.yml up -d
 Open [http://localhost:3000](http://localhost:3000).
 
 ###
- Useful commands
+
+Useful commands
 
 ```bash
 # Stop all running containers

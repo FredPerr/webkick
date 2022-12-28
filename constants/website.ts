@@ -1,4 +1,4 @@
-import AppLogo from "@/public/images/logo.svg?url"
+import AppLogo from '@/public/images/logo.svg?url'
 
 export default {
     title: 'Archetype - Next.js Boilerplate',
@@ -15,5 +15,5 @@ export default {
     services: {
         title: 'Our Services',
         subtitle: 'Polyvalence & Excellence',
-    }
+    },
 }

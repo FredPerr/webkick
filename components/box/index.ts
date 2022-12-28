@@ -1,3 +1,3 @@
-import { default as Box } from "./box";
+import { default as Box } from './box'
 
-export default Box;
+export default Box

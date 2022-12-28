@@ -1,15 +1,15 @@
 export const navbar = [
     {
         path: '/#services',
-        title: 'Services'
+        title: 'Services',
     },
     {
         path: '/#about',
-        title: 'About'
+        title: 'About',
     },
     {
         path: '/#projects',
-        title: 'Projects'
+        title: 'Projects',
     },
     {
         path: '/#contact',
@@ -18,6 +18,6 @@ export const navbar = [
     {
         path: '/#quote',
         title: 'Get a Quote',
-        type: 'button'
-    }
+        type: 'button',
+    },
 ]

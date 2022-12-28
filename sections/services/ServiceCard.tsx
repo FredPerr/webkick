@@ -1,11 +1,11 @@
-import Box from "@/components/box"
-import { Card, Text, Link } from "@nextui-org/react"
+import Box from '@/components/box'
+import { Card, Text, Link } from '@nextui-org/react'
 
 interface ServiceCardProps {
-    title?: string,
-    subtitle?: string,
-    description?: string,
-    img: string,
+    title?: string
+    subtitle?: string
+    description?: string
+    img: string
     href?: string
 }
 
@@ -22,25 +22,22 @@ export default function ServiceCard(props: ServiceCardProps) {
                     alt={props.title}
                 />
                 <Box css={{ ml: '$8' }}>
-                    <Text h4 css={{ lineHeight: "$xs" }}>{props.title}</Text>
-                    <Text css={{ color: "$accents8" }}>{props.subtitle}</Text>
+                    <Text h4 css={{ lineHeight: '$xs' }}>
+                        {props.title}
+                    </Text>
+                    <Text css={{ color: '$accents8' }}>{props.subtitle}</Text>
                 </Box>
             </Card.Header>
             <Card.Body>
                 <Text>{props.description}</Text>
             </Card.Body>
-            {
-                props.href &&
+            {props.href && (
                 <Card.Footer>
-                    <Link
-                        color="primary"
-                        target="_blank"
-                        href={props.href}
-                    >
+                    <Link color="primary" target="_blank" href={props.href}>
                         See more
                     </Link>
                 </Card.Footer>
-            }
+            )}
         </Card>
     )
 }

@@ -1,11 +1,15 @@
-import website from "@/constants/website";
-import { navbar } from "@/constants/routing"
-import { Navbar, Image, Button, Link } from "@nextui-org/react";
-
+import website from '@/constants/website'
+import { navbar } from '@/constants/routing'
+import { Navbar, Image, Button, Link } from '@nextui-org/react'
 
 export default function ClassicNavbar() {
     return (
-        <Navbar disableBlur variant="static" css={{ bgColor: 'black', h: '76px' }} containerCss={{bgColor: 'black'}}>
+        <Navbar
+            disableBlur
+            variant="static"
+            css={{ bgColor: 'black', h: '76px' }}
+            containerCss={{ bgColor: 'black' }}
+        >
             <Navbar.Content>
                 <Navbar.Link href="/#">
                     <Navbar.Brand>
@@ -15,12 +19,17 @@ export default function ClassicNavbar() {
             </Navbar.Content>
             <Navbar.Content gap="$15">
                 {navbar.map((route, index) =>
-                    route.type === "button" ?
-                        <Navbar.Item><Button auto as={Link} href={route.path}>{route.title}</Button></Navbar.Item>
-                        :
+                    route.type === 'button' ? (
+                        <Navbar.Item>
+                            <Button auto as={Link} href={route.path}>
+                                {route.title}
+                            </Button>
+                        </Navbar.Item>
+                    ) : (
                         <Navbar.Link href={route.path} key={index}>
                             {route.title}
                         </Navbar.Link>
+                    )
                 )}
             </Navbar.Content>
         </Navbar>
