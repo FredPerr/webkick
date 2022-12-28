@@ -4,6 +4,7 @@ import { Navbar } from '../components/navbar'
 import { AboutSection } from '@/sections/about'
 import ServicesSection from '@/sections/services/ServicesSection'
 import { TestimonialsSection } from '@/sections/testimonials'
+import PortfolioSection from '@/sections/portfolio/PortfolioSection'
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <ServicesSection />
             <AboutSection />
             <TestimonialsSection />
+            {/* <PortfolioSection /> */}
         </>
     )
 }
