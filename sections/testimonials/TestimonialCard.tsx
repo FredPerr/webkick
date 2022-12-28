@@ -16,7 +16,15 @@ export default function TestimonialCard(props: TestimonialCardProps) {
     return (
         <Grid xs={11} sm={6} md={4}>
             <Card css={{ w: '100%', height: '70vh' }}>
-                <Card.Header css={{ position: 'absolute', zIndex: 1, top: 5, jc: 'left', ai: 'start' }}>
+                <Card.Header
+                    css={{
+                        position: 'absolute',
+                        zIndex: 1,
+                        top: 5,
+                        jc: 'left',
+                        ai: 'start',
+                    }}
+                >
                     <Col>
                         <Text
                             size={12}
@@ -24,11 +32,17 @@ export default function TestimonialCard(props: TestimonialCardProps) {
                             transform="uppercase"
                             color="#ffffffAA"
                         >
-                            {
-                                [...Array(5)].map((e, i) => <span key={i}>{i + 1 > props.rating ? <>&#9734;</> : <>&#9733;</>}</span>)
-                            }
+                            {[...Array(5)].map((e, i) => (
+                                <span key={i}>
+                                    {i + 1 > props.rating ? (
+                                        <>&#9734;</>
+                                    ) : (
+                                        <>&#9733;</>
+                                    )}
+                                </span>
+                            ))}
                         </Text>
-                        <Box css={{d: 'flex', ai: 'center'}}>
+                        <Box css={{ d: 'flex', ai: 'center' }}>
                             <Text h3 color="black" css={{ mb: 0, mr: 14 }}>
                                 {props.title}
                             </Text>
@@ -72,7 +86,11 @@ export default function TestimonialCard(props: TestimonialCardProps) {
                 >
                     <Row>
                         <Col css={{ dflex: 'center', fd: 'column' }}>
-                            <Text color="#000" size={12} css={{ mb: 5, jc: 'justify' }}>
+                            <Text
+                                color="#000"
+                                size={12}
+                                css={{ mb: 5, jc: 'justify' }}
+                            >
                                 {props.comment} - {props.writer}
                             </Text>
                             <Button

@@ -42,7 +42,9 @@ export default function TestimonialsSection() {
                     writer="CEO - A&G Real Estate"
                 />
             </Grid.Container>
-            <Button as={Link} css={{br: 0, mt: 14}}>Contact us</Button>
+            <Button as={Link} css={{ br: 0, mt: 14 }}>
+                Contact us
+            </Button>
         </Section>
     )
 }
