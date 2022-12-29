@@ -8,8 +8,12 @@ export default function ClassicNavbar() {
             disableBlur
             variant="static"
             css={{ bgColor: 'black', h: '76px' }}
-            containerCss={{ bgColor: 'black' }}
+            containerCss={{ bgColor: 'black', '@smMax': { jc: 'start' } }}
         >
+            <Navbar.Toggle
+                aria-label="toggle navigation"
+                css={{ mr: 10, '@smMin': { d: 'none' } }}
+            />
             <Navbar.Content>
                 <Navbar.Link href="/#">
                     <Navbar.Brand>
@@ -17,7 +21,7 @@ export default function ClassicNavbar() {
                     </Navbar.Brand>
                 </Navbar.Link>
             </Navbar.Content>
-            <Navbar.Content gap="$15">
+            <Navbar.Content gap="$15" css={{ '@smMax': { d: 'none' } }}>
                 {navbar.map((route, index) =>
                     route.type === 'button' ? (
                         <Navbar.Item key={index}>
@@ -32,6 +36,21 @@ export default function ClassicNavbar() {
                     )
                 )}
             </Navbar.Content>
+            <Navbar.Collapse>
+                {navbar.map((route, index) =>
+                    route.type === 'button' ? (
+                        <Navbar.CollapseItem key={index}>
+                            <Button auto as={Link} href={route.path}>
+                                {route.title}
+                            </Button>
+                        </Navbar.CollapseItem>
+                    ) : (
+                        <Navbar.CollapseItem key={index}>
+                            <Link href={route.path}>{route.title}</Link>
+                        </Navbar.CollapseItem>
+                    )
+                )}
+            </Navbar.Collapse>
         </Navbar>
     )
 }
