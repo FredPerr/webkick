@@ -7,7 +7,6 @@
         "prepare": "husky install"
     },
     "dependencies": {
-        "@formspree/react": "^2.4.1",
         "@nextui-org/react": "^1.0.0-beta.11",
         "next": "13.1.1",
         "react": "^18.2.0",

@@ -1,11 +1,4 @@
-# Archetype
-
-## Customization
-
-Set the information in `constants/*.ts` files.
-Change the icons (favicons) of the website in `public/images/favicons/` using the [RealFaviconGenerator](https://realfavicongenerator.net/).
-
-Customize the service cards in `constants/services.ts`.
+# Webkick
 
 ## Installation & Running
 
@@ -30,11 +23,6 @@ First, run the development server:
 # with each other, by using their container name as a hostname
 docker network create archetype_network
 
-# Build dev
-# Note: Keep v1 command until "Use Docker Compose v2" is enabled by default for Docker Desktop for Linux
-# Docker aliases `docker-compose` (v1 command) to `docker compose` (v2 command), but not the other way around
-docker-compose -f docker-compose.dev.yml build
-
 # Up dev
 npm run dev
 ```
@@ -52,13 +40,13 @@ First, run the production server (Final image approximately 110 MB).
 ```bash
 # Create a network, which allows containers to communicate
 # with each other, by using their container name as a hostname
-docker network create archetype_network
+docker network create webkick_network
 
 # Build prod
-docker-compose -f docker-compose.prod.yml build
+docker-compose -f build
 
 # Up prod in detached mode
-docker-compose -f docker-compose.prod.yml up -d
+docker-compose -f up -d
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
@@ -74,3 +62,23 @@ docker kill $(docker ps -aq) && docker rm $(docker ps -aq)
 # Free space (free docker's files on the host filesystem entirely: containers, images, ...)
 docker system prune -af --volumes
 ```
+
+## Information:
+
+-   Email: webkick.agency@gmail.com (recovery: frederic.perr@gmail.com)
+-   Domain name: GoDaddy (with Gmail address)
+
+### Logos
+
+## Availability
+
+### Company name
+
+-   World: (_one company but closed, another in build_)
+-   Canada: (_WebKick inc. exists in Ontario but nothing seems to be assosiated with_)
+-   Québec: Free
+
+### Domains
+
+-   &#x2713; webkick.ca (_owned by agency_)
+-   &#x2717; webkick.com (_but unused_)
