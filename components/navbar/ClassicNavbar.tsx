@@ -5,7 +5,7 @@ export default function ClassicNavbar() {
     return (
         <Navbar variant="static">
             <Navbar.Brand>
-                <LogoAnimated size={50}/>
+                <LogoAnimated size={50} />
             </Navbar.Brand>
         </Navbar>
     )
