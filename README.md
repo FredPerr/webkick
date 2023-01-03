@@ -70,6 +70,18 @@ docker system prune -af --volumes
 
 ### Logos
 
+---
+
+![Square](./public/images/logos/logo.svg)
+
+---
+
+![Text](./public/images/logos/logo-text.svg)
+
+---
+
+Both available in white contrast format too.
+
 ## Availability
 
 ### Company name
