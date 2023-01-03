@@ -14,14 +14,14 @@ export default function Layout({ children }: LayoutProps) {
     return (
         <>
             <Head>
-                <title>WebKick</title>
+                <title>WebKick - Création de site Web pour entreprises</title>
                 <meta
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"
                 />
                 <meta
                     property="og:title"
-                    content="WebKick - Création de site Web pour les entreprises"
+                    content="WebKick - Création de site Web pour entreprises"
                     key="title"
                 />
                 <meta
