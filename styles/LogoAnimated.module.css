@@ -1,0 +1,35 @@
+.arrow_appear {
+    animation: arrow-appear-animation 1s cubic-bezier(0.12, 1.12, 0.65, 0.46);
+    animation-fill-mode: forwards;
+    transform-origin: center center;
+}
+
+.ring_appear {
+    animation: ring-appear-animation 3s cubic-bezier(0.14, 0.65, 0.9, 0.61);
+    animation-fill-mode: forwards;
+    animation-delay: 0.9s;
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+}
+
+@keyframes ring-appear-animation {
+    0% {
+        stroke-dasharray: 3000;
+        stroke-dashoffset: 3000;
+    }
+    100% {
+        stroke-dasharray: 3000;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes arrow-appear-animation {
+    0% {
+        clip-path: circle(0% at center center);
+        transform: scale(0.6);
+    }
+    100% {
+        clip-path: circle(100% at center center);
+        transform: scale(1);
+    }
+}

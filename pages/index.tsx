@@ -1,7 +1,12 @@
 import Layout from '@/layouts/Layout'
+import { LogoAnimated } from '@/components/logo'
 
 export default function Home() {
-    return <></>
+    return (
+        <>
+            <LogoAnimated />
+        </>
+    )
 }
 
 Home.layout = (page: React.ReactElement) => {
