@@ -1,8 +1,6 @@
 import React from 'react'
 import { NextPage } from 'next'
 import Head from 'next/head'
-import website from '@/constants/website'
-import Footer from '@/components/footer/Footer'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
     layout?: (page: React.ReactElement) => React.ReactNode
@@ -16,19 +14,33 @@ export default function Layout({ children }: LayoutProps) {
     return (
         <>
             <Head>
-                <title>{website.title}</title>
+                <title>WebKick</title>
                 <meta
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"
                 />
-                <meta property="og:title" content={website.title} key="title" />
-                <meta property="og:description" content={website.description} />
-                <meta name="description" content={website.description} />
+                <meta
+                    property="og:title"
+                    content="WebKick - Création de site Web pour les entreprises"
+                    key="title"
+                />
+                <meta
+                    property="og:description"
+                    content="Obtenez votre soumission en 24H-48H pour obtenir votre site Web rapidement et à un prix adaptatif à vos besoin. Payez après la réception en 12 mois à 0%!"
+                />
+                <meta
+                    name="description"
+                    content="Obtenez votre soumission en 24H-48H pour obtenir votre site Web rapidement et à un prix adaptatif à vos besoin. Payez après la réception en 12 mois à 0%!"
+                />
                 <meta
                     property="og:image"
                     content="/favicon/favicon-32x32.png"
                 />
-                <meta name="keywords" content={website.keywords} key="desc" />
+                <meta
+                    name="keywords"
+                    content="agence web, site web entreprise, création web"
+                    key="desc"
+                />
                 <meta name="msapplication-TileColor" content="#FFFFFF" />
                 <link
                     rel="apple-touch-icon"
@@ -57,7 +69,6 @@ export default function Layout({ children }: LayoutProps) {
                 <meta name="google" content="notranslate" />
             </Head>
             {children}
-            <Footer />
         </>
     )
 }
