@@ -1,14 +1,15 @@
 import Layout from '@/layouts/Layout'
-import { LogoAnimated } from '@/components/logo'
+import { Hero } from '@/components/hero'
+import DefaultLayout from '@/layouts/Default'
 
 export default function Home() {
     return (
         <>
-            <LogoAnimated />
+            <Hero />
         </>
     )
 }
 
 Home.layout = (page: React.ReactElement) => {
-    return <Layout>{page}</Layout>
+    return <DefaultLayout>{page}</DefaultLayout>
 }
