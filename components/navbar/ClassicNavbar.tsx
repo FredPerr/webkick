@@ -3,7 +3,7 @@ import { LogoAnimated } from '../logo'
 
 export default function ClassicNavbar() {
     return (
-        <Navbar variant="static">
+        <Navbar variant="static" isBordered>
             <Navbar.Brand>
                 <LogoAnimated size={50} />
             </Navbar.Brand>
