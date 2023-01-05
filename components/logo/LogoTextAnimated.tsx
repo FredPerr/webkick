@@ -3,7 +3,7 @@ import LogoAnimated from './LogoAnimated'
 
 export default function LogoTextAnimated(props: { size: number }) {
     return (
-        <>
+        <div>
             <LogoAnimated size={props.size} />
             <svg
                 width={(props.size * 7.01) / 1.33}
@@ -18,6 +18,6 @@ export default function LogoTextAnimated(props: { size: number }) {
                     fill="#1877F2"
                 />
             </svg>
-        </>
+        </div>
     )
 }
