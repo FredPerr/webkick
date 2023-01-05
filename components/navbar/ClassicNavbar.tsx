@@ -1,11 +1,11 @@
 import { Navbar } from '@nextui-org/react'
-import { LogoAnimated } from '../logo'
+import { LogoTextAnimated } from '../logo'
 
 export default function ClassicNavbar() {
     return (
-        <Navbar variant="static" isBordered>
+        <Navbar variant="static" disableBlur disableShadow>
             <Navbar.Brand>
-                <LogoAnimated size={50} />
+                <LogoTextAnimated size={30} />
             </Navbar.Brand>
         </Navbar>
     )

@@ -16,15 +16,15 @@ export default function LogoAnimated(props: { size: number }) {
             <path
                 className={styles.ring_appear}
                 d="M134.765 115.331C113.702 160.286 172.638 234.455 263.452 276.78C309.507 298.226 357.021 308.908 397.122 306.804C434.266 304.862 460.027 292.359 469.749 271.601"
-                stroke="white"
-                strokeWidth="20"
+                stroke="#262626"
+                strokeWidth="40"
                 strokeLinecap="round"
             />
             <path
                 className={styles.ring_appear}
                 d="M436.15 145.81C410.982 122.542 382.269 103.42 351.088 89.1609C260.152 46.7957 165.612 49.183 144.549 94.1379C123.485 139.093 182.422 213.262 273.236 255.587C319.291 277.033 366.804 287.715 406.905 285.611C444.049 283.669 469.811 271.166 479.532 250.408C489.618 228.76 479.856 204.077 469.892 187.163"
                 stroke="#1877F2"
-                strokeWidth="25"
+                strokeWidth="30"
                 strokeLinecap="round"
             />
         </svg>

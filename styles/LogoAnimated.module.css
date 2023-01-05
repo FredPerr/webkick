@@ -12,13 +12,32 @@
     stroke-dashoffset: 3000;
 }
 
+.text_appear path {
+    animation: text-appear-animation 0.7s cubic-bezier(0.76, 1.01, 0.88, 0.89);
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+    clip-path: circle(0% at left center);
+}
+
+@keyframes text-appear-animation {
+    0% {
+        /* opacity: 0; */
+        /* transform-origin: center center; */
+        /* transform: translateX(-100%); */
+        clip-path: circle(0% at left center);
+    }
+    100% {
+        clip-path: circle(200% at left center);
+        /* opacity: 1; */
+        /* transform: transformX(0); */
+    }
+}
+
 @keyframes ring-appear-animation {
     0% {
-        stroke-dasharray: 3000;
         stroke-dashoffset: 3000;
     }
     100% {
-        stroke-dasharray: 3000;
         stroke-dashoffset: 0;
     }
 }
