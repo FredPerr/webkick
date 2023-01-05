@@ -1,9 +1,10 @@
 import styles from '@/styles/LogoAnimated.module.css'
 import LogoAnimated from './LogoAnimated'
+import Box from '../box'
 
 export default function LogoTextAnimated(props: { size: number }) {
     return (
-        <div>
+        <Box css={{ dflex: 'center' }}>
             <LogoAnimated size={props.size} />
             <svg
                 width={(props.size * 7.01) / 1.33}
@@ -18,6 +19,6 @@ export default function LogoTextAnimated(props: { size: number }) {
                     fill="#1877F2"
                 />
             </svg>
-        </div>
+        </Box>
     )
 }
