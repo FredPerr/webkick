@@ -14,7 +14,13 @@ class MyDocument extends Document {
     render() {
         return (
             <Html lang="fr">
-                <Head>{CssBaseline.flush()}</Head>
+                <Head>
+                    {CssBaseline.flush()}
+                    <link
+                        rel="stylesheet"
+                        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap"
+                    />
+                </Head>
                 <body>
                     <Main />
                     <NextScript />

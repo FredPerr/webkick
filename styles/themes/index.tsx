@@ -8,5 +8,11 @@ export default createTheme({
             background: '#262626',
             primary: '#1877F2',
         },
+        fonts: {
+            sans: "'Roboto', sans-serif",
+        },
+        letterSpacings: {
+            tighter: '0.5px',
+        },
     },
 })
