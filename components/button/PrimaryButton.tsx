@@ -1,14 +1,13 @@
 import { Button, styled } from '@nextui-org/react'
 
 export default styled(Button, {
-    borderRadius: '1px',
+    borderRadius: '3px',
     bgColor: '$primary',
     fontWeight: 600,
-    color: {
+    colors: {
         primary: {
             backgroud: '$primary',
             color: '#FFFFFF',
-            borderRadius: '3px',
         },
     },
 })
