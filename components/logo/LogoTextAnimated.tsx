@@ -4,7 +4,7 @@ import { TextAppearAnimation } from '@/styles/LogoAnimated'
 
 export default function LogoTextAnimated(props: { size: number }) {
     return (
-        <Box css={{ dflex: 'center' }}>
+        <Box css={{ d: 'flex', ai: 'center' }}>
             <LogoAnimated size={props.size} />
             <svg
                 width={(props.size * 7.01) / 1.33}

@@ -27,7 +27,7 @@ export default function ClassicNavbar() {
                     css={{ mr: 10, '@smMin': { d: 'none' } }}
                 />
                 <NextLink href="/#">
-                    <LogoTextAnimated size={30} />
+                    {scrollPosition > 100 && <LogoTextAnimated size={30} />}
                 </NextLink>
             </Navbar.Brand>
             <Navbar.Content
