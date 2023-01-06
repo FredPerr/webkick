@@ -1,4 +1,3 @@
-import Layout from '@/layouts/Layout'
 import { Hero } from '@/components/hero'
 import DefaultLayout from '@/layouts/Default'
 
