@@ -3,6 +3,7 @@ import Box from '../box'
 import HeroImage from './HeroImage'
 import { LogoTextAnimated } from '../logo'
 import { Button } from '../button'
+import NextLink from 'next/link'
 
 export default function Hero() {
     const theme = useTheme()
@@ -85,8 +86,12 @@ export default function Hero() {
                         </Text>
                     </Box>
                     <Box css={{ '& .nextui-button': { my: 20 } }}>
-                        <Button auto>Obtenir ma soumission</Button>
-                        <Button auto>En savoir plus</Button>
+                        <NextLink href="/#soumission">
+                            <Button auto>Obtenir ma soumission</Button>
+                        </NextLink>
+                        <NextLink href="/#avantages">
+                            <Button auto>En savoir plus</Button>
+                        </NextLink>
                     </Box>
                 </Box>
                 <Box
