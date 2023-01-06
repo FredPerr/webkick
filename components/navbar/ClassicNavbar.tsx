@@ -3,14 +3,27 @@ import { LogoTextAnimated } from '@/components/logo'
 import { Button } from '@/components/button'
 import NextLink from 'next/link'
 import { NavbarDrawer } from '@/components/navbar'
+import useScrollPosition from '@/hooks/useScrollPosition'
 
 export default function ClassicNavbar() {
+    const scrollPosition = useScrollPosition()
+
     return (
-        <Navbar variant="sticky" disableBlur disableShadow>
+        <Navbar
+            variant="static"
+            disableBlur
+            disableShadow
+            css={{ position: 'fixed', background: 'transparent' }}
+            containerCss={{
+                background:
+                    scrollPosition < 200 ? 'transparent' : '$background',
+                transition: 'background .25s ease-in-out',
+            }}
+        >
             <NavbarDrawer />
             <Navbar.Brand>
                 <Navbar.Toggle
-                    aria-label="toggle navigation"
+                    aria-label="toggle navbar drawer"
                     css={{ mr: 10, '@smMin': { d: 'none' } }}
                 />
                 <NextLink href="/#">
