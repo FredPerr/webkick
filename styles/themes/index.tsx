@@ -6,6 +6,7 @@ export default createTheme({
         // Override theme attributes (for more information see https://nextui.org/docs/theme/customize-theme).
         colors: {
             background: '#262626',
+            primary: '#1877F2',
         },
     },
 })

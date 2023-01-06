@@ -1,12 +1,49 @@
-import { Navbar } from '@nextui-org/react'
-import { LogoTextAnimated } from '../logo'
+import { Link, Navbar, styled } from '@nextui-org/react'
+import { LogoTextAnimated } from '@/components/logo'
+import { Button } from '@/components/button'
+import NextLink from 'next/link'
+import { NavbarDrawer } from '@/components/navbar'
 
 export default function ClassicNavbar() {
     return (
-        <Navbar variant="static" disableBlur disableShadow>
+        <Navbar variant="sticky" disableBlur disableShadow>
+            <NavbarDrawer />
             <Navbar.Brand>
-                <LogoTextAnimated size={30} />
+                <Navbar.Toggle
+                    aria-label="toggle navigation"
+                    css={{ mr: 10, '@smMin': { d: 'none' } }}
+                />
+                <NextLink href="/#">
+                    <LogoTextAnimated size={30} />
+                </NextLink>
             </Navbar.Brand>
+            <Navbar.Content
+                css={{
+                    '@xsMax': { d: 'none' },
+                    '& .nextui-navbar-item': {
+                        fontWeight: 600,
+                        fs: 14,
+                        letterSpacing: 10,
+                        '@smMax': { d: 'none' },
+                    },
+                }}
+            >
+                <Navbar.Item as={Link} href="/#avantages">
+                    Avantages
+                </Navbar.Item>
+                <Navbar.Item as={Link} href="/#solution-web">
+                    Solution
+                </Navbar.Item>
+                <Navbar.Item as={Link} href="/#processus">
+                    Processus
+                </Navbar.Item>
+                <Navbar.Item as={Link} href="/#contact">
+                    Contact
+                </Navbar.Item>
+                <NextLink href="/#soumission">
+                    <Button auto>Obtenir ma soumission</Button>
+                </NextLink>
+            </Navbar.Content>
         </Navbar>
     )
 }
