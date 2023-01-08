@@ -4,6 +4,7 @@ import HeroImage from './HeroImage'
 import { LogoTextAnimated } from '../logo'
 import { Button } from '../button'
 import NextLink from 'next/link'
+import DottedLine from '../shapes/DottedLine'
 
 export default function Hero() {
     const theme = useTheme()
@@ -11,6 +12,7 @@ export default function Hero() {
     return (
         <Box
             css={{
+                position: 'relative',
                 h: '100vh',
                 w: '100vw',
                 backgroundImage:
@@ -22,6 +24,48 @@ export default function Hero() {
                 },
             }}
         >
+            <Box
+                css={{
+                    position: 'absolute',
+                    bottom: -2,
+                    h: 2,
+                    w: '100%',
+                    bgColor: '$primary',
+                    opacity: 0.3,
+                }}
+            ></Box>
+
+            <Box
+                css={{
+                    position: 'absolute',
+                    top: '20%',
+                    bgColor: '$primary',
+                    w: '23px',
+                    h: '120px',
+                    boxShadow: `0px 0px 30px 0px ${theme.theme.colors.primary.value}32`,
+                }}
+            ></Box>
+            <Box
+                css={{
+                    dflex: 'center',
+                    fd: 'column',
+                    position: 'absolute',
+                    bottom: '20%',
+                    right: 0,
+                    bgColor: '$primary',
+                    w: '39px',
+                    h: '80px',
+                    boxShadow: `0px 0px 30px 0px ${theme.theme.colors.primary.value}32`,
+                    '& .nextui-text': { color: 'white' },
+                }}
+            >
+                <NextLink href="/#" locale="fr">
+                    <Text>FR</Text>
+                </NextLink>
+                <NextLink href="/#" locale="en">
+                    <Text>EN</Text>
+                </NextLink>
+            </Box>
             <Box
                 css={{
                     h: 'calc(100% - 76px)',
@@ -61,7 +105,7 @@ export default function Hero() {
                     </Text>
                     <Text css={{ fs: '$md', color: '$gray900', my: 30 }}>
                         Parce que vos clients se tournent de plus en plus vers
-                        le Web pour trouver ce qu'ils veulent, il est judicieux
+                        le Web pour trouver ce qu’ils veulent, il est judicieux
                         de se mettre au premier plan sur le Web pour maximiser
                         ses revenues.
                     </Text>

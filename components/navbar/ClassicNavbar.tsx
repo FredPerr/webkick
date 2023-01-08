@@ -13,10 +13,17 @@ export default function ClassicNavbar() {
             variant="static"
             disableBlur
             disableShadow
-            css={{ position: 'fixed', background: 'transparent' }}
+            css={{
+                position: 'fixed',
+                background: scrollPosition < 50 ? 'transparent' : '$background',
+                transition: 'background .25s ease-in-out',
+                borderBottom:
+                    scrollPosition < 50
+                        ? '0px solid $gray300'
+                        : '1px solid $gray300',
+            }}
             containerCss={{
-                background:
-                    scrollPosition < 200 ? 'transparent' : '$background',
+                background: scrollPosition < 50 ? 'transparent' : '$background',
                 transition: 'background .25s ease-in-out',
             }}
         >
@@ -27,7 +34,7 @@ export default function ClassicNavbar() {
                     css={{ mr: 10, '@smMin': { d: 'none' } }}
                 />
                 <NextLink href="/#">
-                    {scrollPosition > 100 && <LogoTextAnimated size={30} />}
+                    {scrollPosition > 50 && <LogoTextAnimated size={30} />}
                 </NextLink>
             </Navbar.Brand>
             <Navbar.Content

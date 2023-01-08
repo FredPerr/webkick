@@ -7,6 +7,7 @@ export default createTheme({
         colors: {
             background: '#262626',
             primary: '#1877F2',
+            secondary: '#353535',
         },
         fonts: {
             sans: "'Roboto', sans-serif",
