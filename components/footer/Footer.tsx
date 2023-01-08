@@ -1,4 +1,4 @@
-import { Text } from '@nextui-org/react'
+import { Link, Text } from '@nextui-org/react'
 import Box from '../box'
 
 export default function Footer() {
@@ -6,14 +6,22 @@ export default function Footer() {
     return (
         <Box
             css={{
-                w: '100%',
-                pt: 100,
+                px: '8%',
                 ta: 'center',
-                bgColor: 'white',
-                clipPath: 'polygon(0 0, 100% 45%, 100% 100%, 0 100%)',
+                py: 20,
+                d: 'grid',
+                gridTemplateColumns: 'repeat(3, 1fr)',
+                '& p, a': { fs: 14 },
+                justifyItems: 'center',
             }}
         >
-            <Text css={{ color: '$secondary' }}>&copy; {year} -</Text>
+            <Link href="/politique-de-confidentialite">
+                <Text css={{ color: '$gray700', fs: 14 }}>
+                    Politique de confidentialité
+                </Text>
+            </Link>
+            <Text css={{ color: '$gray800' }}>&copy; {year} - WebKick CA</Text>
+            <Text css={{ color: '$gray700' }}>webkick.agency@gmail.com</Text>
         </Box>
     )
 }

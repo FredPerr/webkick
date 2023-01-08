@@ -10,7 +10,7 @@ import { Button } from '../button'
 
 export default function ProcessSection() {
     return (
-        <Box css={{ w: '100%', pb: 100 }}>
+        <Box css={{ w: '100%', pb: 20 }}>
             <SeparatorSvg style={{ width: '100%', marginTop: 20 }} />
             <SectionTitle
                 title="Création & Hébergement Web"

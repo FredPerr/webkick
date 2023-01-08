@@ -5,7 +5,11 @@ import NextLink from 'next/link'
 import { NavbarDrawer } from '@/components/navbar'
 import useScrollPosition from '@/hooks/useScrollPosition'
 
-export default function ClassicNavbar() {
+export default function ClassicNavbar({
+    logoStatic,
+}: {
+    logoStatic?: boolean
+}) {
     const scrollPosition = useScrollPosition()
 
     return (
@@ -15,7 +19,10 @@ export default function ClassicNavbar() {
             disableShadow
             css={{
                 position: 'fixed',
-                background: scrollPosition < 50 ? 'transparent' : '$background',
+                background:
+                    scrollPosition < 50 && logoStatic
+                        ? 'transparent'
+                        : '$background',
                 transition: 'background .25s ease-in-out',
                 borderBottom:
                     scrollPosition < 50
@@ -23,7 +30,10 @@ export default function ClassicNavbar() {
                         : '1px solid $gray300',
             }}
             containerCss={{
-                background: scrollPosition < 50 ? 'transparent' : '$background',
+                background:
+                    scrollPosition < 50 && logoStatic
+                        ? 'transparent'
+                        : '$background',
                 transition: 'background .25s ease-in-out',
             }}
         >
@@ -34,7 +44,9 @@ export default function ClassicNavbar() {
                     css={{ mr: 10, '@smMin': { d: 'none' } }}
                 />
                 <NextLink href="/#">
-                    {scrollPosition > 50 && <LogoTextAnimated size={30} />}
+                    {(scrollPosition > 50 || logoStatic) && (
+                        <LogoTextAnimated size={30} />
+                    )}
                 </NextLink>
             </Navbar.Brand>
             <Navbar.Content
