@@ -1,4 +1,4 @@
-import { Text } from '@nextui-org/react'
+import { CSS, Text } from '@nextui-org/react'
 import Box from '@/components/box'
 
 interface StepTextProps {
@@ -6,11 +6,12 @@ interface StepTextProps {
     subtitle: string
     steps: string[]
     step: number
+    css?: CSS
 }
 
 export default function StepText(props: StepTextProps) {
     return (
-        <Box css={{ w: '70%' }}>
+        <Box css={{ w: '70%', mx: 30, ...props.css }}>
             <Text h5 css={{ fs: '$2xl' }}>
                 {props.step}. {props.title}
             </Text>
