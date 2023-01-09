@@ -1,6 +1,7 @@
 import { Navbar, Link } from '@nextui-org/react'
 import { Button } from '@/components/button'
 import NextLink from 'next/link'
+import React from 'react'
 
 export default function NavbarDrawer() {
     return (
@@ -12,12 +13,10 @@ export default function NavbarDrawer() {
                 ta: 'left',
                 '& .nextui-navbar-collapse-wrapper': {
                     background: '$secondary',
-                    dflex: 'left',
-                    fd: 'column',
                 },
             }}
         >
-            <Navbar.CollapseItem>
+            <Navbar.CollapseItem onClick={() => props.setOpen(false)}>
                 <Link href="/#avantages">Nos Avantages</Link>
             </Navbar.CollapseItem>
             <Navbar.CollapseItem>

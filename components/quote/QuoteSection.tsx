@@ -1,10 +1,38 @@
-import { Input, Textarea, useModal, Modal, Text } from '@nextui-org/react'
+import {
+    Input,
+    Textarea,
+    useModal,
+    Modal,
+    Text,
+    useInput,
+} from '@nextui-org/react'
 import Box from '../box'
 import { SectionTitle } from '../section'
 import WorldMapSvg from '@/public/images/quote/world-map.svg?url'
 import { Button } from '../button'
 
 export default function QuoteSection() {
+    const { value: name, bindings: nameBindings } = useInput('')
+    const { value: company, bindings: companyBindings } = useInput('')
+    const { value: email, bindings: emailBindings } = useInput('')
+    const { value: phone, bindings: phoneBindings } = useInput('')
+    const { value: msg, bindings: msgBindings } = useInput('')
+
+    const sendMail = () => {
+        fetch('/api/email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, company, email, phone, msg }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+            })
+            .catch((err) => console.log(err))
+    }
+
     const { setVisible, bindings } = useModal()
     return (
         <Box
@@ -28,20 +56,39 @@ export default function QuoteSection() {
                     gridTemplate: 'repeat(4, 1fr) / 50% 50%',
                     gap: 10,
                     columnGap: 40,
-                    '& .nextui-input-container--textarea, nextui-input-wrapper--shadow':
-                        { h: '100%' },
+                    '@smMax': {
+                        gridTemplate: 'repeat(5, auto) / 100%',
+                    },
                 }}
             >
-                <Input fullWidth shadow clearable label="Nom complet" />
+                <Input
+                    fullWidth
+                    shadow
+                    clearable
+                    label="Nom complet"
+                    {...nameBindings}
+                    value={name}
+                />
                 <Textarea
                     fullWidth
+                    {...msgBindings}
+                    value={msg}
                     minRows={13}
                     maxRows={13}
-                    css={{ gridRowStart: 1, gridRowEnd: 5, gridColumnStart: 2 }}
+                    css={{
+                        '@smMin': {
+                            gridRowStart: 1,
+                            gridRowEnd: 5,
+                            gridColumnStart: 2,
+                        },
+                        '@smMax': { gridRow: 5 },
+                    }}
                     label="Brève description de votre demande"
-                    placeholder="Décrivez très brièvement votre requête. Nous définirons plus en détails la soumission"
+                    placeholder="Décrivez très brièvement votre requête. Nous définirons plus en détails la soumission lorsque nous vous recontacterons."
                 />
                 <Input
+                    {...companyBindings}
+                    value={company}
                     fullWidth
                     shadow
                     clearable
@@ -49,6 +96,8 @@ export default function QuoteSection() {
                     label="Entreprise représentée"
                 />
                 <Input
+                    {...emailBindings}
+                    value={email}
                     fullWidth
                     shadow
                     clearable
@@ -57,6 +106,8 @@ export default function QuoteSection() {
                     type="email"
                 />
                 <Input
+                    {...phoneBindings}
+                    value={phone}
                     fullWidth
                     shadow
                     clearable
@@ -65,7 +116,7 @@ export default function QuoteSection() {
                     type="tel"
                 />
             </Box>
-            <Button css={{ mx: 'auto', mt: 40 }}>
+            <Button css={{ mx: 'auto', mt: 40 }} onPress={() => sendMail()}>
                 Envoyer ma demande de soumission
             </Button>
             <Button

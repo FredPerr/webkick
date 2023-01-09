@@ -27,7 +27,7 @@ export default function SolutionSection() {
                     d: 'grid',
                     mb: 20,
                     gridTemplateColumns: 'repeat(4, 1fr)',
-                    gridTemplateRows: '1fr 1fr 1fr 1fr',
+                    gridTemplateRows: '1fr 1fr',
                     justifyItems: 'center',
                     gap: 20,
                     '@smMax': {

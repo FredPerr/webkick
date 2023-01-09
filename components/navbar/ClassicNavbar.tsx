@@ -4,6 +4,7 @@ import { Button } from '@/components/button'
 import NextLink from 'next/link'
 import { NavbarDrawer } from '@/components/navbar'
 import useScrollPosition from '@/hooks/useScrollPosition'
+import React from 'react'
 
 export default function ClassicNavbar({
     logoStatic,
