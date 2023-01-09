@@ -4,7 +4,7 @@ import HeroImage from './HeroImage'
 import { LogoTextAnimated } from '../logo'
 import { Button } from '../button'
 import NextLink from 'next/link'
-import DottedLine from '../shapes/DottedLine'
+import ExclamationSvg from '@/public/images/hero/exclamation.svg'
 
 export default function Hero() {
     const theme = useTheme()
@@ -75,8 +75,6 @@ export default function Hero() {
                     px: '5%',
                     ai: 'center',
                     ta: 'center',
-                    // background:
-                    // 'radial-gradient(19.26% 56.07% at 75% 75%, rgba(142, 39, 159, 0.1) 0%, rgba(226, 14, 14, 0) 100%), radial-gradient(32.09% 43.78% at 72.01% 46.78%, rgba(220, 132, 235, 0.03) 0%, rgba(142, 31, 182, 0) 100%)',
                     '@smMax': {
                         gridTemplate: '1fr / 100%',
                     },
@@ -110,20 +108,9 @@ export default function Hero() {
                         ses revenues.
                     </Text>
                     <Box css={{ d: 'flex', ai: 'center', mb: 30 }}>
-                        <Box
-                            css={{
-                                d: 'flex',
-                                ai: 'center',
-                                bgColor: 'red',
-                                w: '20px',
-                                h: '20px',
-                                br: '50%',
-                                dflex: 'center',
-                                mr: '10px',
-                            }}
-                        >
-                            <Text css={{ fs: '18px', fontWeight: 800 }}>!</Text>
-                        </Box>
+                        <ExclamationSvg
+                            style={{ height: '17px', marginRight: 10 }}
+                        />
                         <Text>
                             Obtenez votre soumission en 24H-48H et payez en 12
                             mois à 0%!

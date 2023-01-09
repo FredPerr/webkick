@@ -10,13 +10,11 @@ export default function SolutionCard(props: SolutionCardProps) {
     return (
         <Box
             css={{
-                position: 'relative',
                 bgColor: '$secondary',
                 br: 15,
-                w: 250,
-                h: 250,
-                m: 20,
+                p: 20,
                 dflex: 'center',
+                fd: 'column',
                 '& svg': {
                     w: '30%',
                 },
@@ -25,15 +23,13 @@ export default function SolutionCard(props: SolutionCardProps) {
             {props.icon}
             <Text
                 css={{
-                    position: 'absolute',
-                    top: '75%',
-                    verticalAlign: 'middle',
-                    w: '90%',
-                    left: '50%',
+                    mt: 20,
                     ta: 'center',
-                    transform: 'translateX(-50%)',
                     fs: 14,
                     fontWeight: 600,
+                    '@smMax': {
+                        fs: 12,
+                    },
                 }}
             >
                 {props.title}

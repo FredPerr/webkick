@@ -23,10 +23,16 @@ export default function SolutionSection() {
             />
             <Box
                 css={{
-                    mx: '5%',
+                    px: '5%',
                     d: 'grid',
+                    mb: 20,
                     gridTemplateColumns: 'repeat(4, 1fr)',
+                    gridTemplateRows: '1fr 1fr 1fr 1fr',
                     justifyItems: 'center',
+                    gap: 20,
+                    '@smMax': {
+                        gridTemplateColumns: 'repeat(2, 1fr)',
+                    },
                 }}
             >
                 <SolutionCard
@@ -50,7 +56,7 @@ export default function SolutionSection() {
                     icon={<EditSvg />}
                 />
                 <SolutionCard
-                    title="Optimizations pour moteurs de recherche (SEO)"
+                    title="Optimizations pour moteurs de recherche"
                     icon={<SEOSvg />}
                 />
                 <SolutionCard

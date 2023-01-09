@@ -69,7 +69,7 @@ export default function ClassicNavbar({
                 <Navbar.Item as={Link} href="/#processus">
                     Processus
                 </Navbar.Item>
-                <Navbar.Item as={Link} href="/#contact">
+                <Navbar.Item as={Link} href="/#contacter-autrement">
                     Contact
                 </Navbar.Item>
                 <NextLink href="/#soumission">

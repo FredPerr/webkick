@@ -1,10 +1,11 @@
-import { Input, Textarea } from '@nextui-org/react'
+import { Input, Textarea, useModal, Modal, Text } from '@nextui-org/react'
 import Box from '../box'
 import { SectionTitle } from '../section'
 import WorldMapSvg from '@/public/images/quote/world-map.svg?url'
 import { Button } from '../button'
 
 export default function QuoteSection() {
+    const { setVisible, bindings } = useModal()
     return (
         <Box
             css={{
@@ -67,9 +68,39 @@ export default function QuoteSection() {
             <Button css={{ mx: 'auto', mt: 40 }}>
                 Envoyer ma demande de soumission
             </Button>
-            <Button css={{ mx: 'auto', mt: 20, bgColor: '$gray600' }}>
+            <Button
+                id="contacter-autrement"
+                onPress={() => setVisible(true)}
+                css={{ mx: 'auto', mt: 20, bgColor: '$gray600' }}
+            >
                 Nous contacter autrement
             </Button>
+            <Modal
+                closeButton
+                aria-labelledby="contact-information"
+                aria-describedby="contact webkick via email"
+                {...bindings}
+            >
+                <Modal.Header>
+                    <Text size={18}>Comment nous contacter rapidement</Text>
+                </Modal.Header>
+                <Modal.Body>
+                    <Text>
+                        Pour nous contacter rapidement, envoyez-nous un email{' '}
+                        <strong>webkick.agency@gmail.com</strong>
+                    </Text>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button
+                        flat
+                        auto
+                        color="primary"
+                        onPress={() => setVisible(false)}
+                    >
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </Box>
     )
 }

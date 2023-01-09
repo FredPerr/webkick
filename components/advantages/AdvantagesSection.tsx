@@ -7,6 +7,7 @@ import CompetitiveSvg from '@/public/images/advantages/thumb-up.svg'
 import CoffeeSvg from '@/public/images/advantages/coffee.svg'
 import DashboardSvg from '@/public/images/advantages/dashboard.svg'
 import { Button } from '../button'
+import NextLink from 'next/link'
 
 export default function AdvantagesSection() {
     return (
@@ -50,7 +51,11 @@ export default function AdvantagesSection() {
                     subtitle="Notre entreprise croissante sera toujours là pour vous soutenir. Notre équipe jeune et grandissante n’est pas près d’arrêter ses activités. Au contraire, nous ne faisons que commencer!"
                 />
             </Box>
-            <Button css={{ mx: 'auto', my: 20 }}>Obtenir ma soumission</Button>
+            <NextLink href="/#soumission">
+                <Button css={{ mx: 'auto', my: 20 }}>
+                    Obtenir ma soumission
+                </Button>
+            </NextLink>
         </Box>
     )
 }

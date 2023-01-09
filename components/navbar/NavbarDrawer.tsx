@@ -6,13 +6,13 @@ export default function NavbarDrawer() {
     return (
         <Navbar.Collapse
             css={{
-                dflex: 'center',
+                background: '$secondary',
+                dflex: 'left',
                 fd: 'column',
-                background: 'transparent',
-                ta: 'center',
+                ta: 'left',
                 '& .nextui-navbar-collapse-wrapper': {
-                    background: 'transparent',
-                    dflex: 'center',
+                    background: '$secondary',
+                    dflex: 'left',
                     fd: 'column',
                 },
             }}
@@ -27,7 +27,7 @@ export default function NavbarDrawer() {
                 <Link href="/#processus">Notre processus</Link>
             </Navbar.CollapseItem>
             <Navbar.CollapseItem>
-                <Link href="/#contact">Nous contacter</Link>
+                <Link href="/#contacter-autrement">Nous contacter</Link>
             </Navbar.CollapseItem>
             <NextLink href="/#soumission">
                 <Navbar.CollapseItem>
