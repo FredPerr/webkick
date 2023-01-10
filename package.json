@@ -10,8 +10,7 @@
     "format:check": "prettier --check . --ignore-path .gitignore",
     "format": "prettier --w . --ignore-path .gitignore",
     "prepare": "husky install",
-    "test:e2e": "playwright test",
-    "test:e2e:debug": "playwright test --headed"
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@next/font": "13.1.1",
