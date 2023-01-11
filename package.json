@@ -8,9 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "format:check": "prettier --check . --ignore-path .gitignore",
-    "format": "prettier --w . --ignore-path .gitignore",
+    "format": "prettier --w . --ignore-path .gitignore --loglevel warn",
     "prepare": "husky install",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "sb": "start-storybook -p 6006",
+    "sb:build": "build-storybook"
   },
   "dependencies": {
     "@next/font": "13.1.1",
@@ -28,6 +30,16 @@
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@playwright/test": "^1.29.2",
+    "@storybook/addon-a11y": "^6.5.15",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/addon-storysource": "^6.5.15",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
     "@svgr/webpack": "^6.5.1",
     "babel-loader": "^8.3.0",
     "eslint-plugin-storybook": "^0.6.8",
