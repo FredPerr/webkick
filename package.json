@@ -11,8 +11,7 @@
     "format": "prettier --w . --ignore-path .gitignore --loglevel warn",
     "prepare": "husky install",
     "test:e2e": "playwright test",
-    "sb": "start-storybook -p 6006",
-    "sb:build": "build-storybook"
+    "sb": "start-storybook -p 6006"
   },
   "dependencies": {
     "@next/font": "13.1.1",
