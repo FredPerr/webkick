@@ -4,9 +4,9 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+COPY package.json yarn.lock* package-lock.json* .pnpm-lock.yaml* ./
 # Omit --production flag for TypeScript devDependencies
-RUN \
+RUN \ 
   if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
   elif [ -f package-lock.json ]; then npm ci; \
   elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i; \
@@ -28,7 +28,7 @@ ENV NEXT_PUBLIC_ENV_VARIABLE=${NEXT_PUBLIC_ENV_VARIABLE}
 ENV NEXT_TELEMETRY_DISABLED 1
 
 # Build Next.js based on the preferred package manager
-RUN \
+RUN \ 
   if [ -f yarn.lock ]; then yarn build; \
   elif [ -f package-lock.json ]; then npm run build; \
   elif [ -f pnpm-lock.yaml ]; then pnpm build; \
