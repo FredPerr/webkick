@@ -8,6 +8,8 @@ export default {
     secondaryLight: '#f52043',
     background: 'white',
     foreground: 'black',
-    text: '#8896a8',
+    text: '#5a576b',
+    textLight: '#74808f',
+    textDark: '#363440',
   },
 }
