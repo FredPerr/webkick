@@ -1,21 +1,26 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import Link from 'next/link'
+import { DefaultLayout } from 'layouts'
+import React from 'react'
 
 export default function Home() {
   const { t } = useTranslation('common')
 
   return (
-    <nav>
-      <Link href="/about">{t('test')}</Link>
-    </nav>
+    <>
+      <p>{t('test')}</p>
+    </>
   )
+}
+
+Home.PageLayout = (page: React.ReactElement) => {
+  return <DefaultLayout pageName="home">{page}</DefaultLayout>
 }
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common'])),
+      ...(await serverSideTranslations(locale, ['common', 'home'])),
     },
   }
 }
