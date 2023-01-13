@@ -1,10 +1,8 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
-import { DefaultLayout } from 'layouts'
 import { NextPageWithLayout } from 'layouts/Default'
-import { NextPage } from 'next'
-import { ReactElement } from 'react'
+import GlobalStyles from 'styles/globals'
 
 interface MyAppProps extends AppProps {
   Component: NextPageWithLayout
@@ -12,7 +10,12 @@ interface MyAppProps extends AppProps {
 
 function MyApp({ Component, pageProps }: MyAppProps) {
   const pageLayout = Component.PageLayout ?? ((page) => page)
-  return pageLayout(<Component {...pageProps} />)
+  return pageLayout(
+    <>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </>,
+  )
 }
 
 // @ts-ignore

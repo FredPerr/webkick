@@ -1,11 +1,17 @@
 import '/styles/globals.css'
+import GlobalStyle from '/styles/globals'
 
 import React from 'react'
 
 import { ThemeProvider } from 'styled-components'
 
 export const decorators = [
-  (Story) => <ThemeProvider theme={{}}>{Story()}</ThemeProvider>,
+  (Story) => (
+    <ThemeProvider theme={{}}>
+      <GlobalStyle />
+      {Story()}
+    </ThemeProvider>
+  ),
 ]
 
 export const parameters = {
