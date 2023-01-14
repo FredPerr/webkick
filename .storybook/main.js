@@ -6,6 +6,7 @@ module.exports = {
   },
   stories: ['../components/**/*.stories.@(js|jsx|ts|tsx)'],
   staticDirs: ['../public'],
+
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -27,6 +28,10 @@ module.exports = {
   },
   webpackFinal: async (config, { configType }) => {
     config.resolve.plugins = [new TsconfigPathsPlugin()]
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'next-i18next': 'react-i18next',
+    }
     return config
   },
 }

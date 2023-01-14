@@ -1,3 +1,6 @@
 {
-  "test": "Bonjour tout le monde!"
+  "test": "Bonjour tout le monde!",
+  "buttons": {
+    "get_quote": "Obtenir ma soumission"
+  }
 }
