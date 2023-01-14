@@ -14,7 +14,7 @@ export function DrawerToggleButtonBase(props: DrawerToggleButtonProps) {
           <path
             d="M3 6.00092H21M3 12.0009H21M3 18.0009H21"
             stroke={theme.colors.textLight}
-            strokeWidth="1.75"
+            strokeWidth="2"
           />
         </g>
       </svg>

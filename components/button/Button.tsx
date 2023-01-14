@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import styles from './Button.module.css'
 import theme from '@/styles/themes/default'
 
 interface ButtonProps {
@@ -35,6 +34,7 @@ const StyledButton = styled(ButtonBase)`
   padding: 0 20px;
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
+  margin: 0 5px;
 
   ${(props) =>
     props.variant === 'contained' &&

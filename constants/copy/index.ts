@@ -1,7 +1,13 @@
 const COPY = {
   buttons: {
     get_quote: 'Obtenir ma soumission',
-    contact_us: 'Nous contacter',
+    contact: 'Nous contacter',
+  },
+  navbar: {
+    blog: 'Blogue',
+    about: 'À propos',
+    solutions: 'Solutions',
+    pricing: 'Tarification',
   },
 }
 

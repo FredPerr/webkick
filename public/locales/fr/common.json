@@ -1,6 +1,12 @@
 {
-  "test": "Bonjour tout le monde!",
+  "navbar": {
+    "blog": "Blogue",
+    "about": "À propos",
+    "solutions": "Solutions",
+    "pricing": "Tarification"
+  },
   "buttons": {
+    "contact": "Nous contacter",
     "get_quote": "Obtenir ma soumission"
   }
 }
