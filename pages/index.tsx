@@ -1,19 +1,19 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import { DefaultLayout } from 'layouts'
-import React from 'react'
+import Logo from 'components/logo'
 
 export default function Home() {
   const { t } = useTranslation('common')
 
   return (
     <>
-      <p>{t('test')}</p>
+      <Logo />
     </>
   )
 }
 
-Home.PageLayout = (page: React.ReactElement) => {
+Home.PageLayout = function PageLayout(page: React.ReactElement) {
   return <DefaultLayout pageName="home">{page}</DefaultLayout>
 }
 
