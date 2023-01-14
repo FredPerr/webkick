@@ -68,13 +68,14 @@ const StyledButton = styled(ButtonBase)`
     ${(props) =>
     props.variant === 'outlined' &&
     css`
-      border: 2px solid ${props.theme.colors[props.color]};
+      border: 1.5px solid ${props.theme.colors[props.color + 'Light']};
       background-color: transparent;
       color: ${props.theme.colors[props.color]};
       text-transform: none;
       text-shadow: 0px 0px 5px ${props.theme.colors[props.color + 'Light']}32;
       &:hover {
         border-color: ${props.theme.colors[props.color + 'Light']};
+        background-color: ${props.theme.colors[props.color + 'Light']}0A;
       }
     `}
 `
