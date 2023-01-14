@@ -73,13 +73,6 @@ export function InputBase(props: InputProps) {
   )
 }
 
-InputBase.defaultProps = {
-  type: 'text',
-  variant: 'contained',
-  color: 'primary',
-  note: '',
-}
-
 const StyledInput = styled(InputBase)`
   outline: none;
   padding: 10px 15px;
@@ -119,5 +112,12 @@ const StyledInput = styled(InputBase)`
       }
     `};
 `
+
+StyledInput.defaultProps = {
+  type: 'text',
+  variant: 'contained',
+  color: 'primary',
+  note: '',
+}
 
 export default StyledInput
