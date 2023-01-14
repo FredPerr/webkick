@@ -50,6 +50,7 @@
     "eslint-plugin-storybook": "^0.6.8",
     "husky": "^8.0.3",
     "prettier": "^2.8.2",
+    "storybook-addon-next-router": "^4.0.2",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
     "webpack": "^5.75.0"
   }

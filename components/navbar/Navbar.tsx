@@ -4,15 +4,18 @@ import { useTranslation } from 'next-i18next'
 import Button from '@/components/button'
 import COPY from '@/constants/copy'
 import NavbarLink from './NavbarLink'
-import theme from '@/styles/themes/default'
+import Logo from '@/components/logo'
+import { useRouter } from 'next/router'
+import LangLink from './LangLink'
 
 interface NavbarProps {}
 
 export function NavbarBase(props: NavbarProps) {
   const { t } = useTranslation('common')
+  const { locale } = useRouter()
   return (
     <div {...props}>
-      <DrawerToggleButton />
+      <Logo size={30} text />
       <nav>
         <NavbarLink
           href="/#solutions"
@@ -35,7 +38,9 @@ export function NavbarBase(props: NavbarProps) {
         <Button variant="contained" color="primary">
           {t('buttons.get_quote', COPY.buttons.get_quote)}
         </Button>
+        <LangLink />
       </div>
+      <DrawerToggleButton />
     </div>
   )
 }

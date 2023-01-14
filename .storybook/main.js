@@ -13,6 +13,7 @@ module.exports = {
     '@storybook/addon-actions',
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
+    'storybook-addon-next-router',
     {
       name: '@storybook/addon-storysource',
       options: {
