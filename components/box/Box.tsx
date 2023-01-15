@@ -1,12 +1,13 @@
 import styled from 'styled-components'
-import { CssProps } from '@/components'
+import { CSSGroups } from '@/styles'
 
 export interface BoxProps {
   children?: React.ReactNode
+  center?: boolean
 }
 
 const Box = styled.div<BoxProps>`
-  color: blue;
+  ${(props) => props.center && CSSGroups.flexCentered}
 `
 
 export default Box
