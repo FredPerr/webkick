@@ -5,7 +5,7 @@ interface BoxProps extends StyledComponentProps {
   children?: React.ReactNode
 }
 
-const StyledBox = styled.div<BoxProps>`
+const StyledBox = styled.div.attrs()<BoxProps>`
   ${(props) => props.css}
 `
 
