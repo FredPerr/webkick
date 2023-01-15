@@ -1,8 +1,13 @@
 {
   "presets": ["next/babel"],
-  "plugins": [["babel-plugin-styled-components", {
-      "minify": false,
-      "pure": true,
-      "namespace": "webkick"
-  }]]
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "minify": false,
+        "pure": true,
+        "namespace": "webkick"
+      }
+    ]
+  ]
 }
