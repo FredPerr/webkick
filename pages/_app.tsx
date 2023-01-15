@@ -4,7 +4,7 @@ import { appWithTranslation } from 'next-i18next'
 import { NextPageWithLayout } from 'layouts/Default'
 import GlobalStyles from 'styles/globals'
 import { ThemeProvider } from 'styled-components'
-import theme from '@/styles/theme'
+import Theme from 'styles/theme'
 
 interface MyAppProps extends AppProps {
   Component: NextPageWithLayout
@@ -13,7 +13,7 @@ interface MyAppProps extends AppProps {
 function MyApp({ Component, pageProps }: MyAppProps) {
   const pageLayout = Component.PageLayout ?? ((page) => page)
   return pageLayout(
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Theme}>
       <GlobalStyles />
       <Component {...pageProps} />
     </ThemeProvider>,

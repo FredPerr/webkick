@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import styles from './Logo.module.css'
-import { StyledComponentProps } from '@/components'
 
-interface LogoProps extends StyledComponentProps {
+interface LogoProps {
   size: number
   text?: boolean
   disableAnimation?: boolean
@@ -11,7 +10,6 @@ interface LogoProps extends StyledComponentProps {
 const StyledLogo = styled('div')<LogoProps>`
   display: flex;
   align-items: center;
-  ${(props) => props.css}
 `
 
 export default function Logo(props: LogoProps) {

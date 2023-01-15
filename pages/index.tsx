@@ -1,9 +1,16 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { DefaultLayout } from 'layouts'
-import Input from '@/components/input'
+import { useTheme } from 'styled-components'
+import useBreakpoint from '@/hooks/useBreakpoint'
 
 export default function Home() {
-  return <></>
+  const theme = useTheme()
+  const breakpoint = useBreakpoint()
+  return (
+    <>
+      <h1 style={{ color: theme.colors.primary }}>{breakpoint}</h1>
+    </>
+  )
 }
 
 Home.PageLayout = function PageLayout(page: React.ReactElement) {

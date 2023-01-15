@@ -1,6 +1,8 @@
-import { CSSObject, DefaultTheme } from 'styled-components'
+import { CSSObject } from 'styled-components'
+import { DefaultTheme } from 'styled-components'
 
 type VariantType = 'contained' | 'underline' | 'text' | 'outlined'
+type ColorType = DefaultTheme['colors']
 
 export interface CssProps {
   css?: CSSObject
@@ -11,5 +13,5 @@ export interface VariantProps {
 }
 
 export interface ColorProps {
-  color: keyof DefaultTheme['colors']
+  color: ColorType
 }
