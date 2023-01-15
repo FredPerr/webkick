@@ -39,9 +39,9 @@ const Colors = {
 
 const Fonts = "'Poppins', sans-serif"
 const FontSizes = {
-  xs: 8,
-  sm: 11,
-  md: 13,
+  xs: 10,
+  sm: 12,
+  md: 14,
   lg: 16,
   xl: 18,
 }
@@ -78,27 +78,28 @@ const Shadows = {
 
 const Breakpoints = {
   xs: 480,
-  sm: 900,
-  md: 1280,
-  lg: 1650,
+  sm: 720,
+  md: 1080,
+  lg: 1440,
   xl: 1920,
 }
 
 const MediaQueries = {
-  xs: `@media (max-width: ${Breakpoints.xs}px)`,
-  sm: `@media (min-width: ${Breakpoints.sm}px) and (max-width: ${Breakpoints.md}px)`,
-  md: `@media (min-width: ${Breakpoints.md}px) and (max-width: ${Breakpoints.lg}px)`,
-  lg: `@media (min-width: ${Breakpoints.lg}px) and (max-width: ${Breakpoints.xl}px)`,
-  xl: `@media (min-width: ${Breakpoints.xl}px)`,
-  smMax: `@media (max-width: ${Breakpoints.sm}px)`,
-  mdMax: `@media (max-width: ${Breakpoints.md}px)`,
-  lgMax: `@media (max-width: ${Breakpoints.lg}px)`,
-  xlMax: `@media (max-width: ${Breakpoints.xl}px)`,
+  xs: `(max-width: ${Breakpoints.xs}px)`,
+  sm: `(min-width: ${Breakpoints.xs}px) and (max-width: ${Breakpoints.sm}px)`,
+  md: `(min-width: ${Breakpoints.sm}px) and (max-width: ${Breakpoints.md}px)`,
+  lg: `(min-width: ${Breakpoints.md}px) and (max-width: ${Breakpoints.lg}px)`,
+  xl: `(min-width: ${Breakpoints.lg}px)`,
+  smMax: `(max-width: ${Breakpoints.sm}px)`,
+  mdMax: `(max-width: ${Breakpoints.md}px)`,
+  lgMax: `(max-width: ${Breakpoints.lg}px)`,
+  xlMax: `(max-width: ${Breakpoints.xl}px)`,
 
-  smMin: `@media (min-width: ${Breakpoints.sm}px)`,
-  mdMin: `@media (min-width: ${Breakpoints.md}px)`,
-  lgMin: `@media (min-width: ${Breakpoints.lg}px)`,
-  xlMin: `@media (min-width: ${Breakpoints.xl}px)`,
+  xsMin: `(min-width: ${Breakpoints.xs}px)`,
+  smMin: `(min-width: ${Breakpoints.sm}px)`,
+  mdMin: `(min-width: ${Breakpoints.md}px)`,
+  lgMin: `(min-width: ${Breakpoints.lg}px)`,
+  xlMin: `(min-width: ${Breakpoints.xl}px)`,
 }
 
 const Theme = {
