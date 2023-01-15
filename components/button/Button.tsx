@@ -6,6 +6,7 @@ import {
   StyledComponentProps,
   VariantComponentProps,
 } from '@/components'
+import media from '@/styles/theme/media'
 
 interface ButtonProps
   extends StyledComponentProps,
@@ -19,11 +20,19 @@ interface ButtonProps
 const StyledButton = styled.button<ButtonProps>`
   border: none;
   cursor: pointer;
-  height: 40px;
   color: white;
   text-transform: uppercase;
   font-size: 0.9rem;
-  padding: 0 20px;
+  padding: 9px 20px;
+  ${media.mdMax} {
+    padding: 7px 15px;
+  }
+  ${media.smMax} {
+    padding: 6px 10px;
+  }
+  ${media.xs} {
+    padding: 4px 5px;
+  }
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
   margin: 0 5px;

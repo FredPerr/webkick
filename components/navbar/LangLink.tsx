@@ -7,7 +7,16 @@ export default function LangLink() {
   const anchorLang = locale === 'fr' ? 'en' : 'fr'
   return (
     <Link href={asPath} locale={anchorLang}>
-      <Button variant="text" color="primary">
+      <Button
+        variant="text"
+        color="primary"
+        css={{
+          textTransform: 'uppercase',
+          fontWeight: 500,
+          fontSize: '0.9rem',
+          padding: 0,
+        }}
+      >
         {anchorLang}
       </Button>
     </Link>

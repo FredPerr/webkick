@@ -11,6 +11,7 @@ interface LogoProps extends StyledComponentProps {
 const StyledLogo = styled('div')<LogoProps>`
   display: flex;
   align-items: center;
+  ${(props) => props.css}
 `
 
 export default function Logo(props: LogoProps) {

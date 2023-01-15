@@ -14,11 +14,11 @@ interface NavbarProps {}
 
 const StyledNavbar = styled(Box)`
   width: 100%;
-  padding: 10px 5%;
+  padding: 0 2%;
   display: grid;
   align-items: center;
   justify-content: space-between;
-  grid-template: 35px / auto auto auto;
+  grid-template: 1fr / auto auto auto;
 `
 
 export default function Navbar(props: NavbarProps) {
@@ -27,7 +27,7 @@ export default function Navbar(props: NavbarProps) {
     <StyledNavbar {...props}>
       <DrawerToggleButton css={{ [media.sm]: { display: 'none' } }} />
       <Link href="/">
-        <Logo size={30} text />
+        <Logo size={29} text css={{ marginRight: 20 }} />
       </Link>
       <Box css={{ [media.mdMax]: { display: 'none' } }}>
         <nav>
@@ -46,7 +46,15 @@ export default function Navbar(props: NavbarProps) {
           />
         </nav>
       </Box>
-      <Box css={{ [media.smMax]: { display: 'none' } }}>
+      <Box
+        css={{
+          display: 'flex',
+          flexWrap: 'nowrap',
+          alignItems: 'center',
+          [media.smMax]: { display: 'none' },
+          '& button': { fontSize: '0.8rem' },
+        }}
+      >
         <Button variant="outlined" color="primary" css={{ fontWeight: 500 }}>
           {t('buttons.contact', COPY.buttons.contact)}
         </Button>

@@ -13,11 +13,13 @@ export function NavbarLink(props: NavbarLinkProps) {
 export default styled(NavbarLink)`
   color: ${theme.colors.textLight};
   font-weight: 500;
-  margin: 0 15px;
+  margin: 0 10px;
   font-size: 0.9rem;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
+  letter-spacing: 0.5px;
   text-shadow: 0 0 6px ${theme.colors.text}20;
+  white-space: nowrap;
   &:hover {
     color: ${theme.colors.textLighter};
   }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import theme from '@/styles/theme'
 import { StyledComponentProps } from '@/components'
+import Colors from '@/styles/theme/colors'
 
 interface DrawerToggleButtonProps
   extends StyledComponentProps,
@@ -25,8 +25,9 @@ export default function DrawerToggleButton(props: DrawerToggleButtonProps) {
         <g>
           <path
             d="M3 6.00092H21M3 12.0009H21M3 18.0009H21"
-            stroke={theme.colors.textLight}
+            stroke={Colors.textLighter}
             strokeWidth="2"
+            strokeLinecap="round"
           />
         </g>
       </svg>
