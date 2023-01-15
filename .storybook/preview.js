@@ -1,6 +1,6 @@
 import '/styles/globals.css'
 import GlobalStyle from '/styles/globals'
-import theme from '/styles/themes/default'
+import theme from '@/styles/theme'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n'
 import { RouterContext } from 'next/dist/shared/lib/router-context'

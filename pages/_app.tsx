@@ -4,7 +4,7 @@ import { appWithTranslation } from 'next-i18next'
 import { NextPageWithLayout } from 'layouts/Default'
 import GlobalStyles from 'styles/globals'
 import { ThemeProvider } from 'styled-components'
-import theme from 'styles/themes/default'
+import theme from '@/styles/theme'
 
 interface MyAppProps extends AppProps {
   Component: NextPageWithLayout

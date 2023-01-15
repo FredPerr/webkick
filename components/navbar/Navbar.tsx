@@ -5,51 +5,56 @@ import Button from '@/components/button'
 import COPY from '@/constants/copy'
 import NavbarLink from './NavbarLink'
 import Logo from '@/components/logo'
-import { useRouter } from 'next/router'
 import LangLink from './LangLink'
+import Box from '@/components/box'
+import Link from 'next/link'
+import media from '@/styles/theme/media'
 
 interface NavbarProps {}
 
-export function NavbarBase(props: NavbarProps) {
+const StyledNavbar = styled(Box)`
+  width: 100%;
+  padding: 10px 5%;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template: 35px / auto auto auto;
+`
+
+export default function Navbar(props: NavbarProps) {
   const { t } = useTranslation('common')
-  const { locale } = useRouter()
   return (
-    <div {...props}>
-      <Logo size={30} text />
-      <nav>
-        <NavbarLink
-          href="/#solutions"
-          text={t('navbar.solutions', COPY.navbar.solutions)}
-        />
-        <NavbarLink
-          href="/pricing"
-          text={t('navbar.pricing', COPY.navbar.pricing)}
-        />
-        <NavbarLink href="/blog" text={t('navbar.blog', COPY.navbar.blog)} />
-        <NavbarLink
-          href="/about"
-          text={t('navbar.solutions', COPY.navbar.about)}
-        />
-      </nav>
-      <div>
-        <Button variant="outlined" color="primary">
+    <StyledNavbar {...props}>
+      <DrawerToggleButton css={{ [media.sm]: { display: 'none' } }} />
+      <Link href="/">
+        <Logo size={30} text />
+      </Link>
+      <Box css={{ [media.mdMax]: { display: 'none' } }}>
+        <nav>
+          <NavbarLink
+            href="/#solutions"
+            text={t('navbar.solutions', COPY.navbar.solutions)}
+          />
+          <NavbarLink
+            href="/pricing"
+            text={t('navbar.pricing', COPY.navbar.pricing)}
+          />
+          <NavbarLink href="/blog" text={t('navbar.blog', COPY.navbar.blog)} />
+          <NavbarLink
+            href="/about"
+            text={t('navbar.about', COPY.navbar.about)}
+          />
+        </nav>
+      </Box>
+      <Box css={{ [media.smMax]: { display: 'none' } }}>
+        <Button variant="outlined" color="primary" css={{ fontWeight: 500 }}>
           {t('buttons.contact', COPY.buttons.contact)}
         </Button>
         <Button variant="contained" color="primary">
           {t('buttons.get_quote', COPY.buttons.get_quote)}
         </Button>
         <LangLink />
-      </div>
-      <DrawerToggleButton />
-    </div>
+      </Box>
+    </StyledNavbar>
   )
 }
-
-export default styled(NavbarBase)`
-  width: 100%;
-  padding: 0 5%;
-  display: grid;
-  align-items: center;
-  justify-content: space-between;
-  grid-template: 35px / auto auto auto;
-`

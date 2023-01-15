@@ -1,14 +1,26 @@
 import styled from 'styled-components'
-import theme from '@/styles/themes/default'
+import theme from '@/styles/theme'
+import { StyledComponentProps } from '@/components'
 
-interface DrawerToggleButtonProps {
+interface DrawerToggleButtonProps
+  extends StyledComponentProps,
+    React.ButtonHTMLAttributes<HTMLButtonElement> {
   size: number
-  onClick: () => void
 }
 
-export function DrawerToggleButtonBase(props: DrawerToggleButtonProps) {
+const StyledDrawerToggleButton = styled.button<DrawerToggleButtonProps>`
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  ${(props) => props.css}
+`
+
+export default function DrawerToggleButton(props: DrawerToggleButtonProps) {
   return (
-    <button type="button" {...props}>
+    <StyledDrawerToggleButton type="button" {...props}>
       <svg viewBox="0 0 24 24" width={props.size} height={props.size}>
         <g>
           <path
@@ -18,19 +30,11 @@ export function DrawerToggleButtonBase(props: DrawerToggleButtonProps) {
           />
         </g>
       </svg>
-    </button>
+    </StyledDrawerToggleButton>
   )
 }
 
-DrawerToggleButtonBase.defaultProps = {
+DrawerToggleButton.defaultProps = {
   onClick: () => {},
   size: 24,
 }
-
-export default styled(DrawerToggleButtonBase)`
-  display: flex;
-  align-items: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-`

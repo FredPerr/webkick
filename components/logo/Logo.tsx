@@ -1,15 +1,21 @@
 import styled from 'styled-components'
 import styles from './Logo.module.css'
+import { StyledComponentProps } from '@/components'
 
-interface LogoProps {
+interface LogoProps extends StyledComponentProps {
   size: number
   text?: boolean
   disableAnimation?: boolean
 }
 
-export function LogoBase(props: LogoProps) {
+const StyledLogo = styled('div')<LogoProps>`
+  display: flex;
+  align-items: center;
+`
+
+export default function Logo(props: LogoProps) {
   return (
-    <div {...props}>
+    <StyledLogo {...props}>
       <svg
         width={props.size}
         height={props.size}
@@ -51,15 +57,10 @@ export function LogoBase(props: LogoProps) {
           />
         </svg>
       )}
-    </div>
+    </StyledLogo>
   )
 }
 
-LogoBase.defaultProps = {
+Logo.defaultProps = {
   size: 50,
 }
-
-export default styled(LogoBase)`
-  display: flex;
-  align-items: center;
-`
