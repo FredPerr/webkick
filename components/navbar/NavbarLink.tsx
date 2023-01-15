@@ -21,6 +21,6 @@ export default styled(NavbarLink)`
   text-shadow: 0 0 6px ${theme.colors.text}20;
   white-space: nowrap;
   &:hover {
-    color: ${theme.colors.textLighter};
+    color: ${theme.colors.textDark};
   }
 `

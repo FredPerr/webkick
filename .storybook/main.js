@@ -4,7 +4,11 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  stories: ['../components/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: [
+    '../components/**/*.stories.@(js|jsx|ts|tsx)',
+    '../pages/**/*.stories.@(js|jsx|ts|tsx)',
+    '../sections/**/*.stories.@(js|jsx|ts|tsx)',
+  ],
   staticDirs: ['../public'],
 
   addons: [

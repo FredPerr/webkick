@@ -9,25 +9,36 @@ import LangLink from './LangLink'
 import Box from '@/components/box'
 import Link from 'next/link'
 import media from '@/styles/theme/media'
+import Colors from '@/styles/theme/colors'
+import useScrollPosition from '@/hooks/useScrollPosition'
 
 interface NavbarProps {}
 
 const StyledNavbar = styled(Box)`
+  position: fixed;
   width: 100%;
   padding: 0 2%;
   display: grid;
   align-items: center;
   justify-content: space-between;
   grid-template: 1fr / auto auto auto;
+  ${(props) => props.css}
 `
 
 export default function Navbar(props: NavbarProps) {
   const { t } = useTranslation('common')
+  const scrollPosition = useScrollPosition()
   return (
-    <StyledNavbar {...props}>
+    <StyledNavbar
+      {...props}
+      css={{
+        backgroundColor:
+          scrollPosition > 50 ? Colors.background : 'transparent',
+      }}
+    >
       <DrawerToggleButton css={{ [media.sm]: { display: 'none' } }} />
       <Link href="/">
-        <Logo size={29} text css={{ marginRight: 20 }} />
+        <Logo size={23} text css={{ marginRight: 20 }} />
       </Link>
       <Box css={{ [media.mdMax]: { display: 'none' } }}>
         <nav>
