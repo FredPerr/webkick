@@ -8,7 +8,7 @@ export default function Home() {
   const breakpoint = useBreakpoint()
   return (
     <>
-      <h1 style={{ color: theme.colors.primary }}>{breakpoint}</h1>
+      <h1 css={{ color: theme.colors.error }}>{breakpoint}</h1>
     </>
   )
 }

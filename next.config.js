@@ -8,7 +8,6 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: false,
   trailingSlash: true,
-
   i18n,
 
   webpack(config) {
