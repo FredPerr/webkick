@@ -1,11 +1,11 @@
 const Colors = {
-  primary: '#038aa6',
-  primaryLight: '#00d4ff',
-  primaryDark: '#0a2540',
-  primaryDarker: '#071d33',
-  primaryLighter: '#a7eefc',
+  primary: '#1877F2',
+  primaryLight: '#4c9aff',
+  primaryDark: '#004dcf',
+  primaryDarker: '#0039a6',
+  primaryLighter: '#5da9ff',
 
-  secondary: '#635bff',
+  secondary: '#6772e5',
   secondaryLight: '#7a73ff',
   secondaryDark: '#403b9c',
   secondaryDarker: '#302c7d',
@@ -35,6 +35,8 @@ const Colors = {
   gray700: '#9797b4',
   gray800: '#8888a8',
   gray900: '#79799c',
+
+  transparent: 'transparent',
 }
 
 const Fonts = "'Poppins', sans-serif"
@@ -57,7 +59,7 @@ const Radius = {
 
 const Spacings = {
   none: '0',
-  xs: '4px',
+  xs: '6px',
   sm: '8px',
   md: '16px',
   lg: '24px',
