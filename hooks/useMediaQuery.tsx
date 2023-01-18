@@ -17,7 +17,6 @@ export default function useMediaQuery() {
           }
         })
     })
-    console.table()
   }, [])
   return mediaQuery
 }

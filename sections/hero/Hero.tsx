@@ -7,9 +7,16 @@ export default function Hero() {
   return (
     <Box
       css={{
-        height: '100vh',
-        backgroundSize: '400% 400%',
-        clipPath: 'polygon(0 0, 100% 0, 100% 30%, 0 80%)',
+        height: 600,
+        [theme.media.mdMin]: {
+          height: 600,
+        },
+        [theme.media.mdMax]: {
+          height: 800,
+        },
+        width: '100%',
+        display: 'grid',
+        gridTemplate: '100% / 50% 50%',
       }}
     >
       <HeroBackgroundAnimation />

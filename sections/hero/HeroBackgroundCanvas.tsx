@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Gradient from '@/utils/Gradient'
+import useViewport from '@/hooks/useViewport'
 
 const HeroBackgroundAnimation: React.FC<{}> = () => {
   useEffect(() => {
@@ -22,9 +23,13 @@ const HeroBackgroundAnimation: React.FC<{}> = () => {
   return (
     <canvas
       id="hero-background-canvas"
-      width={400}
-      height={400}
-      css={{ backgroundColor: '#000FFF' }}
+      css={{
+        clipPath: 'polygon(0 0, 100% 0, 100% 30vh, 0 70vh)',
+        position: 'absolute',
+        zIndex: -1,
+        width: '100%',
+        height: '100%',
+      }}
     />
   )
 }
