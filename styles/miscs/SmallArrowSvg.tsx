@@ -28,7 +28,7 @@ const SmallArrowSvg = ({
       }}
     >
       <g
-        fill-rule="evenodd"
+        fillRule="evenodd"
         stroke={
           variant === 'contained'
             ? theme.colors[color]
