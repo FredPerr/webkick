@@ -1,25 +1,4 @@
-import React, { useRef, useEffect } from 'react'
-
-const drawRect = (
-  ctx: CanvasRenderingContext2D,
-  x: number,
-  y: number,
-  w: number,
-  h: number,
-) => {
-  ctx.beginPath()
-  ctx.strokeStyle = 'red'
-  ctx.lineWidth = 10
-  ctx.rect(x, y, w, h)
-  ctx.stroke()
-}
-
-const draw = (ctx: CanvasRenderingContext2D) => {
-  ctx.fillStyle = '#aaa000'
-  ctx.beginPath()
-  ctx.arc(50, 100, 20, 0, 2 * Math.PI)
-  ctx.fill()
-}
+import React, { useEffect } from 'react'
 
 const HeroBackgroundAnimation: React.FC<{}> = () => {
   const draw = (ctx: CanvasRenderingContext2D) => {
@@ -41,7 +20,6 @@ const HeroBackgroundAnimation: React.FC<{}> = () => {
     //   ctx,
     // )
     // gradient.initGradient('#hero-background-canvas')
-    // draw(ctx)
   }, [draw])
 
   return (
