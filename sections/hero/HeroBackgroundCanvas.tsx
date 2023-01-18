@@ -1,6 +1,4 @@
 import React, { useRef, useEffect } from 'react'
-import './HeroBackgroundAnimation.module.css'
-import Gradient from '@/utils/Gradient'
 
 const drawRect = (
   ctx: CanvasRenderingContext2D,
