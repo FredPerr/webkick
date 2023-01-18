@@ -1,13 +1,6 @@
 import React, { useEffect } from 'react'
 
 const HeroBackgroundAnimation: React.FC<{}> = () => {
-  const draw = (ctx: CanvasRenderingContext2D) => {
-    ctx.fillStyle = '#aaa000'
-    ctx.beginPath()
-    ctx.arc(50, 100, 20, 0, 2 * Math.PI)
-    ctx.fill()
-  }
-
   useEffect(() => {
     const canvas = document.getElementById(
       'hero-background-canvas',
@@ -20,7 +13,7 @@ const HeroBackgroundAnimation: React.FC<{}> = () => {
     //   ctx,
     // )
     // gradient.initGradient('#hero-background-canvas')
-  }, [draw])
+  }, [])
 
   return (
     <canvas
