@@ -9,7 +9,7 @@ export default function Hero() {
       css={{
         height: '100vh',
         backgroundSize: '400% 400%',
-        // clipPath: 'polygon(0 0, 100% 0, 100% 30%, 0 80%)',
+        clipPath: 'polygon(0 0, 100% 0, 100% 30%, 0 80%)',
       }}
     >
       <HeroBackgroundAnimation />

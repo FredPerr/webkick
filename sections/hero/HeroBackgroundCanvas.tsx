@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Gradient from "@/utils/Gradient"
+import Gradient from '@/utils/Gradient'
 
 const HeroBackgroundAnimation: React.FC<{}> = () => {
   useEffect(() => {
@@ -9,9 +9,13 @@ const HeroBackgroundAnimation: React.FC<{}> = () => {
     if (!canvas) throw new Error('Canvas not found')
     const ctx = canvas.getContext('webgl', { antialias: true })
     if (!ctx) throw new Error('Context not initialized properly')
-    var gradient = new Gradient(
-      ['#ffc857', '#90d7fe', '#ff61ab', '#ff303d', '#a963ed']
-    )
+    var gradient = new Gradient([
+      '#ffc857',
+      '#90d7fe',
+      '#ff61ab',
+      '#ff303d',
+      '#a963ed',
+    ])
     gradient.initGradient('#hero-background-canvas')
   }, [])
 
