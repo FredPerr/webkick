@@ -9,13 +9,11 @@ export default function useMediaQuery() {
   React.useEffect(() => {
     if (window === undefined) throw new Error('window is undefined')
     Object.keys(theme.breakpoints).forEach((breakpoint) => {
-      console.log(window, theme.media[breakpoint as BreakpointType])
       window
         .matchMedia(theme.media[breakpoint as BreakpointType])
         .addEventListener('change', (e) => {
           if (e.matches) {
             setMediaQuery(breakpoint as BreakpointType)
-            console.log(breakpoint)
           }
         })
     })
