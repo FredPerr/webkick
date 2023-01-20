@@ -1,9 +1,17 @@
 import React, { useEffect } from 'react'
 import Gradient from '@/utils/Gradient'
 import { useTheme } from 'styled-components'
+import useScrollPosition from '@/hooks/useScrollPosition'
 
 const HeroBackgroundAnimation: React.FC<{}> = () => {
   const theme = useTheme()
+  const gradient = new Gradient([
+    '#fa9f66',
+    '#90d7fe',
+    '#66b3fa',
+    '#ff303d',
+    '#a963ed',
+  ])
   useEffect(() => {
     const canvas = document.getElementById(
       'hero-background-canvas',
@@ -11,13 +19,6 @@ const HeroBackgroundAnimation: React.FC<{}> = () => {
     if (!canvas) throw new Error('Canvas not found')
     const ctx = canvas.getContext('webgl', { antialias: true })
     if (!ctx) throw new Error('Context not initialized properly')
-    var gradient = new Gradient([
-      '#fa9f66',
-      '#90d7fe',
-      '#66b3fa',
-      '#ff303d',
-      '#a963ed',
-    ])
     gradient.initGradient('#hero-background-canvas')
   }, [])
 

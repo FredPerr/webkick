@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 export default function Hero() {
   const theme = useTheme()
-  const { t } = useTranslation('home')
+  const { t } = useTranslation(['home', 'common'])
   return (
     <Box
       css={{
@@ -18,7 +18,7 @@ export default function Hero() {
         overflow: 'hidden',
         opacity: 0.99,
         backgroundColor: theme.colors.backgroundPaper,
-        backgroundImage: `radial-gradient(#d1d1d1 0.5px, transparent 0.5px), radial-gradient(#d1d1d1 0.5px, ${theme.colors.backgroundPaper} 0.5px)`,
+        backgroundImage: `radial-gradient(#efefef  1px, transparent 1px), radial-gradient(#efefef  1px, ${theme.colors.backgroundPaper} 1px)`,
         backgroundSize: '20px 20px',
         backgroundPosition: '0 0,10px 10px',
       }}
@@ -32,12 +32,32 @@ export default function Hero() {
           [theme.media.smMax]: {
             gridTemplate: 'auto auto / 100%',
           },
-          alignItems: 'center',
           paddingBottom: 100,
           marginTop: 100,
+          [theme.media.lg]: {
+            marginTop: 100,
+          },
+          [theme.media.md]: {
+            marginTop: 200,
+            gridTemplate: '500px / 60% 40%',
+          },
+          [theme.media.sm]: {
+            marginTop: 220,
+            gridTemplate: '500px / 60% 40%',
+          },
+          [theme.media.xs]: {
+            marginTop: 120,
+          },
         }}
       >
-        <Box center css={{ flexDirection: 'column', paddingLeft: '20%' }}>
+        <Box
+          center
+          css={{
+            flexDirection: 'column',
+            paddingLeft: '20%',
+            [theme.media.xs]: { paddingLeft: '5%', paddingRight: '5%' },
+          }}
+        >
           <h1
             css={{
               fontSize: theme.fontSizes.lg * 5,
@@ -47,6 +67,19 @@ export default function Hero() {
               mixBlendMode: 'hard-light',
               color: '#191919',
               marginBottom: 40,
+              [theme.media.lg]: {
+                fontSize: theme.fontSizes.md * 4.5,
+              },
+              [theme.media.md]: {
+                fontSize: theme.fontSizes.md * 4,
+              },
+              [theme.media.sm]: {
+                fontSize: theme.fontSizes.md * 3.5,
+              },
+              [theme.media.xs]: {
+                fontSize: theme.fontSizes.md * 3,
+                marginLeft: 30,
+              },
             }}
           >
             {t('hero.title')}
@@ -60,6 +93,8 @@ export default function Hero() {
               borderLeft: `1px dotted ${theme.colors.gray900}`,
               paddingLeft: 20,
               marginLeft: 30,
+              fontSize: theme.fontSizes.md,
+              [theme.media.smMax]: { fontSize: theme.fontSizes.sm },
             }}
           >
             {t('hero.subtitle')}
@@ -71,17 +106,20 @@ export default function Hero() {
               textAlign: 'left',
               marginTop: 20,
               marginLeft: 50,
+              [theme.media.xs]: {
+                marginLeft: 15,
+              },
               paddingLeft: 20,
             }}
           >
             <Link href="#">
               <Button variant="contained" color="primary" arrow>
-                Demander ma soumission
+                {t('common:buttons.get_quote')}
               </Button>
             </Link>
             <Link href="#">
               <Button variant="text" color="primaryLight" arrow>
-                Explorer nos services
+                {t('common:buttons.explore_services')}
               </Button>
             </Link>
           </div>
@@ -94,6 +132,9 @@ export default function Hero() {
               marginLeft: 50,
               alignSelf: 'start',
               marginTop: 20,
+              [theme.media.xs]: {
+                fontSize: theme.fontSizes.xs,
+              },
             }}
           >
             <sup>*</sup>
@@ -108,13 +149,17 @@ export default function Hero() {
       <Box
         css={{
           display: 'grid',
+          rowGap: 50,
           gridTemplate: 'auto / 1fr 1fr',
-          paddingLeft: '12%',
-          paddingRight: '12%',
-          [theme.media.smMax]: {
+          marginLeft: '12%',
+          marginRight: '12%',
+          [theme.media.mdMax]: {
             gridTemplate: 'auto auto / 1fr',
+            marginLeft: '5%',
+            marginRight: '5%',
+            marginTop: 100,
           },
-          justifyContent: 'center',
+          justifyItems: 'center',
           alignItems: 'center',
           marginBottom: 100,
         }}
@@ -122,11 +167,26 @@ export default function Hero() {
         <Box>
           <Box
             css={{
+              display: 'grid',
               width: 500,
               height: 350,
               backgroundColor: theme.colors.background,
-              boxShadow: '0 40px 50px 12px rgba(0, 0, 0, 0.05)',
+              justifyItems: 'center',
+              alignItems: 'center',
+              boxShadow: '0 40px 50px 12px rgba(0, 0, 0, 0.15)',
               borderRadius: 10,
+              [theme.media.smMax]: {
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                width: 400,
+                height: 150,
+              },
+              [theme.media.xs]: {
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                width: 300,
+                height: 150,
+              },
             }}
           ></Box>
           <p
@@ -135,12 +195,21 @@ export default function Hero() {
               marginLeft: 20,
               marginRight: 20,
               width: 500,
+              [theme.media.smMax]: {
+                width: 400,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              },
+
+              [theme.media.xs]: {
+                width: 300,
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              },
               marginTop: 10,
             }}
           >
-            En 2020, Statistique Canada révèle que <strong>82%</strong> des
-            Canadiens de moins de 65 ans achètent en ligne. Au total plus de{' '}
-            <strong>80 milliards</strong> on été dépensé sur le Web au Canada.{' '}
+            {t('hero.statistic')}
           </p>
         </Box>
         <Box>
@@ -151,7 +220,7 @@ export default function Hero() {
               color: theme.colors.textDark,
             }}
           >
-            Rejoignez des millions d'acheteurs au pays
+            {t('home:hero.list_title')}
           </h3>
           <ul
             css={{
@@ -159,12 +228,16 @@ export default function Hero() {
               marginTop: 20,
               lineHeight: '40px',
               color: theme.colors.text,
+              fontSize: 15,
             }}
           >
-            <li>Retour sur investissement et taux de conversion élevé</li>
-            <li>Affichez votre entreprise et ses produits/services 24/7</li>
-            <li>Soyez visible de n'importe où</li>
+            <li>{t('home:hero.list_point_1')}</li>
+            <li>{t('home:hero.list_point_2')}</li>
+            <li>{t('home:hero.list_point_3')}</li>
           </ul>
+          <Button variant="text" arrow color="primaryLight">
+            {t('common:buttons.explore_services')}
+          </Button>
         </Box>
       </Box>
     </Box>

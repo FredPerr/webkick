@@ -3,6 +3,7 @@ import MiniGl from '@/utils/MiniGl'
 
 export default class Gradient {
   constructor(colors) {
+    this.lock = false
     this.el = undefined
     this.angle = 0
     this.isLoadedClass = false
@@ -15,7 +16,9 @@ export default class Gradient {
     this.vertexShader = undefined
     this.sectionColors = formatHexColors(colors)
     this.computedCanvasStyle = undefined
-    this.conf = undefined
+    this.conf = {
+      playing: true,
+    }
     this.uniforms = undefined
     this.t = 1253106
     this.last = 0

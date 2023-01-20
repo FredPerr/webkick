@@ -3,6 +3,7 @@ import { ColorProps, VariantProps } from '@/components'
 import SmallArrowSvg from '@/styles/miscs/SmallArrowSvg'
 import React from 'react'
 import { darken, lighten } from 'polished'
+import Theme from '@/styles/theme'
 
 interface ButtonProps extends VariantProps, ColorProps {
   children?: React.ReactNode
@@ -22,6 +23,7 @@ const StyledButton = styled.button<ButtonProps>`
   font-weight: 600;
 
   ${({ theme }) => `
+  ${theme.media.smMax} {font-size: ${theme.fontSizes.sm}px; padding: ${theme.spacing.sm} ${theme.spacing.sm};}
     border-radius: ${theme.radius.sm};
     padding: ${theme.spacing.sm} ${theme.spacing.md};
   `}
