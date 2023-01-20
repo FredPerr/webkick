@@ -87,21 +87,21 @@ const Breakpoints = {
 }
 
 const MediaQueries = {
-  xs: `(max-width: ${Breakpoints.xs}px)`,
-  sm: `(min-width: ${Breakpoints.xs}px) and (max-width: ${Breakpoints.sm}px)`,
-  md: `(min-width: ${Breakpoints.sm}px) and (max-width: ${Breakpoints.md}px)`,
-  lg: `(min-width: ${Breakpoints.md}px) and (max-width: ${Breakpoints.lg}px)`,
-  xl: `(min-width: ${Breakpoints.lg}px)`,
-  smMax: `(max-width: ${Breakpoints.sm}px)`,
-  mdMax: `(max-width: ${Breakpoints.md}px)`,
-  lgMax: `(max-width: ${Breakpoints.lg}px)`,
-  xlMax: `(max-width: ${Breakpoints.xl}px)`,
+  xs: `@media (max-width: ${Breakpoints.xs}px)`,
+  sm: `@media (min-width: ${Breakpoints.xs}px) and (max-width: ${Breakpoints.sm}px)`,
+  md: `@media (min-width: ${Breakpoints.sm}px) and (max-width: ${Breakpoints.md}px)`,
+  lg: `@media (min-width: ${Breakpoints.md}px) and (max-width: ${Breakpoints.lg}px)`,
+  xl: `@media (min-width: ${Breakpoints.lg}px)`,
+  smMax: `@media (max-width: ${Breakpoints.sm}px)`,
+  mdMax: `@media (max-width: ${Breakpoints.md}px)`,
+  lgMax: `@media (max-width: ${Breakpoints.lg}px)`,
+  xlMax: `@media (max-width: ${Breakpoints.xl}px)`,
 
-  xsMin: `(min-width: ${Breakpoints.xs}px)`,
-  smMin: `(min-width: ${Breakpoints.sm}px)`,
-  mdMin: `(min-width: ${Breakpoints.md}px)`,
-  lgMin: `(min-width: ${Breakpoints.lg}px)`,
-  xlMin: `(min-width: ${Breakpoints.xl}px)`,
+  xsMin: `@media (min-width: ${Breakpoints.xs}px)`,
+  smMin: `@media (min-width: ${Breakpoints.sm}px)`,
+  mdMin: `@media (min-width: ${Breakpoints.md}px)`,
+  lgMin: `@media (min-width: ${Breakpoints.lg}px)`,
+  xlMin: `@media (min-width: ${Breakpoints.xl}px)`,
 }
 
 const Theme = {

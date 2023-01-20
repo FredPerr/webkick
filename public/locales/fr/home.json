@@ -1,5 +1,11 @@
 {
   "title": "Création de Sites Web Pour PME",
   "description": "Commandez votre site et déployez-le rapidement! Soumission en 24H-48H et paiements en 12 mois à 0% d'intérêt. 100% de satisfaction garantie.",
-  "keywords": "création site Web, Québec, petite entreprise, PME"
+  "keywords": "création site Web, Québec, petite entreprise, PME",
+
+  "hero": {
+    "title": "Propulsez votre entreprise avec un site Web adapté!",
+    "subtitle": "Débloquez le plein potentiel de votre entreprise! Un site Web professionnel adapté à vos besoins est clé pour améliorer votre visibilité, votre crédibilité et vos ventes.",
+    "announcement": "Obtenez votre soumission en 24H-48H! Financement en 12 mois à 0% d'intérêt. 100% de satisfaction garantie."
+  }
 }

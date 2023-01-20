@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import Gradient from '@/utils/Gradient'
-import useViewport from '@/hooks/useViewport'
+import { useTheme } from 'styled-components'
 
 const HeroBackgroundAnimation: React.FC<{}> = () => {
+  const theme = useTheme()
   useEffect(() => {
     const canvas = document.getElementById(
       'hero-background-canvas',
@@ -24,8 +25,22 @@ const HeroBackgroundAnimation: React.FC<{}> = () => {
     <canvas
       id="hero-background-canvas"
       css={{
-        clipPath: 'polygon(0 0, 100% 0, 100% 30vh, 0 70vh)',
+        clipPath: 'polygon(100% 20%, 100% 0, 0 0, 0 70%)',
+        [theme.media.lg]: {
+          clipPath: 'polygon(100% 30%, 100% 0, 0 0, 0 70%)',
+        },
+        [theme.media.md]: {
+          clipPath: 'polygon(100% 40%, 100% 0, 0 0, 0 70%)',
+        },
+        [theme.media.sm]: {
+          clipPath: 'polygon(100% 30%, 100% 0, 0 0, 0 50%)',
+        },
+        [theme.media.xs]: {
+          clipPath: 'polygon(100% 30%, 100% 0, 0 0, 0 45%)',
+        },
         position: 'absolute',
+        top: 0,
+        left: 0,
         zIndex: -1,
         width: '100%',
         height: '100%',
