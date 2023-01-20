@@ -5,6 +5,7 @@ import PhoneMockup from './PhoneMockup'
 import ScreenMockup from './ScreenMockup'
 import { useTranslation } from 'next-i18next'
 import Button from '@/components/button'
+import Link from 'next/link'
 
 export default function Hero() {
   const theme = useTheme()
@@ -33,13 +34,13 @@ export default function Hero() {
           },
           alignItems: 'center',
           paddingBottom: 100,
-          marginTop: 70,
+          marginTop: 100,
         }}
       >
         <Box center css={{ flexDirection: 'column', paddingLeft: '20%' }}>
           <h1
             css={{
-              fontSize: theme.fontSizes.xl * 5,
+              fontSize: theme.fontSizes.lg * 5,
               lineHeight: '100%',
               letterSpacing: -2,
               fontWeight: 700,
@@ -56,23 +57,115 @@ export default function Hero() {
               marginRight: 'auto',
               fontWeight: 500,
               color: theme.colors.text,
+              borderLeft: `1px dotted ${theme.colors.gray900}`,
+              paddingLeft: 20,
+              marginLeft: 30,
             }}
           >
             {t('hero.subtitle')}
           </p>
-          <div css={{ display: 'flex' }}>
-            <Button variant="contained" color="secondaryDarker" arrow>
-              Demander ma soumission
-            </Button>
-            <Button variant="text" color="primaryDarker" arrow>
-              Explorer nos services
-            </Button>
+          <div
+            css={{
+              display: 'flex',
+              width: '100%',
+              textAlign: 'left',
+              marginTop: 20,
+              marginLeft: 50,
+              paddingLeft: 20,
+            }}
+          >
+            <Link href="#">
+              <Button variant="contained" color="primary" arrow>
+                Demander ma soumission
+              </Button>
+            </Link>
+            <Link href="#">
+              <Button variant="text" color="primaryLight" arrow>
+                Explorer nos services
+              </Button>
+            </Link>
           </div>
+          <p
+            css={{
+              fontSize: theme.fontSizes.md,
+              textAlign: 'left',
+              color: theme.colors.error,
+              fontWeight: 500,
+              marginLeft: 50,
+              alignSelf: 'start',
+              marginTop: 20,
+            }}
+          >
+            <sup>*</sup>
+            {t('hero.note')}
+          </p>
         </Box>
         <div css={{ position: 'relative' }}>
           <ScreenMockup />
           <PhoneMockup />
         </div>
+      </Box>
+      <Box
+        css={{
+          display: 'grid',
+          gridTemplate: 'auto / 1fr 1fr',
+          paddingLeft: '12%',
+          paddingRight: '12%',
+          [theme.media.smMax]: {
+            gridTemplate: 'auto auto / 1fr',
+          },
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginBottom: 100,
+        }}
+      >
+        <Box>
+          <Box
+            css={{
+              width: 500,
+              height: 350,
+              backgroundColor: theme.colors.background,
+              boxShadow: '0 40px 50px 12px rgba(0, 0, 0, 0.05)',
+              borderRadius: 10,
+            }}
+          ></Box>
+          <p
+            css={{
+              fontSize: theme.fontSizes.xs,
+              marginLeft: 20,
+              marginRight: 20,
+              width: 500,
+              marginTop: 10,
+            }}
+          >
+            En 2020, Statistique Canada révèle que <strong>82%</strong> des
+            Canadiens de moins de 65 ans achètent en ligne. Au total plus de{' '}
+            <strong>80 milliards</strong> on été dépensé sur le Web au Canada.{' '}
+          </p>
+        </Box>
+        <Box>
+          <h3
+            css={{
+              fontSize: theme.fontSizes.md * 1.5,
+              fontWeight: 700,
+              color: theme.colors.textDark,
+            }}
+          >
+            Rejoignez des millions d'acheteurs au pays
+          </h3>
+          <ul
+            css={{
+              marginLeft: 20,
+              marginTop: 20,
+              lineHeight: '40px',
+              color: theme.colors.text,
+            }}
+          >
+            <li>Retour sur investissement et taux de conversion élevé</li>
+            <li>Affichez votre entreprise et ses produits/services 24/7</li>
+            <li>Soyez visible de n'importe où</li>
+          </ul>
+        </Box>
       </Box>
     </Box>
   )

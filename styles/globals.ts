@@ -2,6 +2,10 @@ import { createGlobalStyle } from 'styled-components'
 import { BreakpointType } from './theme'
 
 export default createGlobalStyle`
+  a {
+    text-decoration: none;
+  }
+
 ${(props) =>
   Object.keys(props.theme.breakpoints).map(
     (value) => `

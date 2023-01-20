@@ -12,9 +12,9 @@ const HeroBackgroundAnimation: React.FC<{}> = () => {
     const ctx = canvas.getContext('webgl', { antialias: true })
     if (!ctx) throw new Error('Context not initialized properly')
     var gradient = new Gradient([
-      '#ffc857',
+      '#fa9f66',
       '#90d7fe',
-      '#ff61ab',
+      '#66b3fa',
       '#ff303d',
       '#a963ed',
     ])
@@ -43,7 +43,7 @@ const HeroBackgroundAnimation: React.FC<{}> = () => {
         left: 0,
         zIndex: -1,
         width: '100%',
-        height: '100%',
+        height: '650px',
       }}
     />
   )
