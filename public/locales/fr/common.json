@@ -7,7 +7,7 @@
   },
   "buttons": {
     "contact": "Nous contacter",
-    "get_quote": "Obtenir ma soumission",
-    "explore_service": "Explorer nos services"
+    "get_quote": "Demander ma soumission",
+    "explore_services": "Explorer nos services"
   }
 }
