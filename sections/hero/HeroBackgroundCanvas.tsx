@@ -27,10 +27,10 @@ const HeroBackgroundAnimation: React.FC<{}> = () => {
       css={{
         clipPath: 'polygon(100% 20%, 100% 0, 0 0, 0 70%)',
         [theme.media.lg]: {
-          clipPath: 'polygon(100% 30%, 100% 0, 0 0, 0 70%)',
+          clipPath: 'polygon(100% 20%, 100% 0, 0 0, 0 60%)',
         },
         [theme.media.md]: {
-          clipPath: 'polygon(100% 40%, 100% 0, 0 0, 0 70%)',
+          clipPath: 'polygon(100% 30%, 100% 0, 0 0, 0 60%)',
         },
         [theme.media.sm]: {
           clipPath: 'polygon(100% 30%, 100% 0, 0 0, 0 50%)',
