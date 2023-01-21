@@ -188,7 +188,78 @@ export default function Hero() {
                 height: 150,
               },
             }}
-          ></Box>
+          >
+            <svg
+              viewBox="0 0 1000 500"
+              xmlns="http://www.w3.org/2000/svg"
+              css={{ marginRight: 10 }}
+            >
+              <path
+                d="  M0,500  h50  v--1.0289661900545752  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M62.5,500  h50  v-18.093383865343526  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M125,500  h50  v-33.689588486236744  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M187.5,500  h50  v-54.82861481749677  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M250,500  h50  v-76.4183167291369  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M312.5,500  h50  v-97.3231364286936  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M375,500  h50  v-121.70622585669491  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M437.5,500  h50  v-185.05537921531788  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M500,500  h50  v-164.83469031215407  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M562.5,500  h50  v-256.2796692186359  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M625,500  h50  v-161.82747707328167  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M687.5,500  h50  v-193.98209923311958  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M750,500  h50  v-235.02494922743392  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M812.5,500  h50  v-218.8120680929319  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M875,500  h50  v-329.2265470709448  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+              <path
+                d="  M937.5,500  h50  v-478.16074885370244  q0,-7 -7,-7  h-36  q-7,0 -7,7  Z"
+                fill={theme.colors.primary}
+              />
+            </svg>
+          </Box>
           <p
             css={{
               fontSize: theme.fontSizes.xs,

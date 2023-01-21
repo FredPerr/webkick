@@ -2,8 +2,8 @@ import { useTheme } from 'styled-components'
 
 interface CardProps {
   title: string
-  description: string
-  image: React.ReactNode
+  includes: string[]
+  icon: React.ReactNode
 }
 
 export default function Card(props: CardProps) {
@@ -11,44 +11,54 @@ export default function Card(props: CardProps) {
   return (
     <div
       css={{
-        display: 'grid',
-        alignItems: 'center',
-        gridTemplate: '20px 40px / 30px auto',
-        backgroundColor: theme.colors.background,
-        boxShadow: '0 0 10px rgba(0,0,0,0.1)',
-        padding: 10,
-        columnGap: 10,
+        display: 'flex',
+        flexDirection: 'column',
+        '&>svg': {
+          width: 50,
+        },
       }}
     >
-      <div
+      {props.icon}
+
+      <h4
         css={{
-          gridRowStart: 1,
-          gridRowEnd: 3,
-          justifySelf: 'center',
-          '& svg': { width: 40, height: 40, padding: 5 },
+          fontWeight: 500,
+          fontSize: theme.fontSizes.xl,
+          marginTop: 15,
+          marginBottom: 15,
         }}
       >
-        {props.image}
-      </div>
-      <div css={{ gridColumn: '2 / 2', gridRow: '1 / 1', alignSelf: 'end' }}>
-        <h4
-          css={{ fontSize: theme.fontSizes.md, color: theme.colors.textDark }}
-        >
-          {props.title}
-        </h4>
-      </div>
-      <div css={{ gridColumn: '2 / 2', gridRow: '2 / 2' }}>
-        <p
-          css={{
-            fontSize: theme.fontSizes.sm,
-            fontWeight: 500,
-            color: theme.colors.text,
-            letterSpacing: '.5px',
-          }}
-        >
-          {props.description}
-        </p>
-      </div>
+        {props.title}
+      </h4>
+      <ul
+        css={{
+          '& li:before': {
+            content: '',
+            display: 'inline-block',
+            margin: '0 7px 0 -18px',
+            width: '11px',
+            height: '10px',
+            background:
+              'url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMCI+PHBhdGggZD0iTTkuOC4yTDMuMyA2LjlsLTEuOC0yQy44IDQuMi0uNCA1IC4xIDZsMi4xIDMuNWMuMy40IDEuMS45IDEuOSAwIC4zLS40IDYuNi04LjMgNi42LTguMy44LS44LS4yLTEuNi0uOS0xeiIgZmlsbD0iIzZiN2M5MyIvPjwvc3ZnPg==)',
+          },
+          listStyle: 'none',
+        }}
+      >
+        {props.includes.map((include) => (
+          <li css={{ color: theme.colors.text, marginBottom: 5 }}>
+            <svg viewBox="0 0 512 512" width={10} style={{ marginRight: 10 }}>
+              <g>
+                <path
+                  d="M469.402,35.492C334.09,110.664,197.114,324.5,197.114,324.5L73.509,184.176L0,254.336l178.732,222.172
+		l65.15-2.504C327.414,223.414,512,55.539,512,55.539L469.402,35.492z"
+                  fill={theme.colors.text}
+                />
+              </g>
+            </svg>
+            {include}
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
