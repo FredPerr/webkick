@@ -4,6 +4,8 @@ import Hero from '@/sections/hero'
 import ServicesSection from '@/sections/services'
 import WebCreation from '@/sections/webcreation/WebCreation'
 import { useTheme } from 'styled-components'
+import About from '@/sections/about/About'
+import Quote from '@/sections/quote'
 
 export default function Home() {
   const theme = useTheme()
@@ -22,6 +24,8 @@ export default function Home() {
       >
         <WebCreation />
       </div>
+      <About />
+      <Quote />
     </>
   )
 }

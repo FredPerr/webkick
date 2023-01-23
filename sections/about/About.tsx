@@ -1,19 +1,39 @@
+import { useTranslation } from 'next-i18next'
+import { useTheme } from 'styled-components'
+
 export default function About() {
+  const theme = useTheme()
+  const { t } = useTranslation('home')
   return (
-    <div>
-      <h1>
-        Pas de paiements avant d'avoir la confirmation de votre satisfaction!
-      </h1>
-      <p>
-        Votre satisfaction est notre priorité lorsque vous faites affaire avec
-        nous; <u>pas les paiements</u>. Nous sommes deux développeurs qui se
-        démènent pour bâtir une clientèle satisfaite de nos services dans le but
-        de préserver l'image intacte de notre compagnie. C'est pourquoi vous ne
-        payez pas avant d'être satisfait de votre site Web et que nous offrons
-        du financement sur 12 mois à 0%. L'expertise de notre duo nous permet
-        d'offrir des prix TRÈS compétitifs tout en offrant un produit de qualité
-        sans compromis.
-      </p>
+    <div
+      css={{
+        backgroundColor: theme.colors.backgroundPaperDark,
+        color: theme.colors.background,
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+        paddingLeft: '15%',
+        paddingRight: '15%',
+        paddingTop: '4rem',
+        paddingBottom: '4rem',
+        textAlign: 'center',
+        opacity: 0.8,
+        backgroundImage:
+          'radial-gradient(#4e4e4e 0.5px, transparent 0.5px), radial-gradient(#4e4e4e 0.5px, #000912 0.5px)',
+        backgroundSize: '20px 20px',
+        backgroundPosition: '0 0,10px 10px',
+      }}
+    >
+      <h3 css={{ fontSize: theme.fontSizes.lg * 2 }}>
+        {t('home:about.title')}
+      </h3>
+      <p
+        css={{ fontSize: 18, marginTop: 10 }}
+        dangerouslySetInnerHTML={{
+          __html: t('home:about.description', { __: '<u>', ___: '</u>' }),
+        }}
+      ></p>
     </div>
   )
 }

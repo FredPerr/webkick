@@ -1,10 +1,10 @@
 export default function HostingSvg() {
   return (
     <svg viewBox="0 0 1500 1500" fill="none">
-      <g clip-path="url(#clip0_604_194)">
+      <g clipPath="url(#clip0_604_194)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M1437 937V88C1380.81 459.494 902.604 861.196 389 937H1437Z"
           fill="#F4F4F4"
         />

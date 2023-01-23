@@ -19,7 +19,7 @@ const Colors = {
 
   background: '#ffffff',
   backgroundPaper: '#fcffff',
-  backgroundPaperDark: '#061f38',
+  backgroundPaperDark: '#000912',
 
   success: '#6bcc7f',
   error: '#ed4040',

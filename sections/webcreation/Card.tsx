@@ -61,8 +61,8 @@ export default function Card(props: CardProps) {
             listStyle: 'none',
           }}
         >
-          {props.includes.map((include) => (
-            <li css={{ color: theme.colors.text, marginBottom: 5 }}>
+          {props.includes.map((include, index) => (
+            <li key={index} css={{ color: theme.colors.text, marginBottom: 5 }}>
               <svg viewBox="0 0 512 512" width={10} style={{ marginRight: 10 }}>
                 <g>
                   <path

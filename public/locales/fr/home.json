@@ -51,5 +51,9 @@
       "item3": "100% personalisable selon vos besoins",
       "cta": "Parlez-nous de vos idées"
     }
+  },
+  "about": {
+    "title": "Pas de paiements sans votre satisfaction!",
+    "description": "Votre satisfaction est notre priorité lorsque vous faites affaire avec nous; {{__}}pas les paiements{{___}}. Nous sommes un duo de développeurs qui se démènent pour bâtir une clientèle durable. La rapidité et la communication efficace d'une petite équipe est à notre avantage et permet d'offrir des prix TRÈS compétitifs, tout en offrant un produit de qualité."
   }
 }
