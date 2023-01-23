@@ -9,6 +9,7 @@ interface ButtonProps extends VariantProps, ColorProps {
   children?: React.ReactNode
   arrow?: boolean
   shadow?: boolean
+  rounded?: boolean
 }
 
 const StyledButton = styled.button<ButtonProps>`

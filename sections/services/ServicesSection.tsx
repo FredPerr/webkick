@@ -1,9 +1,11 @@
 import { useTheme } from 'styled-components'
 import ServicesAZ from './ServicesAZ'
 import Button from '@/components/button'
+import { useTranslation } from 'next-i18next'
 
 export default function ServicesSection() {
   const theme = useTheme()
+  const { t } = useTranslation(['home', 'common'])
   return (
     <div
       css={{
@@ -35,17 +37,14 @@ export default function ServicesSection() {
             textShadow: `0 0 5px ${theme.colors.error}32`,
           }}
         >
-          Ne touchez à rien, tout en gardant le contrôle
+          {t('home:services.title')}
         </h3>
         <p css={{ fontSize: theme.fontSizes.lg, marginTop: 15 }}>
-          Commandez votre site et laissez-nous s'occuper de la création Web,
-          l'hébergement et les différents services lié à votre site. Nous
-          apportons également les modifications que vous demander et ce sans
-          limite!
+          {t('home:services.description')}
         </p>
         <div css={{ marginTop: 30 }}>
           <Button variant="text" color="primary" arrow>
-            Explorer nos services
+            {t('common:buttons.explore_services')}
           </Button>
         </div>
       </div>

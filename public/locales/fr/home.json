@@ -12,5 +12,44 @@
     "list_point_1": "Retour sur investissement et taux de conversion élevés",
     "list_point_2": "Affichez les produits et les services de votre entreprise 24/7",
     "list_point_3": "Soyez visible de n'importe où"
+  },
+  "services": {
+    "title": "Ne touchez à rien, tout en gardant le contrôle",
+    "description": "Commandez votre site et laissez-nous s'occuper de la création Web, l'hébergement et les différents services lié à votre site. Nous apportons également les modifications que vous demander et ce, sans limite!"
+  },
+  "solution": {
+    "title": "Une solution simple, efficace et complète",
+    "web_creation": {
+      "title": "Création de site Web",
+      "item1": "Interface intuitive & accessible",
+      "item2": "Optimisation pour moteurs de recherche (SEO)",
+      "item3": "Protection et encryption du site",
+      "item4": "Traduction optionnelle",
+      "item5": "Revisions illimitées du site"
+    },
+    "web_hosting": {
+      "title": "Hébergement Web",
+      "item1": "Nom de domaine .ca ou .com",
+      "item2": "Chargement ultra-rapide du contenu",
+      "item3": "+99.99% du temps minimalement en fonction",
+      "item4": "Structure adaptative à la croissance rapide",
+      "item5": "Certification de sécurité SSL",
+      "item6": "Sauvegarde régulières"
+    },
+    "maintenance": {
+      "title": "Maintenance & support continu",
+      "item1": "Gestion de tout imprévu rapidement",
+      "item2": "Revisions illimités de votre site",
+      "item3": "Vérification de la sécurité mensuellement",
+      "item4": "Vérficiation SEO (réalignement)",
+      "item5": "Extraction du contenu du site"
+    },
+    "functionality": {
+      "title": "Fonctionnalités personnalisées",
+      "item1": "Automatisez un processus répétitif",
+      "item2": "Gagner du temps et garder votre argent",
+      "item3": "100% personalisable selon vos besoins",
+      "cta": "Parlez-nous de vos idées"
+    }
   }
 }
