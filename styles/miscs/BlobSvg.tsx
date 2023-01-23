@@ -14,9 +14,9 @@ export default function Blob1Svg() {
     >
       <defs>
         <radialGradient id="radialGradientId" r="100%" cx="50%" cy="50%">
-          <stop offset="0%" stop-color="#4158D0" />
-          <stop offset="50%" stop-color="#C850C0" />
-          <stop offset="100%" stop-color="#ffcc70" />
+          <stop offset="0%" stopColor="#4158D0" />
+          <stop offset="50%" stopColor="#C850C0" />
+          <stop offset="100%" stopColor="#ffcc70" />
         </radialGradient>
 
         <clipPath id="shape">

@@ -4,7 +4,7 @@ import { useTheme } from 'styled-components'
 import WebDevSvg from '@/styles/miscs/WebCreationSvg'
 import HostingSvg from '@/styles/miscs/HostingSvg'
 import MaintenanceSvg from '@/styles/miscs/MaintenanceSvg'
-import Blob1Svg from '@/styles/miscs/Blob1Svg'
+import BlobSvg from '@/styles/miscs/BlobSvg'
 import FunctionalitySvg from '@/styles/miscs/FunctionalitySvg'
 import { useTranslation } from 'next-i18next'
 
@@ -97,7 +97,7 @@ export default function WebCreation() {
           }
         />
       </div>
-      <Blob1Svg />
+      <BlobSvg />
 
       <div
         css={{
