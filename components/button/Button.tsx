@@ -1,11 +1,13 @@
 import styled, { useTheme } from 'styled-components'
 import { ColorProps, VariantProps } from '@/components'
 import SmallArrowSvg from '@/styles/miscs/SmallArrowSvg'
-import React from 'react'
+import React, { ButtonHTMLAttributes } from 'react'
 import { darken, lighten } from 'polished'
-import Theme from '@/styles/theme'
 
-interface ButtonProps extends VariantProps, ColorProps {
+interface ButtonProps
+  extends VariantProps,
+    ColorProps,
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> {
   children?: React.ReactNode
   arrow?: boolean
   shadow?: boolean
