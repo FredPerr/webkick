@@ -13,6 +13,7 @@ export default function WebCreation() {
   const { t } = useTranslation(['common', 'home'])
   return (
     <div
+      id="webcreation"
       css={{
         position: 'relative',
         width: '100%',
@@ -46,7 +47,6 @@ export default function WebCreation() {
             t('home:solution.web_creation.item3'),
             t('home:solution.web_creation.item4'),
             t('home:solution.web_creation.item5'),
-            t('home:solution.web_creation.item6'),
           ]}
           icon={<WebDevSvg />}
         />

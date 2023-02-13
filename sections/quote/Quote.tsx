@@ -1,150 +1,268 @@
-import Button from '@/components/button'
-import { StyledTextField } from '@/components/input'
 import StyledInput from '@/components/input/Input'
-import StyledOption from '@/components/input/Option'
-import StyledSelect from '@/components/input/Select'
-import { useRouter } from 'next/router'
 import React from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
-import { useForm } from 'react-hook-form'
-import { SubmitHandler } from 'react-hook-form/dist/types'
+import { FieldError, useForm } from 'react-hook-form'
+import Button from '@/components/button'
+import { useTranslation } from 'next-i18next'
+import { useTheme } from 'styled-components'
+import { StyledTextField } from '@/components/input'
+import { useRouter } from 'next/router'
+import WorldMapSvgUrl from '@/public/images/world-map.svg?url'
 
-interface FormFields {
+interface FormInputs {
   name: string
   email: string
-  company: string
   phone: string
+  company: string
+  message: string
 }
 
-const sendMail = (captchaRef: React.MutableRefObject<ReCAPTCHA>) => {
-  const token = captchaRef.current.getValue()
-  if (!token) {
-    return {
-      status: 'error',
-      message: "Veuillez confirmer que vous n'êtes pas un robot",
-    }
-  }
-  captchaRef.current.reset()
-
-  fetch('/api/email', {
-    method: 'POST',
-    body: JSON.stringify({ name, company, email, phone, msg }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((res) => {
-      if (res.status !== 200) {
-        throw new Error('Could not send the email')
-      }
-      res.json().then((data) => {
-        setSending(false)
-        setSuccess(true)
-      })
-    })
-    .catch((err) => {
-      setSending(false)
-      setError(true)
-      console.log(err)
-    })
-
-  return {
-    status: 'success',
-    message: 'Votre message a bien été envoyé',
-  }
+function Field({
+  error,
+  errorMsg,
+  children,
+}: {
+  error: FieldError | undefined
+  errorMsg: string
+  children: React.ReactNode
+}) {
+  const theme = useTheme()
+  return (
+    <div css={{ position: 'relative' }}>
+      {children}
+      {error && (
+        <span
+          css={{
+            color: theme.colors.error,
+            fontSize: 12,
+            position: 'absolute',
+            bottom: -20,
+          }}
+        >
+          {errorMsg}
+        </span>
+      )}
+    </div>
+  )
 }
 
 export default function Quote() {
   const { locale } = useRouter()
+  const captchaRef = React.useRef<ReCAPTCHA>(null)
+  const [captchaDone, setCaptchaDone] = React.useState(false)
+  const [submitTried, setSubmitTried] = React.useState(false)
+  const [successful, setSuccessful] = React.useState(false)
+  const { t } = useTranslation('home')
+  const theme = useTheme()
   const {
     register,
     handleSubmit,
-    watch,
+    getValues,
+    reset,
     formState: { errors },
-  } = useForm()
-  const captchaRef = React.useRef<ReCAPTCHA>(null)
-  const onSubmit: SubmitHandler<FormFields> = (data) => console.log(data)
+  } = useForm<FormInputs>({})
+
+  const nameField = register('name', { required: true })
+  const emailField = register('email', { required: true })
+  const phoneField = register('phone', { required: true })
+  const companyField = register('company', { required: true })
+  const messageField = register('message', { required: true, minLength: 10 })
+
+  const sendMessage = async (data: FormInputs) => {
+    setSubmitTried(true)
+
+    if (!captchaDone) {
+      return null
+    }
+
+    await fetch('/api/email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(getValues()),
+    }).then((res) => {
+      if (res.status === 200) {
+        setSuccessful(true)
+        console.log(data)
+        reset()
+      } else {
+        console.log(res.status)
+      }
+    })
+  }
 
   return (
     <div
+      id="quote"
       css={{
         display: 'flex',
         width: '100%',
-        padding: '100px 15%',
+        padding: '100px 5%',
         justifyContent: 'center',
         flexDirection: 'column',
+        alignItems: 'center',
+        background: `url(${WorldMapSvgUrl}) no-repeat center center`,
       }}
     >
-      <h3 css={{ textAlign: 'center', fontSize: 24 }}>
-        Demander votre soumission ou parlez-nous de vos idées de projets
+      <h3
+        css={{
+          textAlign: 'center',
+          fontSize: 22,
+          [theme.media.smMax]: { fontSize: 18 },
+        }}
+      >
+        {t('home:quote.title')}
       </h3>
-      <div css={{ padding: 200 }}>
+      <div css={{ paddingTop: 50 }}>
         <form
-          method="post"
+          onSubmit={handleSubmit((data) => sendMessage(data))}
           css={{
+            position: 'relative',
             display: 'grid',
-            gridTemplate: 'repeat(5, 1fr) / 50% 50%',
+            gridTemplate: 'repeat(5, auto) / 50% 50%',
             gap: 30,
+            [theme.media.smMax]: {
+              gridTemplate: 'repeat(7, auto) / 100%',
+            },
           }}
         >
-          <StyledInput
-            {...register('name', { required: true, minLength: 3 })}
-            placeholder="Nom complet"
-          />
-          <StyledInput
-            placeholder="Adresse courriel"
-            required
-            type="email"
-            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-          />
-          <StyledInput placeholder="# téléphone" required type="tel" />
-          <StyledInput
-            placeholder="Entreprise ou entité"
-            required
-            type="text"
-          />
-          <StyledTextField
-            placeholder="Votre message"
-            required
+          <Field error={errors.name} errorMsg={t('home:quote.form.name.error')}>
+            <StyledInput
+              placeholder={t('home:quote.form.name.name') || 'Name'}
+              {...nameField}
+            />
+          </Field>
+          <Field
+            error={errors.email}
+            errorMsg={t('home:quote.form.email.error')}
+          >
+            <StyledInput
+              type="email"
+              placeholder={
+                t('home:quote.form.email.name') || 'Addresse courriel'
+              }
+              {...emailField}
+            />
+          </Field>
+          <Field
+            error={errors.phone}
+            errorMsg={t('home:quote.form.phone.error')}
+          >
+            <StyledInput
+              type="tel"
+              placeholder={t('home:quote.form.phone.name') || 'Phone number'}
+              {...phoneField}
+            />
+          </Field>
+          <Field
+            error={errors.company}
+            errorMsg={t('home:quote.form.phone.error')}
+          >
+            <StyledInput
+              placeholder={t('home:quote.form.company.name') || 'Entreprise'}
+              {...companyField}
+            />
+          </Field>
+          <div
             css={{
-              gridRowStart: 1,
-              gridRowEnd: 4,
-              gridColumnStart: 2,
-              resize: 'none',
+              gridColumnStart: 1,
+              gridColumnEnd: 3,
+              [theme.media.smMax]: { gridColumnEnd: 2 },
             }}
-          />
-          <div css={{ marginLeft: 'auto', marginRight: 'auto' }}>
+          >
+            <Field
+              error={errors.message}
+              errorMsg={t('home:quote.form.message.error')}
+            >
+              <StyledTextField
+                placeholder={
+                  t('home:quote.form.message.name') ||
+                  'Quelle est votre demande?'
+                }
+                rows={4}
+                {...messageField}
+              />
+            </Field>
+          </div>
+          <div css={{ position: 'relative' }}>
             <ReCAPTCHA
               hl={locale}
               ref={captchaRef}
               sitekey="6LdnBOUjAAAAAEjUXCVfguwCZo5N8xAEqzLo19b6"
+              onChange={(e) => {
+                if (e && e.length > 0) setCaptchaDone(true)
+              }}
             />
+            {!captchaDone && submitTried && (
+              <span
+                css={{
+                  fontSize: 12,
+                  color: theme.colors.error,
+                  position: 'absolute',
+                  bottom: -20,
+                }}
+              >
+                {t('home:quote.captcha')}
+              </span>
+            )}
           </div>
-          <StyledSelect>
-            <StyledOption>Demande de soumission</StyledOption>
-            <StyledOption>Nous communiquer</StyledOption>
-          </StyledSelect>
           <div
             css={{
-              height: 'min-content',
-              marginLeft: 'auto',
-              marginRight: 'auto',
+              height: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              width: '100%',
             }}
           >
             <Button
+              type="submit"
+              arrow
               variant="contained"
               color="primary"
-              arrow
-              type="submit"
-              onClick={() => {
-                if (captchaRef.current) {
-                  captchaRef.current.reset()
-                }
-              }}
+              css={{ height: 'min-content' }}
             >
               Envoyer
             </Button>
           </div>
+          {successful && (
+            <div
+              css={{
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%,-50%)',
+                padding: '4rem',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: 'white',
+                width: '400px',
+                borderRadius: '10px',
+                boxShadow: '0 0 10px 0 rgba(0,0,0,0.2)',
+              }}
+            >
+              <h3 css={{ textAlign: 'center', marginBottom: '1rem' }}>
+                {t('home:quote.success.title')}
+              </h3>
+              <p css={{ textAlign: 'center', marginBottom: '1rem' }}>
+                {t('home:quote.success.description')}
+              </p>
+              <Button
+                variant="outlined"
+                color="success"
+                onClick={(e) => {
+                  setSuccessful(false)
+                  setSubmitTried(false)
+                  setCaptchaDone(false)
+                  captchaRef.current?.reset()
+                }}
+              >
+                Fermer
+              </Button>
+            </div>
+          )}
         </form>
       </div>
     </div>

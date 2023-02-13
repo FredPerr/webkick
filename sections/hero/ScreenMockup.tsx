@@ -8,8 +8,8 @@ export default function ScreenMockup() {
         [theme.media.xs]: {
           display: 'none',
         },
-        background:
-          'linear-gradient(hsla(0,0%,100%,.4),hsla(0,0%,100%,.3) 25%,rgba(246,249,252,.3) 50%,#f6f9fc 60%)',
+        background: `url(${'/images/laptop.jpg'}) no-repeat center center`,
+        backgroundSize: 'cover',
         width: 800,
         height: 500,
         borderRadius: 10,

@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import Head from 'next/head'
 import { useTranslation } from 'next-i18next'
 import websiteConstants from 'constants/website'
+import Footer from '@/sections/footer/Footer'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   PageLayout?: (page: React.ReactElement) => React.ReactNode

@@ -1,4 +1,5 @@
 {
+  "translate": "Site en français",
   "navbar": {
     "blog": "Blogue",
     "about": "À propos",
@@ -9,5 +10,8 @@
     "contact": "Nous contacter",
     "get_quote": "Demander ma soumission",
     "explore_services": "Explorer nos services"
+  },
+  "footer": {
+    "copyright": "© {{year}} - Tous droits réservés"
   }
 }

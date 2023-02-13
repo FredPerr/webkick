@@ -24,6 +24,7 @@ const StyledButton = styled.button<ButtonProps>`
   transition: all 0.2s ease-in-out;
   margin: 5px;
   font-weight: 600;
+  height: min-content;
 
   ${({ theme }) => `
   ${theme.media.smMax} {font-size: ${theme.fontSizes.sm}px; padding: ${theme.spacing.sm} ${theme.spacing.sm};}
@@ -67,6 +68,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
     <StyledButton
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      {...props}
       variant={props.variant || 'contained'}
       color={props.color || 'primary'}
     >

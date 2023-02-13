@@ -6,6 +6,7 @@ import WebCreation from '@/sections/webcreation/WebCreation'
 import { useTheme } from 'styled-components'
 import About from '@/sections/about/About'
 import Quote from '@/sections/quote'
+import Footer from '@/sections/footer'
 
 export default function Home() {
   const theme = useTheme()
@@ -26,6 +27,7 @@ export default function Home() {
       </div>
       <About />
       <Quote />
+      <Footer />
     </>
   )
 }

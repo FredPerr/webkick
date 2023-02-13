@@ -6,6 +6,7 @@ export default function About() {
   const { t } = useTranslation('home')
   return (
     <div
+      id="about"
       css={{
         backgroundColor: theme.colors.backgroundPaperDark,
         color: theme.colors.background,

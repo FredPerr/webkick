@@ -6,6 +6,7 @@ import ScreenMockup from './ScreenMockup'
 import { useTranslation } from 'next-i18next'
 import Button from '@/components/button'
 import Link from 'next/link'
+import Navbar from '@/components/navbar/Navbar'
 
 export default function Hero() {
   const theme = useTheme()
@@ -23,12 +24,13 @@ export default function Hero() {
         backgroundPosition: '0 0,10px 10px',
       }}
     >
+      <Navbar />
       <HeroBackgroundAnimation />
       <Box
         css={{
           zIndex: 1,
           display: 'grid',
-          gridTemplate: '600px / 60% 40%',
+          gridTemplate: '650px / 60% 40%',
           [theme.media.smMax]: {
             gridTemplate: 'auto auto / 100%',
           },
@@ -141,7 +143,7 @@ export default function Hero() {
             {t('hero.note')}
           </p>
         </Box>
-        <div css={{ position: 'relative' }}>
+        <div css={{ position: 'relative', marginTop: '5rem' }}>
           <ScreenMockup />
           <PhoneMockup />
         </div>

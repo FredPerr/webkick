@@ -8,6 +8,7 @@ export default function ServicesSection() {
   const { t } = useTranslation(['home', 'common'])
   return (
     <div
+      id="services"
       css={{
         display: 'grid',
         backgroundColor: theme.colors.background,

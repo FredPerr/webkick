@@ -5,7 +5,7 @@
 
   "hero": {
     "title": "Propulsez votre entreprise avec un site Web adapté!",
-    "subtitle": "Débloquez le plein potentiel de votre entreprise! Un site Web professionnel adapté à vos besoins est clé pour améliorer votre visibilité, votre crédibilité et vos ventes.",
+    "subtitle": "Débloquez le plein potentiel de votre entreprise! Un site Web professionnel adapté à vos besoins est la clé pour améliorer votre visibilité, votre crédibilité et vos ventes.",
     "note": "Obtenez votre soumission en 24H-48H et payer en 12 mois sans intérêts. Satisfaction garantie.",
     "statistic": "En 2020, Statistique Canada révèle que 82% des Canadiens de moins de 65 ans achètent en ligne. Au total plus de 80 milliards de dollars ont été dépensés sur le Web au Canada.",
     "list_title": "Rejoignez des millions d'acheteurs au pays avec un site Web professionnel",
@@ -34,7 +34,7 @@
       "item3": "+99.99% du temps minimalement en fonction",
       "item4": "Structure adaptative à la croissance rapide",
       "item5": "Certification de sécurité SSL",
-      "item6": "Sauvegarde régulières"
+      "item6": "Sauvegardes régulières"
     },
     "maintenance": {
       "title": "Maintenance & support continu",
@@ -55,5 +55,35 @@
   "about": {
     "title": "Pas de paiements sans votre satisfaction!",
     "description": "Votre satisfaction est notre priorité lorsque vous faites affaire avec nous; {{__}}pas les paiements{{___}}. Nous sommes un duo de développeurs qui se démènent pour bâtir une clientèle durable. La rapidité et la communication efficace d'une petite équipe est à notre avantage et permet d'offrir des prix TRÈS compétitifs, tout en offrant un produit de qualité."
+  },
+  "quote": {
+    "title": "Demander votre soumission ou parlez-nous de vos idées de projets",
+    "captcha": "Veuillez compléter le captcha",
+    "form": {
+      "name": {
+        "name": "Nom complet",
+        "error": "Veuillez entrer votre nom complet"
+      },
+      "email": {
+        "name": "Addresse courriel",
+        "error": "Veuillez entrer une addresse courriel valide"
+      },
+      "phone": {
+        "name": "Numéro de téléphone",
+        "error": "Veuillez entrer un numéro de téléphone valide"
+      },
+      "company": {
+        "name": "Nom de l'entreprise",
+        "error": "Veuillez entrer le nom de votre entreprise ou du requiérant"
+      },
+      "message": {
+        "name": "Votre message",
+        "error": "Veuillez entrez un court message expliquant votre requête"
+      }
+    },
+    "success": {
+      "title": "Votre message a été envoyé avec succès",
+      "description": "Nous vous contacterons dans les plus brefs délais. Merci de vérifier votre boîte de réception ainsi que vos indésirables régulièrement."
+    }
   }
 }

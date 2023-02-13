@@ -26,7 +26,7 @@ const HeroBackgroundAnimation: React.FC<{}> = () => {
     <canvas
       id="hero-background-canvas"
       css={{
-        clipPath: 'polygon(100% 20%, 100% 0, 0 0, 0 70%)',
+        clipPath: 'polygon(100% 25%, 100% 0, 0 0, 0 75%)',
         [theme.media.lg]: {
           clipPath: 'polygon(100% 20%, 100% 0, 0 0, 0 60%)',
         },
