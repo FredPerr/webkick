@@ -9,12 +9,6 @@ const nextConfig = {
   trailingSlash: false,
   trailingSlash: true,
   i18n,
-  compiler: {
-    styledComponents: {
-      cssProp: true,
-      namespace: 'webkick',
-    },
-  },
 
   webpack(config) {
     config.module.rules.push(

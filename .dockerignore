@@ -2,10 +2,5 @@ npm-debug.log
 .git
 .gitignore
 node_modules
-.storybook
 .husky
 *.md
-tests
-playwright-report
-.github
-*.stories.*

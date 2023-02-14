@@ -1,0 +1,30 @@
+@keyframes particle-animation {
+  0% {
+    transform: rotate(0deg) translateX(0%) rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) translateX(40%) rotate(-180deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(0%) rotate(-360deg);
+  }
+}
+
+.animated {
+  animation-duration: 15s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: particle-animation;
+}
+
+.star {
+  animation-delay: -7.5s;
+}
+
+.ring {
+  animation-delay: -12s;
+}
+
+.pop {
+}

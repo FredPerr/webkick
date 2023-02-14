@@ -1,17 +1,1 @@
-{
-  "translate": "Site en français",
-  "navbar": {
-    "blog": "Blogue",
-    "about": "À propos",
-    "solutions": "Solutions",
-    "pricing": "Tarification"
-  },
-  "buttons": {
-    "contact": "Nous contacter",
-    "get_quote": "Demander ma soumission",
-    "explore_services": "Explorer nos services"
-  },
-  "footer": {
-    "copyright": "© {{year}} - Tous droits réservés"
-  }
-}
+{}
