@@ -8,7 +8,6 @@ enum ParticleColor {
 
 interface ParticleProps {
   color: ParticleColor
-  size: number
   animated?: boolean
 }
 
@@ -16,9 +15,10 @@ function PopParticle(props: ParticleProps) {
   return (
     <svg
       viewBox="0 0 10 10"
-      width={props.size}
       className={
-        props.animated ? `particle ${styles.animated} ${styles.pop}` : ''
+        props.animated
+          ? `${styles.particle} ${styles.animated} ${styles.pop}`
+          : ''
       }
       style={{
         fill: props.color,
@@ -35,9 +35,10 @@ function StarParticle(props: ParticleProps) {
   return (
     <svg
       viewBox="0 0 7 7"
-      width={props.size}
       className={
-        props.animated ? `particle ${styles.animated} ${styles.star}` : ''
+        props.animated
+          ? `${styles.particle} ${styles.animated} ${styles.star}`
+          : ''
       }
       style={{
         fill: props.color,
@@ -52,9 +53,10 @@ function RingParticle(props: ParticleProps) {
   return (
     <svg
       viewBox="0 0 6 6"
-      width={props.size}
       className={
-        props.animated ? `particle ${styles.animated} ${styles.ring}` : ''
+        props.animated
+          ? `${styles.particle} ${styles.animated} ${styles.ring}`
+          : ''
       }
       style={{
         fill: props.color,

@@ -10,9 +10,9 @@ import {
 export default function Home() {
   return (
     <>
-      <PopParticle size={15} color={ParticleColor.Yellow} animated />
-      <StarParticle size={15} color={ParticleColor.Blue} animated />
-      <RingParticle size={15} color={ParticleColor.Orange} animated />
+      <PopParticle color={ParticleColor.Yellow} animated />
+      <StarParticle color={ParticleColor.Blue} animated />
+      <RingParticle color={ParticleColor.Orange} animated />
     </>
   )
 }
