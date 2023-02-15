@@ -9,6 +9,9 @@ const nextConfig = {
   trailingSlash: false,
   trailingSlash: true,
   i18n,
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
 
   webpack(config) {
     config.module.rules.push(

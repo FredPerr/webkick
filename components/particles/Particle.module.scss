@@ -18,6 +18,12 @@
   animation-name: particle-animation;
 }
 
+.particle {
+  position: 'absolute';
+  width: 5px;
+  height: 5px;
+}
+
 .star {
   animation-delay: -7.5s;
 }
@@ -27,4 +33,5 @@
 }
 
 .pop {
+  animation-delay: -1s;
 }

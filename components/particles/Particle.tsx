@@ -1,4 +1,4 @@
-import styles from '@/components/particles/Particle.module.css'
+import styles from '@/components/particles/Particle.module.scss'
 
 enum ParticleColor {
   Orange = '#FF8604',
@@ -17,9 +17,10 @@ function PopParticle(props: ParticleProps) {
     <svg
       viewBox="0 0 10 10"
       width={props.size}
-      className={props.animated ? `${styles.animated} ${styles.pop}` : ''}
+      className={
+        props.animated ? `particle ${styles.animated} ${styles.pop}` : ''
+      }
       style={{
-        position: 'absolute',
         fill: props.color,
       }}
     >
@@ -35,9 +36,10 @@ function StarParticle(props: ParticleProps) {
     <svg
       viewBox="0 0 7 7"
       width={props.size}
-      className={props.animated ? `${styles.animated} ${styles.star}` : ''}
+      className={
+        props.animated ? `particle ${styles.animated} ${styles.star}` : ''
+      }
       style={{
-        position: 'absolute',
         fill: props.color,
       }}
     >
@@ -51,9 +53,10 @@ function RingParticle(props: ParticleProps) {
     <svg
       viewBox="0 0 6 6"
       width={props.size}
-      className={props.animated ? `${styles.animated} ${styles.ring}` : ''}
+      className={
+        props.animated ? `particle ${styles.animated} ${styles.ring}` : ''
+      }
       style={{
-        position: 'absolute',
         fill: props.color,
       }}
     >

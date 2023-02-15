@@ -1,4 +1,5 @@
-import '@/styles/globals.css'
+import '@/styles/globals.scss'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
 import { NextPageWithLayout } from 'layouts/Default'
