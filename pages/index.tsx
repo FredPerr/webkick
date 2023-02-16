@@ -1,18 +1,11 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { DefaultLayout } from 'layouts'
-import {
-  ParticleColor,
-  PopParticle,
-  RingParticle,
-  StarParticle,
-} from '@/components/particles/Particle'
+import HomeHero from '@/sections/HomeHero'
 
 export default function Home() {
   return (
     <>
-      <PopParticle color={ParticleColor.Yellow} animated />
-      <StarParticle color={ParticleColor.Blue} animated />
-      <RingParticle color={ParticleColor.Orange} animated />
+      <HomeHero />
     </>
   )
 }
