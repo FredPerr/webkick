@@ -1,3 +1,5 @@
+@import '../../styles/app.scss';
+
 @keyframes particle-animation {
   0% {
     transform: rotate(0deg) translateX(0%) rotate(0deg);
@@ -22,6 +24,10 @@
   position: 'absolute';
   width: 10px;
   height: 10px;
+  @include media-breakpoint-down('md') {
+    width: 5px;
+    height: 5px;
+  }
 }
 
 .star {
