@@ -4,12 +4,20 @@
 @import '~bootstrap/scss/mixins';
 
 .hero_section {
+  background: top right / contain no-repeat white
+    url('/images/waves/hero-home.svg');
   width: 100%;
   min-height: 100vh;
   height: 100vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  border-bottom: 1px solid rgba(172, 172, 172, 1);
+
+  @include media-breakpoint-down('xxl') {
+    background-size: 80%;
+    background-position-x: calc(100% + 100px);
+  }
 }
 
 .hero_container {
