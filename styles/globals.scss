@@ -9,9 +9,40 @@
 
 .btn {
   --bs-btn-padding-x: 1.5rem;
-  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-padding-y: 0.4rem;
   --bs-btn-font-weight: 600;
   --bs-btn-border-radius: 0.25rem;
   --bs-btn-font-size: 0.9rem;
   --bs-btn-border-width: 2px;
 }
+
+
+@keyframes float-animation {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-4px);
+  }
+}
+
+.particle {
+  animation: float-animation 5s ease-in-out infinite alternate;
+}
+
+.particle-delay-1 {
+  animation-delay: -1s;
+}
+.particle-delay-2 {
+  animation-delay: -2s;
+}
+
+.particle-delay-3 {
+  animation-delay: -3s;
+}
+
+.particle-delay-4 {
+  animation-delay: -4s;
+}
+
