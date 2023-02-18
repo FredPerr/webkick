@@ -24,7 +24,7 @@ export default function HomeHero() {
             <NextLink href="#">
               <Button variant="primary">Explorer notre solution</Button>
             </NextLink>
-            <NextLink href="#">
+            <NextLink href="/contact">
               <Button variant="outline-primary">Nous contacter</Button>
             </NextLink>
           </div>

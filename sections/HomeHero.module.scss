@@ -96,7 +96,7 @@
     margin-bottom: 20px;
     padding-left: 10px;
 
-    @include media-breakpoint-down('md') {
+    @include media-breakpoint-down('lg') {
       font-size: 14px;
     }
 

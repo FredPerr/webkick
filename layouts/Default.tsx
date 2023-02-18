@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import Head from 'next/head'
 import { useTranslation } from 'next-i18next'
 import websiteConstants from 'constants/website'
+import Navbar from '@/components/navbar/Navbar'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   PageLayout?: (page: React.ReactElement) => React.ReactNode
@@ -73,6 +74,7 @@ export default function Layout({ children, pageName }: LayoutProps) {
         <meta name="google" content="nositelinkssearchbox" />
         <meta name="google" content="notranslate" />
       </Head>
+      <Navbar />
       {children}
     </>
   )
