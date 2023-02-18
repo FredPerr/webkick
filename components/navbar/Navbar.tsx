@@ -5,19 +5,15 @@ import styles from './Navbar.module.scss'
 import NextLink from 'next/link'
 import { Button } from 'react-bootstrap'
 import React from 'react'
-import { NavbarCollapseProps } from 'react-bootstrap/esm/NavbarCollapse'
-
-type CollapseType =
-  | React.ForwardRefExoticComponent<NavbarCollapseProps>
-  | React.RefAttributes<HTMLDivElement>
+import useScrollPosition from '@/hooks/useScrollPosition'
 
 export default function Navbar() {
   const [expanded, setExpanded] = React.useState(false)
-
+  const scrollPos = useScrollPosition()
   return (
     <BSNavbar
       expand="lg"
-      className={styles.navbar}
+      className={`${styles.navbar} ${scrollPos > 5 && styles.navbar_scrolled}`}
       onToggle={(expanded) => setExpanded(expanded)}
     >
       <div className={styles.navbar_content}>

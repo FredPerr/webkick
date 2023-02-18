@@ -5,6 +5,16 @@
   width: 100%;
   padding: 10px max(17px, 5%);
   z-index: 100;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar_scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(220, 220, 220, 0.9);
+  a {
+    color: $text-dark !important;
+  }
 }
 
 .navbar_content {
@@ -21,7 +31,10 @@
 }
 
 .navbar_toggle {
-  margin-right: 20px;
+  margin-right: 10px;
+  > span {
+    width: 1rem;
+  }
 }
 
 .collapsed {
@@ -29,7 +42,7 @@
     filter: invert(1);
     position: absolute;
     top: 20px;
-    left: 40px;
+    left: 20px;
     z-index: 101;
   }
 }
