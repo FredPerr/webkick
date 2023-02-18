@@ -1,7 +1,3 @@
-export default function SolutionCard(){
-    return (
-        <div>
-            
-        </div>
-    )
+export default function SolutionCard() {
+  return <div></div>
 }
