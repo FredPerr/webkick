@@ -3,8 +3,10 @@
 
 $primary: #1877f2;
 $secondary: #8540f5;
-$text-light: #68717a !default;
-$text-dark: #525252 !default;
+$text-light: #68717a;
+$text-dark: #525252;
+$btn-white-space: nowrap;
+$min-contrast-ratio: 3.5;
 
 $theme-colors: (
   'primary': $primary,
