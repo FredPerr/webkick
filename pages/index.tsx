@@ -2,12 +2,14 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { DefaultLayout } from 'layouts'
 import HomeHero from '@/sections/hero/HomeHero'
 import SolutionSection from '@/sections/solution/SolutionSection'
+import GaranteeSection from '@/sections/garantee/GaranteeSection'
 
 export default function Home() {
   return (
     <>
       <HomeHero />
       <SolutionSection />
+      <GaranteeSection />
     </>
   )
 }
