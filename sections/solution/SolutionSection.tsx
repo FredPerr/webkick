@@ -1,7 +1,6 @@
 import SectionTitle from '@/components/section/SectionTitle'
 import styles from './SolutionSection.module.scss'
 import SolutionCard from './SolutionCard'
-import { Button } from 'react-bootstrap'
 import LightBulbIllustration from '@/components/illustrations/LightBulbIllustration'
 import ThunderstormIllustration from '@/components/illustrations/ThunderstormIllustration'
 import ConversationIllustration from '@/components/illustrations/ConversationIllustration'
@@ -32,7 +31,9 @@ export default function SolutionSection() {
         />
       </div>
       <NextLink href="/#process" passHref legacyBehavior>
-        <Button variant="primary">En savoir plus</Button>
+        <button type="button" className="btn btn-primary">
+          En savoir plus
+        </button>
       </NextLink>
     </section>
   )

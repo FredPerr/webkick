@@ -1,15 +1,16 @@
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/functions.scss';
+@import '~bootstrap/scss/mixins.scss';
 
-$text-dark: #525252;
-$text-light: #68717a;
 $primary: #1877f2;
 $secondary: #8540f5;
+$text-light: #68717a !default;
+$text-dark: #525252 !default;
 
 $theme-colors: (
-  'primary': $secondary,
-  'secondary': $primary,
+  'primary': $primary,
+  'secondary': $secondary,
   'text-dark': $text-dark,
-  'info': $info,
+  'text-light': $text-light,
 );
+
+@import '~bootstrap/scss/variables.scss';

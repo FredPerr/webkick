@@ -1,7 +1,6 @@
-import styles from './HomeHero.module.scss'
 import HeroImage from './HeroImage'
-import { Button } from 'react-bootstrap'
 import NextLink from 'next/link'
+import styles from './HomeHero.module.scss'
 
 export default function HomeHero() {
   return (
@@ -22,10 +21,14 @@ export default function HomeHero() {
 
           <div className={styles.links_container}>
             <NextLink href="#">
-              <Button variant="primary">Explorer notre solution</Button>
+              <button type="button" className="btn btn-primary">
+                Explorer notre solution
+              </button>
             </NextLink>
             <NextLink href="/contact">
-              <Button variant="outline-primary">Nous contacter</Button>
+              <button type="button" className="btn btn-outline-primary">
+                Nous contacter
+              </button>
             </NextLink>
           </div>
         </div>

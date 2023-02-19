@@ -1,6 +1,5 @@
 import SectionTitle from '@/components/section/SectionTitle'
 import styles from './GaranteeSection.module.scss'
-import { Button } from 'react-bootstrap'
 
 export default function GaranteeSection() {
   return (
@@ -16,8 +15,12 @@ export default function GaranteeSection() {
           site. Nous le retoucherons tant que vous n’aurez pas approuvé le
           produit final.
         </p>
-        <Button>Obtenir ma soumission</Button>
-        <Button variant="secondary">Notre processus</Button>
+        <button type="button" className="btn btn-primary">
+          Obtenir ma soumission
+        </button>
+        <button type="button" className="btn btn-secondary">
+          Notre processus
+        </button>
       </div>
     </section>
   )
