@@ -1,10 +1,9 @@
 @import '/styles/app';
 
 .navbar {
-  position: fixed;
   width: 100%;
   padding: 10px max(17px, 5%);
-  z-index: 100;
+  z-index: 1000;
   transition: all 0.2s ease-in-out;
 }
 
@@ -16,6 +15,10 @@
     @include media-breakpoint-up('lg') {
       color: $text-dark !important;
     }
+  }
+
+  a[role='button'] {
+    color: white !important;
   }
 }
 
@@ -50,6 +53,7 @@
 }
 
 .navbar_collapse {
+  display: flex;
   justify-content: flex-end;
   width: 100%;
 
@@ -62,6 +66,7 @@
     backdrop-filter: blur(10px);
     padding: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    justify-content: center;
   }
 }
 
@@ -69,37 +74,29 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  > a {
-    color: white;
-    font-weight: 600;
-    font-size: 13.5px;
-    letter-spacing: 0.5px;
+  color: white !important;
+  font-weight: 600;
+  font-size: 13.5px;
+  letter-spacing: 0.5px;
 
-    &:hover {
-      color: whitesmoke;
-    }
-
-    @include media-breakpoint-down('xl') {
-      font-size: 12px;
-    }
+  a:hover {
+    color: whitesmoke;
   }
 
-  button {
+  @include media-breakpoint-down('xl') {
+    font-size: 12px;
+  }
+
+  button,
+  a {
     font-size: 13.5px;
     font-weight: 600;
     margin: 0 3px;
-    padding: 5px 10px !important;
     letter-spacing: 0.5px;
+    color: white;
 
     @include media-breakpoint-down('xl') {
       font-size: 12px;
     }
   }
-}
-
-.navbar_nav_container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
 }
