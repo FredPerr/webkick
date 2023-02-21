@@ -3,8 +3,6 @@ import SectionTitle from '@/components/section/SectionTitle'
 import styles from './GaranteeSection.module.scss'
 import { Button } from 'react-bootstrap'
 import MoonAndTelescope from '@/components/illustrations/MoonAndTelescope'
-import { RingParticle, StarParticle } from '@/components/particles/Particle'
-import { ParticleColor } from '@/components/particles/Particle'
 
 export default function GaranteeSection() {
   return (

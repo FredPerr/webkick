@@ -3,6 +3,7 @@ import { DefaultLayout } from 'layouts'
 import HomeHero from '@/sections/hero/HomeHero'
 import SolutionSection from '@/sections/solution/SolutionSection'
 import GaranteeSection from '@/sections/garantee/GaranteeSection'
+import ProcessSection from '@/sections/process/ProcessSection'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HomeHero />
       <SolutionSection />
       <GaranteeSection />
+      <ProcessSection />
     </>
   )
 }
