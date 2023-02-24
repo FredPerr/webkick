@@ -5,6 +5,11 @@ import MeasureIllustration from '@/components/illustrations/MeasureIllustration'
 import ThunderstormIllustration from '@/components/illustrations/ThunderstormIllustration'
 import ConversationIllustration from '@/components/illustrations/ConversationIllustration'
 import { Button } from 'react-bootstrap'
+import Image from 'next/image'
+import ShapeCircleSvg from '@/public/images/shapes/circle.svg?url'
+import ShapeSquareSvg from '@/public/images/shapes/square.svg?url'
+import ShapePentagonSvg from '@/public/images/shapes/pentagon.svg?url'
+import ShapeTriangleSvg from '@/public/images/shapes/triangle.svg?url'
 
 export default function ProcessSection() {
   return (
@@ -27,7 +32,7 @@ export default function ProcessSection() {
               <ul className={styles.item_text}>
                 <li>un nouveau site Web</li>
                 <li>une boutique en ligne</li>
-                <li>l'automatisation d'un processus redondant</li>
+                <li>l’automatisation d’un processus redondant</li>
                 <li>une fonctionalité particulière</li>
               </ul>
             </div>
@@ -97,19 +102,37 @@ export default function ProcessSection() {
         <Button>Obtenir ma soumission</Button>
         <Button variant="secondary">Voir notre tarification</Button>
       </div>
+      <Image
+        src={ShapeCircleSvg}
+        width={300}
+        height={300}
+        alt="circle"
+        className={styles.shape_circle}
+      />
+      <Image
+        src={ShapeTriangleSvg}
+        width={300}
+        height={300}
+        alt="triangle"
+        className={styles.shape_triangle}
+      />
+      <Image
+        src={ShapeSquareSvg}
+        width={300}
+        height={300}
+        alt="square"
+        className={styles.shape_square}
+      />
+      <Image
+        src={ShapePentagonSvg}
+        width={300}
+        height={300}
+        alt="pentagon"
+        className={styles.shape_pentagon}
+      />
     </section>
   )
 }
-
-// interface ProcessImageProps {
-//   svg: React.ReactNode
-// }
-
-// function ProcessImage(props: ProcessImageProps){
-//   return (
-
-//   )
-// }
 
 interface ProcessTextProps {
   title: string

@@ -1,6 +1,7 @@
 @import '/styles/app';
 
 .section {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,6 +39,7 @@
 }
 
 .item_img {
+  z-index: 50;
   width: 300px;
 
   @include media-breakpoint-down('xl') {
@@ -102,5 +104,79 @@
 
   & button {
     margin: 7px 0;
+  }
+}
+
+.shape_circle {
+  position: absolute;
+  right: -100px;
+  top: 80px;
+  width: 400px;
+  height: 400px;
+  pointer-events: none;
+
+  @include media-breakpoint-down('xl') {
+    width: 300px;
+    height: 300px;
+  }
+  @include media-breakpoint-down('md') {
+    display: none;
+  }
+}
+.shape_triangle {
+  position: absolute;
+  left: -150px;
+  top: 560px;
+  width: 400px;
+  height: 400px;
+  pointer-events: none;
+
+  @include media-breakpoint-down('xl') {
+    width: 300px;
+    height: 300px;
+  }
+
+  @include media-breakpoint-down('lg') {
+    top: 800px;
+  }
+  @include media-breakpoint-down('md') {
+    display: none;
+  }
+}
+.shape_square {
+  position: absolute;
+  pointer-events: none;
+
+  right: -100px;
+  top: 1000px;
+  width: 400px;
+  height: 400px;
+  @include media-breakpoint-down('xl') {
+    width: 300px;
+    height: 300px;
+  }
+
+  @include media-breakpoint-down('lg') {
+    top: 1400px;
+  }
+  @include media-breakpoint-down('md') {
+    display: none;
+  }
+}
+.shape_pentagon {
+  pointer-events: none;
+
+  position: absolute;
+  left: -150px;
+  top: 1350px;
+  width: 300px;
+  height: 300px;
+
+  @include media-breakpoint-down('lg') {
+    top: 2400px;
+  }
+
+  @include media-breakpoint-down('md') {
+    display: none;
   }
 }
