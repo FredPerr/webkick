@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { useTranslation } from 'next-i18next'
 import websiteConstants from 'constants/website'
 import Navbar from '@/components/navbar/Navbar'
+import Footer from '@/components/footer/Footer'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   PageLayout?: (page: React.ReactElement) => React.ReactNode
@@ -76,6 +77,7 @@ export default function Layout({ children, pageName }: LayoutProps) {
       </Head>
       <Navbar />
       {children}
+      <Footer />
     </>
   )
 }

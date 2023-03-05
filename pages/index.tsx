@@ -4,6 +4,7 @@ import HomeHero from '@/sections/hero/HomeHero'
 import SolutionSection from '@/sections/solution/SolutionSection'
 import GaranteeSection from '@/sections/garantee/GaranteeSection'
 import ProcessSection from '@/sections/process/ProcessSection'
+import QuoteSection from '@/sections/quote/QuoteSection'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <SolutionSection />
       <GaranteeSection />
       <ProcessSection />
+      <QuoteSection />
     </>
   )
 }

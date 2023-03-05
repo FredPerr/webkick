@@ -1,6 +1,7 @@
 @import '/styles/app';
 
 .section {
+  overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
@@ -114,6 +115,7 @@
   width: 400px;
   height: 400px;
   pointer-events: none;
+  overflow: hidden;
 
   @include media-breakpoint-down('xl') {
     width: 300px;
@@ -130,6 +132,7 @@
   width: 400px;
   height: 400px;
   pointer-events: none;
+  overflow: hidden;
 
   @include media-breakpoint-down('xl') {
     width: 300px;
@@ -145,6 +148,8 @@
 }
 .shape_square {
   position: absolute;
+  overflow: hidden;
+
   pointer-events: none;
 
   right: -100px;
@@ -165,7 +170,7 @@
 }
 .shape_pentagon {
   pointer-events: none;
-
+  overflow: hidden;
   position: absolute;
   left: -150px;
   top: 1350px;
