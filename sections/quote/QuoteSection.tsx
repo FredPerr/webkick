@@ -1,6 +1,9 @@
 import SectionTitle from '@/components/section/SectionTitle'
 import styles from './QuoteSection.module.scss'
 import { Button, Form } from 'react-bootstrap'
+import NextImage from 'next/image'
+import PlanetLargeSvg from '@/public/images/illustrations/planet-large.svg?url'
+import PlanetSmallSvg from '@/public/images/illustrations/planet-small.svg?url'
 
 export default function QuoteSection() {
   return (
@@ -52,6 +55,20 @@ export default function QuoteSection() {
           </Button>
         </div>
       </Form>
+      <NextImage
+        className={styles.planet_large}
+        src={PlanetLargeSvg}
+        height={100}
+        width={100}
+        alt="planet large decoration"
+      />
+      <NextImage
+        className={styles.planet_small}
+        src={PlanetSmallSvg}
+        height={100}
+        width={100}
+        alt="planet small decoration"
+      />
     </section>
   )
 }
