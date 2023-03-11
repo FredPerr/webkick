@@ -11,3 +11,20 @@
   background: url('/images/waves/quote.svg') no-repeat center center;
   height: 976px;
 }
+
+.buttons_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  a,
+  button {
+    width: fit-content;
+  }
+}
+
+.form {
+  display: grid;
+  grid: 1fr 1fr auto auto / 50% 50%;
+  gap: 10px;
+}
