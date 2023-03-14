@@ -1,0 +1,58 @@
+@import '/styles/app';
+
+.hero_section {
+  background: top right / cover no-repeat white
+    url('/images/waves/hero-contact.svg');
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid rgba(172, 172, 172, 1);
+
+  @include media-breakpoint-down('xxl') {
+    background-position: center;
+  }
+}
+
+.hero_container {
+  position: relative;
+  margin-top: 10rem;
+  padding-bottom: 15rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons_grid {
+  display: grid;
+  align-items: center;
+  width: min-content;
+  gap: 20px;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  @include media-breakpoint-down('lg') {
+    font-size: 1.4rem;
+  }
+}
+
+.ruler {
+  border-color: white;
+  border-width: 3px;
+  width: 200px;
+}
+
+.img {
+  @include media-breakpoint-down('lg') {
+    width: 30px;
+    height: 30px;
+  }
+}

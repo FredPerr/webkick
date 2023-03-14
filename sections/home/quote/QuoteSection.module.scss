@@ -29,6 +29,13 @@
   display: grid;
   grid: 1fr 1fr auto auto / 50% 50%;
   gap: 10px;
+
+  input,
+  textarea {
+    @include media-breakpoint-down('md') {
+      font-size: 0.5rem;
+    }
+  }
 }
 
 .planet_large {
@@ -74,5 +81,32 @@
 
   @include media-breakpoint-down('sm') {
     display: none;
+  }
+}
+
+.alert_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 5rem;
+  font-weight: 600;
+  opacity: 0.99;
+
+  > span {
+    margin-bottom: 2rem;
+  }
+}
+
+.button {
+  @include media-breakpoint-down('lg') {
+    font-size: 10px;
   }
 }

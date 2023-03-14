@@ -1,10 +1,10 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { DefaultLayout } from 'layouts'
-import HomeHero from '@/sections/hero/HomeHero'
-import SolutionSection from '@/sections/solution/SolutionSection'
-import GaranteeSection from '@/sections/garantee/GaranteeSection'
-import ProcessSection from '@/sections/process/ProcessSection'
-import QuoteSection from '@/sections/quote/QuoteSection'
+import HomeHero from '@/sections/home/hero/HomeHero'
+import SolutionSection from '@/sections/home/solution/SolutionSection'
+import GaranteeSection from '@/sections/home/garantee/GaranteeSection'
+import ProcessSection from '@/sections/home/process/ProcessSection'
+import QuoteSection from '@/sections/home/quote/QuoteSection'
 
 export default function Home() {
   return (

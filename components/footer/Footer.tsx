@@ -7,6 +7,7 @@ import TwitterSvg from '@/public/images/social/twitter.svg?url'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import FooterList from './FooterList'
+import { PopParticle } from '../particles/Particle'
 
 export default function Footer() {
   const { locale } = useRouter()
