@@ -43,7 +43,7 @@ export default function Contact() {
   return (
     <section className={styles.hero_section}>
       <div className={styles.hero_container}>
-        <h1 className={styles.title}>Contacter-nous rapidement</h1>
+        <h1 className={styles.title}>Contacter-nous facilement</h1>
         <hr className={styles.ruler} />
         <div className={styles.buttons_grid}>
           <Image
