@@ -34,9 +34,6 @@ export default function Footer() {
           </NextLink>
         </div>
         <div className={styles.actions_container}>
-          <NextLink href="/" locale={locale == 'fr' ? 'en' : 'fr'}>
-            Switch to {locale == 'fr' ? 'English' : 'français'}
-          </NextLink>
           <NextLink href="#">Aller en haut</NextLink>
         </div>
       </div>

@@ -8,6 +8,7 @@ import React from 'react'
 import { Formik } from 'formik'
 import * as yup from 'yup'
 import ReCAPTCHA from 'react-google-recaptcha'
+import NextLink from 'next/link'
 
 const schema = yup.object().shape({
   name: yup
@@ -182,9 +183,9 @@ export default function QuoteSection() {
               >
                 Envoyer ma demande
               </Button>
-              <Button variant="primary" type="submit">
-                Nous contacter autrement
-              </Button>
+              <NextLink href="/contact" passHref>
+                <Button variant="primary">Nous contacter autrement</Button>
+              </NextLink>
               <ReCAPTCHA
                 ref={recaptchaRef}
                 size="invisible"

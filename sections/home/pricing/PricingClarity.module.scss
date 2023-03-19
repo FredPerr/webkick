@@ -5,9 +5,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: auto;
+  height: 800px;
   min-height: 100vh;
-  background: center / cover no-repeat white
+  background: center / 100% no-repeat white
     url('/images/waves/lost-pricing.svg');
   overflow: hidden;
   @include media-breakpoint-down('lg') {

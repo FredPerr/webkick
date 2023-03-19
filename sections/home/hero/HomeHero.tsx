@@ -20,7 +20,7 @@ export default function HomeHero() {
           </p>
 
           <div className={styles.links_container}>
-            <NextLink href="#">
+            <NextLink href="/#solution">
               <button type="button" className="btn btn-primary">
                 Explorer notre solution
               </button>

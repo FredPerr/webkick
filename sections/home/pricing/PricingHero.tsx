@@ -1,14 +1,15 @@
 import { Button } from 'react-bootstrap'
 import styles from './PricingHero.module.scss'
 import Badge from 'react-bootstrap/Badge'
+import NextLink from 'next/link'
 
 export default function PricingHero() {
   return (
     <section className={styles.hero_section}>
       <div className={styles.hero_container}>
         <h1 className={styles.title}>
-          Garder votre argent plus longtemps <br /> avec notre financement à 0%
-          sur 12 mois
+          Gardez votre argent plus longtemps <br /> avec notre financement à 0%
+          sur 12 mois.
         </h1>
         <div className={styles.grid_container}>
           <Badge bg="success" className={styles.card_badge}>
@@ -18,7 +19,7 @@ export default function PricingHero() {
             Site Vitrine
           </Badge>
           <p className={styles.card_paragraph}>
-            Obtenez une page Web acceuillante et optimisée pour que de nouveaux
+            Obtenez une page Web accueillante et optimisée pour que de nouveaux
             clients puissent vous rejoindre facilement et rapidement.
           </p>
 
@@ -41,19 +42,23 @@ export default function PricingHero() {
             <li>Bande passante illimités</li>
           </ul>
           <div className={styles.card_buttons_container}>
-            <Button variant="primary">Obtenir ma soumission</Button>
-            <Button variant="outline-primary">
-              Demande plus d&apos;information
-            </Button>
+            <NextLink href="/soumission">
+              <Button variant="primary">Obtenir ma soumission</Button>
+            </NextLink>
+            <NextLink href="/contact">
+              <Button variant="outline-primary">
+                Demander plus d&apos;information
+              </Button>
+            </NextLink>
           </div>
         </div>
         <div className={styles.grid_container}>
           <Badge bg="secondary" className={styles.card_title}>
-            Site Vitrine + Fonctionalités
+            Site Vitrine + Fonctionnalités
           </Badge>
           <p className={styles.card_paragraph}>
-            Complétez l’offre <i>Vitrine</i> avec des fonctionalités
-            personnalisées. Faites des ventes en ligne, automatiser un processus
+            Complétez l’offre <i>Vitrine</i> avec des fonctionnalités
+            personnalisées. Faites des ventes en ligne, automatisez un processus
             redondant, offrez une interface interactive à vos clients pour la
             prise de rendez-vous, etc.
           </p>
@@ -68,13 +73,17 @@ export default function PricingHero() {
             <li>Automatisez un processus redondant</li>
             <li>Offrez une interface dynamique à vos clients</li>
             <li>Intégrez un service externe sur votre site Web</li>
-            <li>Utiliser un service de messagerie intégré</li>
+            <li>Utiliser un service de messagerie intégrée</li>
           </ul>
           <div className={styles.card_buttons_container}>
-            <Button variant="secondary">Évaluer une fonctionalité</Button>
-            <Button variant="outline-secondary">
-              Demande plus d&apos;information
-            </Button>
+            <NextLink href="/#soumission">
+              <Button variant="secondary">Évaluer une fonctionnalité</Button>
+            </NextLink>
+            <NextLink href="/contact">
+              <Button variant="outline-secondary">
+                Demande plus d&apos;information
+              </Button>
+            </NextLink>
           </div>
         </div>
       </div>

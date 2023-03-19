@@ -51,10 +51,18 @@ export default function ContactHero() {
             height={50}
             className={styles.image}
           />
-          <Button className={quoteStyles.button}>
+          <Button
+            onClick={(e) => {
+              navigator.clipboard.writeText(
+                process.env.NEXT_PUBLIC_EMAIL || 'webkick.agency@gmail.com',
+              )
+              alert("L'addresse courriel a été copiée !")
+            }}
+            className={quoteStyles.button}
+          >
             {process.env.NEXT_PUBLIC_EMAIL}
           </Button>
-          <Image
+          {/* <Image
             src="/images/contact/messenger.png"
             alt="Messenger"
             width={40}
@@ -63,7 +71,7 @@ export default function ContactHero() {
           />
           <Button variant="secondary" className={quoteStyles.button}>
             Utiliser Messenger / Facebook
-          </Button>
+          </Button> */}
         </div>
         <hr className={styles.ruler} />
         <Formik

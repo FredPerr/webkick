@@ -1,12 +1,8 @@
 /** @type {import('next').NextConfig} */
 
-const loaderUtils = require('loader-utils')
-
 const path = require('path')
 
 const nextConfig = {
-  output: 'standalone',
-
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,

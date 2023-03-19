@@ -33,7 +33,7 @@ export default function ProcessSection() {
                 <li>un nouveau site Web</li>
                 <li>une boutique en ligne</li>
                 <li>l’automatisation d’un processus redondant</li>
-                <li>une fonctionalité particulière</li>
+                <li>une fonctionnalité particulière</li>
               </ul>
             </div>
           </ProcessItemText>
@@ -63,11 +63,11 @@ export default function ProcessSection() {
           <ThunderstormIllustration className={styles.item_img} />
           <ProcessItemText
             title="3. Hébergement de votre site"
-            subtitle="Nous hébergons les sites Web sur des serveurs performants et fiables."
+            subtitle="Nous hébergeons les sites Web sur des serveurs performants et fiables."
           >
             <div>
               <p className={styles.item_text} style={{ marginBottom: 0 }}>
-                Toutes les technicalités sont gérées par nous:
+                Tous les points techniques sont gérés par nous:
               </p>
 
               <ul className={styles.item_text}>
@@ -88,10 +88,10 @@ export default function ProcessSection() {
           >
             <div>
               <p className={styles.item_text}>
-                Vous n’avez pas le temps et l’envie de plonger dans toutes les
-                technicalités des sites Web. Nous assumons cette responsabilité
-                et nous gardons votre site sur pied à{' '}
-                <strong>un taux de +99.9% du temps</strong>.
+                Vous n’avez pas le temps et l’envie de plonger dans tous les
+                points techniques des sites Web. Nous assumons cette
+                responsabilité et nous gardons votre site sur pied
+                <strong> plus de +99.9% du temps</strong>.
               </p>
             </div>
           </ProcessItemText>

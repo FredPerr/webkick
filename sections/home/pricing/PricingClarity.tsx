@@ -14,7 +14,7 @@ export default function ReassureClarity() {
         />
         <p>
           Vous ne savez pas quel plan choisir ou vous cherchez ce qui est le
-          plus avantageux pour vous? Consultez nous pour analyser la situation
+          plus avantageux pour vous? Consultez-nous pour analyser la situation
           de votre entreprise ensemble pour vous offrir un service adapté à vos
           besoins.
         </p>
