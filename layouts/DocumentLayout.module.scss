@@ -1,4 +1,45 @@
+@import '/styles/app';
+
 .title {
-  font-size: 1.5rem;
+  font-size: 40px;
   font-weight: 600;
+  color: $text-dark;
+}
+
+.container {
+  min-height: 100vh;
+  padding-top: 200px;
+  display: grid;
+  grid: 300px 1fr / 1fr;
+  width: 100%;
+  padding-left: clamp(20px, 200px, 10%);
+  padding-right: 100px;
+  background-color: rgb(241, 241, 241);
+  font-size: 60px;
+  background: top right / 70% no-repeat white
+    url('/images/waves/legal-hero.svg');
+  align-items: start;
+
+  p {
+    font-size: 13px;
+    color: $text-dark;
+  }
+  h4 {
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: underline;
+    color: $text-dark;
+  }
+}
+
+.small {
+  font-size: 12px;
+  color: $text-light;
+}
+
+.title_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
 }
