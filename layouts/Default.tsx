@@ -1,8 +1,6 @@
 import React from 'react'
 import { NextPage } from 'next'
 import Head from 'next/head'
-import { useTranslation } from 'next-i18next'
-import websiteConstants from 'constants/website'
 import Navbar from '@/components/navbar/Navbar'
 import Footer from '@/components/footer/Footer'
 
@@ -16,38 +14,29 @@ export type LayoutProps = {
 }
 
 export default function Layout({ children, pageName }: LayoutProps) {
-  const { t, ready } = useTranslation([pageName])
-  const [title, setTitle] = React.useState<string | undefined>()
-  const [description, setDescription] = React.useState<string | undefined>()
-  React.useEffect(() => {
-    const titleValue = t(`${pageName}:title`, '')
-    setTitle(`WebKick${titleValue !== '' ? ` - ${titleValue}` : ''}`)
-    const descriptionValue = t(`${pageName}:description`, '')
-    setDescription(
-      descriptionValue !== '' ? descriptionValue : websiteConstants.description,
-    )
-  }, [ready])
-  const keywords = t(`${pageName}:keywords`, '')
-
   return (
     <>
       <Head>
-        <title>{title ? title : websiteConstants.title}</title>
-        <meta property="og:title" content={title} key="title" />
+        <title>WebKick - Sites Web pour PME</title>
+        <meta
+          property="og:title"
+          content="WebKick - Sites Web pour PME"
+          key="title"
+        />
         <meta
           property="og:description"
-          content={description ? description : websiteConstants.description}
+          content="Commandez votre site et déployez-le rapidement! Soumission en 24H-48H et paiements en 12 mois à 0% d'intérêt. 100% de satisfaction garantie."
         />
         <meta
           name="description"
-          content={description ? description : websiteConstants.description}
+          content="Commandez votre site et déployez-le rapidement! Soumission en 24H-48H et paiements en 12 mois à 0% d'intérêt. 100% de satisfaction garantie."
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           property="og:image"
           content="/images/favicons/favicon-32x32.png"
         />
-        {keywords && <meta name="keywords" content={keywords} key="desc" />}
+        <meta name="keywords" content="site web, PME, québec" key="desc" />
         <meta name="msapplication-TileColor" content="#FFFFFF" />
         <link
           rel="apple-touch-icon"

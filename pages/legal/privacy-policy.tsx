@@ -1,5 +1,4 @@
 import DocumentLayout from '@/layouts/DocumentLayout'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import docStyles from '@/layouts/DocumentLayout.module.scss'
 
 export default function PrivacyPolicy() {
@@ -137,17 +136,9 @@ PrivacyPolicy.PageLayout = function PageLayout(page: React.ReactElement) {
       small={
         <span className={docStyles.small}>Mis à jour le 20 mars 2023</span>
       }
-      pageName="privacy policy"
+      pageName="politique de confidentialité"
     >
       {page}
     </DocumentLayout>
   )
-}
-
-export async function getStaticProps({ locale }: { locale: string }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common', 'privacy-policy'])),
-    },
-  }
 }

@@ -2,7 +2,6 @@
 
 const loaderUtils = require('loader-utils')
 
-const { i18n } = require('./next-i18next.config.js')
 const path = require('path')
 
 const nextConfig = {
@@ -10,9 +9,7 @@ const nextConfig = {
 
   reactStrictMode: true,
   swcMinify: true,
-  trailingSlash: false,
   trailingSlash: true,
-  i18n,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
