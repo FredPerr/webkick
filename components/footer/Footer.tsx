@@ -62,7 +62,9 @@ export default function Footer() {
         <span>
           &copy; {new Date().getFullYear()} - WebKick Inc. Tous droits réservés
         </span>
-        <NextLink href="/legal/conditions-utilisation">Conditions d’utilisation</NextLink>
+        <NextLink href="/legal/conditions-utilisation">
+          Conditions d’utilisation
+        </NextLink>
       </div>
     </footer>
   )
