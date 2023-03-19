@@ -30,7 +30,7 @@ export default function SolutionSection() {
           img={<ConversationIllustration />}
         />
       </div>
-      <NextLink href="/#process" passHref legacyBehavior>
+      <NextLink href="/#processus" passHref legacyBehavior>
         <button type="button" className="btn btn-primary">
           En savoir plus
         </button>

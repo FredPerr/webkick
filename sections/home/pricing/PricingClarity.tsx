@@ -22,7 +22,7 @@ export default function ReassureClarity() {
           <NextLink href="/contact" passHref>
             <Button variant="secondary">Nous contacter</Button>
           </NextLink>
-          <NextLink href="/#quote">
+          <NextLink href="/#soumission">
             <Button variant="primary">Évaluer mon idée de projet</Button>
           </NextLink>
         </div>

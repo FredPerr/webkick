@@ -7,7 +7,6 @@ import TwitterSvg from '@/public/images/social/twitter.svg?url'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import FooterList from './FooterList'
-import { PopParticle } from '../particles/Particle'
 
 export default function Footer() {
   const { locale } = useRouter()
@@ -52,18 +51,18 @@ export default function Footer() {
       <FooterList
         title="Communication"
         links={[
-          { name: 'Obtenir ma soumission', href: '/#quote' },
+          { name: 'Obtenir ma soumission', href: '/#soumission' },
           { name: 'Nous contacter', href: '/contact' },
         ]}
       />
       <div className={styles.notice_container}>
-        <NextLink href="/legal/privacy-policy">
-          Politique de confiendialité
+        <NextLink href="/legal/politique-confidentialite">
+          Politique de confidentialité
         </NextLink>
         <span>
           &copy; {new Date().getFullYear()} - WebKick Inc. Tous droits réservés
         </span>
-        <NextLink href="/legal/terms-of-use">Conditions d’utilisation</NextLink>
+        <NextLink href="/legal/conditions-utilisation">Conditions d’utilisation</NextLink>
       </div>
     </footer>
   )

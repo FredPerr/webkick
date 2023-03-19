@@ -19,10 +19,10 @@ export default function GaranteeSection() {
           produit final.
         </p>
         <div className={styles.btn_container}>
-          <NextLink href="/#quote" legacyBehavior>
+          <NextLink href="/#soumission" legacyBehavior>
             <Button>Obtenir ma soumission</Button>
           </NextLink>
-          <NextLink href="/#process">
+          <NextLink href="/#processus">
             <Button variant="secondary">Notre processus</Button>
           </NextLink>
         </div>

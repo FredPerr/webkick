@@ -41,7 +41,7 @@ export default function QuoteSection() {
   >('pending')
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="soumission">
       <SectionTitle
         title="Envoyer une demande de soumission"
         subtitle="Nous analysons les demandes de soumission en 24H-48H"

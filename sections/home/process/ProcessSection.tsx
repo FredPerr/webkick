@@ -13,7 +13,7 @@ import ShapeTriangleSvg from '@/public/images/shapes/triangle.svg?url'
 
 export default function ProcessSection() {
   return (
-    <section id="process" className={styles.section}>
+    <section id="processus" className={styles.section}>
       <SectionTitle
         title="Toujours à votre écoute et centrés sur l’objectif"
         subtitle="Basé sur une solution prouvée et efficace"
