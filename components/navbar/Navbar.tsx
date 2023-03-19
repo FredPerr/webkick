@@ -47,12 +47,12 @@ export default function Navbar() {
             <NextLink href="/#process" passHref legacyBehavior>
               <Nav.Link>Processus</Nav.Link>
             </NextLink>
-            <NextLink href="/#pricing" passHref legacyBehavior>
+            <NextLink href="/pricing" passHref legacyBehavior>
               <Nav.Link>Tarification</Nav.Link>
             </NextLink>
-            <NextLink href="/blog" passHref legacyBehavior>
+            {/* <NextLink href="/blog" passHref legacyBehavior>
               <Nav.Link>Blogue</Nav.Link>
-            </NextLink>
+            </NextLink> */}
             <NextLink href="/contact" passHref legacyBehavior>
               <Nav.Link>Nous contacter</Nav.Link>
             </NextLink>

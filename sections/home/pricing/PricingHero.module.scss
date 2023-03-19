@@ -1,0 +1,143 @@
+@import '/styles/app';
+
+.hero_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background: top right / cover no-repeat white
+    url('/images/waves/hero-pricing.svg');
+  overflow: hidden;
+  @include media-breakpoint-down('lg') {
+    background-position: center;
+  }
+
+  @include media-breakpoint-down('sm') {
+    padding-top: 30px;
+    background-position: top left;
+    background-size: 300%;
+  }
+  hr {
+    width: 100%;
+  }
+}
+
+.hero_container {
+  display: grid;
+  grid: auto 1fr / 1fr 1.2fr;
+  gap: 20px;
+  margin: 100px;
+
+  @include media-breakpoint-down('md') {
+    grid: repeat(3, auto) / 1fr;
+  }
+}
+
+.grid_container {
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  @include media-breakpoint-down('md') {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+.card_badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+}
+
+.card_title {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card_paragraph {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card_recurring_price {
+  color: $primary;
+  font-weight: 500;
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.card_initial_price {
+  color: $primary;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.card_list {
+  list-style-type: none;
+  padding-left: 10px;
+  font-size: 13px;
+  li::before {
+    content: '\2713';
+    margin-right: 10px;
+    color: $success;
+  }
+  li {
+    margin-bottom: 4px;
+    color: $text-dark;
+  }
+}
+
+.card_buttons_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.card_quote_price {
+  font-size: 13px;
+  color: $secondary;
+  font-weight: 500;
+  text-align: center;
+}
+
+.card_card_list {
+  padding-left: 0;
+  li {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    margin-bottom: 7px;
+    width: auto;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    color: $text-dark;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  }
+}

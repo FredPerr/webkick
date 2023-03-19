@@ -38,7 +38,7 @@ export default function Footer() {
           <NextLink href="/" locale={locale == 'fr' ? 'en' : 'fr'}>
             Switch to {locale == 'fr' ? 'English' : 'français'}
           </NextLink>
-          <NextLink href="/#">Aller en haut</NextLink>
+          <NextLink href="#">Aller en haut</NextLink>
         </div>
       </div>
       <FooterList
@@ -57,11 +57,13 @@ export default function Footer() {
         ]}
       />
       <div className={styles.notice_container}>
-        <NextLink href="/#privacy-policy">Politique de confiendialité</NextLink>
+        <NextLink href="/legal/privacy-policy">
+          Politique de confiendialité
+        </NextLink>
         <span>
           &copy; {new Date().getFullYear()} - WebKick Inc. Tous droits réservés
         </span>
-        <NextLink href="/#terms-of-use">Conditions d’utilisation</NextLink>
+        <NextLink href="/legal/terms-of-use">Conditions d’utilisation</NextLink>
       </div>
     </footer>
   )

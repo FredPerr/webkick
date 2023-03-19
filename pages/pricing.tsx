@@ -1,8 +1,15 @@
 import { DefaultLayout } from '@/layouts'
+import PricingHero from '@/sections/home/pricing/PricingHero'
+import PricingClarity from '@/sections/home/pricing/PricingClarity'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function Pricing() {
-  return <></>
+  return (
+    <>
+      <PricingHero />
+      <PricingClarity />
+    </>
+  )
 }
 
 Pricing.PageLayout = function PageLayout(page: React.ReactElement) {
