@@ -58,6 +58,8 @@
   @include media-breakpoint-down('md') {
     grid-column-start: 1;
     grid-column-end: 2;
+    font-size: 20px;
+    margin-top: 50px;
   }
 }
 
