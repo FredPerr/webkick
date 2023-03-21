@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  webkick-staging:
+    build:
+      context: ../../
+      dockerfile: docker/staging/Dockerfile
+    image: webkick-staging
+    ports:
+      - '3002:3000'
