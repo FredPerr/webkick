@@ -7,6 +7,10 @@ export default function Contact() {
     <>
       <Head>
         <title>Nous contacter</title>
+        <meta
+          name="description"
+          content="Contactez-nous pour toute demande, question ou commentaire. Notre équipe professionnelle est là pour vous aider. Remplissez notre formulaire de contact ou utilisez nos coordonnées pour nous joindre directement."
+        />
       </Head>
       <ContactHero />
     </>

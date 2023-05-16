@@ -8,6 +8,10 @@ export default function Pricing() {
     <>
       <Head>
         <title>Nos offres à bon prix</title>
+        <meta
+          name="description"
+          content=" informations détaillées sur nos plans, leurs fonctionnalités et les prix correspondants. Nous proposons des solutions adaptées à tous les budgets et besoins. Contactez-nous pour obtenir un devis personnalisé ou pour discuter de vos besoins spécifiques."
+        />
       </Head>
       <PricingHero />
       <PricingClarity />
