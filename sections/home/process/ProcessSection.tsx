@@ -10,6 +10,7 @@ import ShapeCircleSvg from '@/public/images/shapes/circle.svg?url'
 import ShapeSquareSvg from '@/public/images/shapes/square.svg?url'
 import ShapePentagonSvg from '@/public/images/shapes/pentagon.svg?url'
 import ShapeTriangleSvg from '@/public/images/shapes/triangle.svg?url'
+import Link from 'next/link'
 
 export default function ProcessSection() {
   return (
@@ -99,8 +100,12 @@ export default function ProcessSection() {
         </div>
       </div>
       <div className={styles.button_container}>
-        <Button>Obtenir ma soumission</Button>
-        <Button variant="secondary">Voir notre tarification</Button>
+        <Link href="#soumission">
+          <Button>Obtenir ma soumission</Button>
+        </Link>
+        <Link href="/tarification">
+          <Button variant="secondary">Voir notre tarification</Button>
+        </Link>
       </div>
       <Image
         src={ShapeCircleSvg}
