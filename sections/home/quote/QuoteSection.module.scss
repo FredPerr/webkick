@@ -6,12 +6,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  padding: 50px max(17px, 5%);
-  background: center center / cover no-repeat white
-    url('/images/waves/quote.png');
-  background: url('/images/waves/quote.svg') no-repeat center center;
-  height: 976px;
+  width: 100vw;
+  overflow: hidden;
+  background: center center / cover
+    url('/images/waves/quote.svg');
+  height: 1200px
 }
 
 .buttons_container {
@@ -40,6 +39,7 @@
 
 .planet_large {
   position: absolute;
+  overflow: hidden;
   top: 200px;
   left: 30px;
   width: 200px;
@@ -63,6 +63,7 @@
 
 .planet_small {
   position: absolute;
+  overflow: hidden;
   bottom: 200px;
   right: 60px;
   width: 100px;
